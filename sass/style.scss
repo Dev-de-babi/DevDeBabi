@@ -1,0 +1,14 @@
+@import "./variables";
+
+// Configurations
+@import "./fonts";
+@import "./scrollbar";
+@import "./globalStyle";
+
+// Style des composants
+@import "./navbar";
+@import "./footer";
+@import "./buttons";
+
+// importation des styles des pages
+@import "./accueil/accueil"

@@ -1,0 +1,150 @@
+h1 {
+    color: $blanc;
+    position: relative;
+
+    &::after {
+        content: "";
+        height: 3.5px;
+        width: 75px;
+        background-color: $orange;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+    }
+}
+
+.presentation {
+    img.boule {
+        position: absolute;
+
+        &:nth-of-type(2) {
+            left: 30%;
+            top: 70%;
+        }
+
+        &:nth-of-type(3) {
+            left: 50%;
+            top: 30%;
+            z-index: -1;
+        }
+
+        &:nth-of-type(4) {
+            right: 30%;
+            top: 60%;
+        }
+    }
+}
+
+.nosjeux {
+
+    h1,
+    span,
+    p {
+        text-align: right !important;
+    }
+
+    h1::after {
+        left: calc(100% - 75px);
+    }
+
+    img {
+
+        &:nth-of-type(2) {
+            position: absolute;
+            left: 20%;
+            top: 57%;
+        }
+
+        &:nth-of-type(3) {
+            position: absolute;
+            left: 39%;
+            top: 30%;
+            z-index: -1;
+        }
+
+        &:nth-of-type(4) {
+            position: absolute;
+            right: 30%;
+            top: 61%;
+        }
+
+        &:nth-of-type(5) {
+            position: absolute;
+            right: 18%;
+            top: 10%;
+            transform: rotate(36deg);
+            animation: gamepadAnim 5.5s ease-in-out infinite;
+        }
+    }
+
+}
+
+span.question {
+    color: $gris-O;
+    font-style: italic;
+    font-size: medium;
+}
+
+.presentation p,
+.nosjeux p {
+    color: $gris;
+
+    &::first-letter {
+        font-size: xx-large;
+        font-weight: 700;
+        color: $orange
+    }
+}
+
+.bubble-generator {
+    position: fixed;
+    width: 5px;
+    height: 100vh;
+    background: red;
+    right: -10vw;
+}
+
+.bubble {
+    position: absolute;
+    animation: bubbleAnim 45s linear forwards;
+}
+
+.glass {
+    backdrop-filter: blur(1.5px);
+    z-index: 60;
+}
+
+@keyframes bubbleAnim {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-150vw);
+    }
+}
+
+@keyframes gamepadAnim {
+    0% {
+        transform: translateY(0) rotate(36deg);
+    }
+
+    33% {
+        transform: translateY(25px) rotate(36deg);
+    }
+
+
+    100% {
+        transform: translateY(0) rotate(36deg);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .game-png {
+        width: 100%;
+    }
+
+    .nosjeux-rev {
+        flex-direction: column-reverse;
+    }
+}

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/img/D2B LOGO.png" type="image/x-icon">
+
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.min.css">
+    <!-- css imports -->
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Dev De Babi | D2B</title>
+
+</head>
+
+<body>
+    <div class="loader">
+        <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <div>Un instant...</div>
+    </div>
+    <!-- Global container -->
+    <div class="global-container">
+        <div class="position-relative w-auto h-auto">
+            <div class="bubble-generator"></div>
+        </div>
+        <div class="glass">
+            <!-- Début barre de navigation -->
+            <nav class="navbar navbar-expand-md sticky-top navbar-dark bg-dark" aria-label="Main navigation">
+                <div class="container">
+                    <a href="#" class="navbar-brand">
+                        <img id="d2b-logo" src="./assets/img/D2B LOGO.png" alt="logo - Dev De Babi" width="50">
+                    </a>
+
+                    <button class="btn btn-outlined navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarsExampleXxl" aria-controls="navbarsExampleXxl" aria-expanded="true"
+                        aria-label="Toggle navigation">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-md-between" id="navbarsExampleXxl">
+                        <ul class="navbar-nav w-100 justify-content-md-center">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" href="#" id="accueil-nav"
+                                    data-bs-toggle="dropdown" aria-expanded="false">Accueil</a>
+                                <ul class="dropdown-menu" aria-labelledby="accueil-nav">
+                                    <li><a class="dropdown-item active" href="#presentation">Présentation</a></li>
+                                    <li><a class="dropdown-item" href="#nosjeux">Nos jeux</a></li>
+                                    <li><a class="dropdown-item" href="#">GARA</a></li>
+                                    <li><a class="dropdown-item" href="#">Nos services</a></li>
+                                    <li><a class="dropdown-item" href="#">Notre équipe</a></li>
+                                    <li><a class="dropdown-item" href="#">Nous contacter</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">Jeux</a>
+                            </li>
+                        </ul>
+                        <div class="d-flex btns-container">
+                            <a href="#" class="btn btn-outlined mx-2">Connexion</a>
+                            <a href="#" class="btn">Inscription</a>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+            <!-- Fin barre de navigation -->
+
+            <!-- ----------------------------------------------------------------------- -->
+            <!-- Début des sections -->
+
+            <!-- Début section Présentation -->
+            <div id="presentation" class="container col-xxl-8 px-4 pt-5 presentation">
+                <div class="row flex-lg-row-reverse align-items-center g-5 py-5 justify-content-sm-center">
+                    <div class="col-10 col-sm-8 col-lg-6 position-relative">
+                        <img src="./assets/img/MASCOTTE.png" class="d-block mx-lg-auto img-fluid" alt="Mascotte D2B"
+                            width="700" height="500" loading="lazy">
+                        <img src="./assets/img/BOULE.png" alt="boule bleue" class="boule" width="60" loading="lazy">
+                        <img src="./assets/img/BOULE.png" alt="boule bleue" class="boule" width="32" loading="lazy">
+                        <img src="./assets/img/BOULE.png" alt="boule bleue" class="boule" width="45" loading="lazy">
+                    </div>
+                    <div class="col-lg-6">
+                        <h1 class="display-5 fw-bold lh-1 mb-3">Dev De Babi</h1>
+                        <span class="question">
+                            <!--Qui somme nous ?-->¨
+                        </span>
+                        <p class="lead">
+                            Je ne sais pas quoi écrire, adipisicing elit. Qui, eius debitis? Repellat odit
+                            maxime nulla consequatur ratione natus, deleniti deserunt aperiam quos atque labore maiores
+                            quis dolorum ipsum, exercitationem saepe!
+                        </p>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                            <button type="button" class="btn">Nous joindre</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fin section Présentation -->
+
+            <!-- ----------------------------------------------------------------------- -->
+            <!-- Début section Nos jeux -->
+            <div id="nosjeux" class="container col-xxl-8 px-4 py-t nosjeux">
+                <div class="row flex-lg-row-reverse align-items-center g-5 py-5 justify-content-md-center nosjeux-rev">
+                    <div class="col-lg-6">
+                        <h1 class="display-5 fw-bold lh-1 mb-3">Nos jeux</h1>
+                        <span class="question d-block text-center">
+                            <!-- Question -->¨
+                        </span>
+                        <p class="lead text-end">
+                            Je ne sais pas quoi écrire, adipisicing elit. Qui, eius debitis? Repellat odit
+                            maxime nulla consequatur ratione natus, deleniti deserunt aperiam quos atque labore maiores
+                            quis dolorum ipsum, exercitationem saepe!
+                        </p>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button type="button" class="btn">Liste des jeux</button>
+                        </div>
+                    </div>
+                    <div class="col-10 col-sm-8 col-lg-6 position-relative justify-content-sm-center border game-png">
+                        <img src="./assets/img/PHONE.png" alt="boule bleue" class="" width="310" loading="lazy">
+                        <img src="./assets/img/BOULE.png" alt="boule bleue" class="" width="58" loading="lazy">
+                        <img src="./assets/img/BOULE.png" alt="boule bleue" class="" width="77" loading="lazy">
+                        <img src="./assets/img/ENVOYER.png" alt="boule bleue" class="" width="105" loading="lazy">
+                        <img src="./assets/img/MANETTE.png" alt="boule bleue" class="" width="170" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            <!-- Fin section Nos jeux -->
+            <!-- ----------------------------------------------------------------------- -->
+
+            <!-- Fin des sections -->
+        </div>
+        <!-- Début du footer -->
+        <div class="container-fluid footer">
+            <div class="container">
+                <footer class="py-1">
+                    <div class="d-flex justify-content-between pt-4 pb-2">
+                        <a href="#">
+                            <img id="d2b-logo" src="./assets/img/D2B LOGO.png" alt="logo - Dev De Babi" width="50">
+                        </a>
+                        <ul class="list-unstyled d-flex">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div class="row py-5">
+                        <div class=" col-sm-12 col-md-6 col-xl-4">
+                            <h5>A propos</h5>
+                            <p>
+                                Je ne sais pas quoi écrire, consectetur adipisicing elit. Corporis, explicabo. Quibusdam
+                                consectetur sint odio dolorum nam, molestiae aliquam minima consequuntur iure
+                                consequatur voluptas exercitationem veniam? Debitis eos veniam aliquid doloremque.
+                            </p>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-xl-2">
+                            <h5>Jeux</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Ivoire run</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Gnama Gnama</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Référence
+                                        ivoirienne</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-xl-2">
+                            <h5>Navigation</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-xl-4">
+                            <form>
+                                <h5>News Letter</h5>
+                                <p class="text-white fw-thin">Abonnez vous à notre news letter pour ne rien rater du
+                                    contenu de
+                                    nos nouveaux jeux
+                                </p>
+                                <div class="d-flex w-100 gap-2">
+                                    <label for="newsletter1" class="visually-hidden">Email address</label>
+                                    <input id="newsletter1" type="text" class="form-control"
+                                        placeholder="Email address">
+                                    <button class="btn btn-primary" type="button">S'abonner</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <p class="footer-copy py-3 text-center">Copyright ©
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script> Dev de Babi | Tout droit réservé
+                    </p>
+                </footer>
+            </div>
+        </div>
+        <!-- Fin du footer -->
+    </div>
+
+    <!-- js imports -->
+    <script src="./libs/jquery/js/jquery.js"></script>
+    <script src="./libs/scrollreveal/js/scrollreveal.js"></script>
+    <script src="./libs/animejs/lib/anime.min.js"></script>
+    <script src="./libs/typewriter/js/typewriter.js"></script>
+    <script src="./libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(window).on('load', function () {
+            $(".loader").fadeOut(1000);
+            $(".global-container").fadeIn(1000);
+        });
+    </script>
+
+    <script type="module" src="./main.js"></script>
+</body>
+
+</html>

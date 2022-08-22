@@ -1,0 +1,22 @@
+.footer {
+    background-color: $dark-O;
+    z-index: -1;
+    // backdrop-filter: blur(3px);
+
+    div.row {
+        border-bottom: 2px solid $vert;
+        border-top: 2px solid $vert;
+    }
+
+    h5 {
+        color: $blanc;
+    }
+
+    .footer-copy {
+        color: $blanc;
+    }
+
+    form p {
+        color: $gris-O  !important;
+    }
+}
