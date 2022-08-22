@@ -392,6 +392,15 @@ span.question {
   .nosjeux-rev {
     flex-direction: column-reverse;
   }
+  .presentation img.boule:nth-of-type(2) {
+    width: 45px;
+  }
+  .presentation img.boule:nth-of-type(3) {
+    width: 17px;
+  }
+  .presentation img.boule:nth-of-type(4) {
+    width: 30px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
