@@ -24,39 +24,10 @@ toggler.addEventListener("click", () => {
     toggler.classList.toggle("trigged")
 })
 
-// Générateur de bulles by Kev
-const container = document.querySelector(".bubble-generator")
-setInterval(() => {
-    gen(container)
-}, 6000);
-
-var questionP = document.querySelector(".presentation .question");
-var questionN = document.querySelector(".nosjeux .question");
-
-var typewriterP = new Typewriter(questionP, {
-    delay: 85,
-    cursor: "_"
-});
-
-typewriterP
-    .pauseFor(2500)
-    .typeString("Qui somme nous ?")
-    .start();
-
-var typewriterN = new Typewriter(questionN, {
-    delay: 85,
-    cursor: "_"
-});
-
-typewriterN
-    .pauseFor(2500)
-    .typeString("Qu'avons nous déjà fait comme jeux ?")
-    .start();
-
-
 // Scroll reveal anim
 window.scrollRev = ScrollReveal({
-    reset: true
+    reset: false,
+    mobile: false
 });
 
 // Présentation

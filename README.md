@@ -3,7 +3,7 @@
 
 1 - cd libs/dart-sass
 
-2 - sass ../../sass/style.scss ../../css/style.css
+2 - sass --watch ../../sass/style.scss ../../css/style.css
 
 ## Librairies utilisées ##
 ==========================

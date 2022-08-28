@@ -1,8 +1,8 @@
 * {
-    box-sizing: border-box;
-    user-select: none;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+  padding: 0;
+  margin: 0;
 }
 
 h1,
@@ -10,34 +10,35 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: "Open Sans";
+  font-family: "Open Sans";
 }
 
 a {
-    text-decoration: none;
-    font-family: "Montserrat";
-    color: $blanc;
+  text-decoration: none;
+  font-family: "Montserrat";
+  color: $blanc;
 }
 
 body {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 .loader {
-    width: 100vw;
-    height: 100vh;
-    background-color: $global-bg;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    color: $blanc;
+  width: 100vw;
+  height: 100vh;
+  background-color: $global-bg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: $blanc;
 }
 
 .global-container {
-    position: relative;
-    background-color: $global-bg;
-    height: auto;
-    z-index: 10;
-    display: none;
+  position: relative;
+  background-color: $global-bg;
+  height: auto;
+  z-index: 10;
+  display: none;
+  overflow-x: hidden;
 }

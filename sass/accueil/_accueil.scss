@@ -1,169 +1,222 @@
 h1 {
-    color: $blanc;
-    position: relative;
+  color: $blanc;
+  position: relative;
 
-    &::after {
-        content: "";
-        height: 3.5px;
-        width: 75px;
-        background-color: $orange;
-        position: absolute;
-        left: 0;
-        bottom: -10px;
-    }
+  //   &::after {
+  //     content: "";
+  //     height: 3.5px;
+  //     width: 75px;
+  //     background-color: $orange;
+  //     position: absolute;
+  //     left: 0;
+  //     bottom: -10px;
+  //   }
 }
 
 .presentation {
-    img.boule {
-        position: absolute;
+  img.boule {
+    position: absolute;
 
-        &:nth-of-type(2) {
-            left: 30%;
-            top: 70%;
-        }
-
-        &:nth-of-type(3) {
-            left: 50%;
-            top: 30%;
-            z-index: -1;
-        }
-
-        &:nth-of-type(4) {
-            right: 30%;
-            top: 60%;
-        }
+    &:nth-of-type(2) {
+      left: 30%;
+      top: 70%;
     }
+
+    &:nth-of-type(3) {
+      left: 50%;
+      top: 30%;
+      z-index: -1;
+    }
+
+    &:nth-of-type(4) {
+      right: 30%;
+      top: 60%;
+    }
+  }
 }
 
 .nosjeux {
+  h1,
+  span,
+  p {
+    text-align: right !important;
+  }
 
-    h1,
-    span,
-    p {
-        text-align: right !important;
+  h1::after {
+    left: calc(100% - 75px);
+  }
+
+  img {
+    &:nth-of-type(2) {
+      position: absolute;
+      left: 20%;
+      top: 57%;
     }
 
-    h1::after {
-        left: calc(100% - 75px);
+    &:nth-of-type(3) {
+      position: absolute;
+      left: 39%;
+      top: 30%;
+      z-index: -1;
     }
 
-    img {
-
-        &:nth-of-type(2) {
-            position: absolute;
-            left: 20%;
-            top: 57%;
-        }
-
-        &:nth-of-type(3) {
-            position: absolute;
-            left: 39%;
-            top: 30%;
-            z-index: -1;
-        }
-
-        &:nth-of-type(4) {
-            position: absolute;
-            right: 30%;
-            top: 61%;
-        }
-
-        &:nth-of-type(5) {
-            position: absolute;
-            right: 18%;
-            top: 10%;
-            transform: rotate(36deg);
-            animation: gamepadAnim 5.5s ease-in-out infinite;
-        }
+    &:nth-of-type(4) {
+      position: absolute;
+      right: 30%;
+      top: 61%;
     }
 
+    &:nth-of-type(5) {
+      position: absolute;
+      right: 18%;
+      top: 10%;
+      transform: rotate(36deg);
+      animation: gamepadAnim 5.5s ease-in-out infinite;
+    }
+  }
 }
 
 span.question {
-    color: $gris-O;
-    font-style: italic;
-    font-size: medium;
+  color: $gris-O;
+  font-style: italic;
+  font-size: medium;
 }
 
 .presentation p,
 .nosjeux p {
-    color: $gris;
+  color: $gris;
 
-    &::first-letter {
-        font-size: xx-large;
-        font-weight: 700;
-        color: $orange
-    }
+  //   &::first-letter {
+  //     font-size: xx-large;
+  //     font-weight: 700;
+  //     color: $orange;
+  //   }
 }
 
 .bubble-generator {
-    position: fixed;
-    width: 5px;
-    height: 100vh;
-    background: red;
-    right: -10vw;
+  position: fixed;
+  width: 5px;
+  height: 100vh;
+  background: red;
+  right: -10vw;
 }
 
 .bubble {
-    position: absolute;
-    animation: bubbleAnim 45s linear forwards;
+  position: absolute;
+  animation: bubbleAnim 45s linear forwards;
 }
 
 .glass {
-    backdrop-filter: blur(1.5px);
-    z-index: 60;
+  backdrop-filter: blur(1.5px);
+  z-index: 60;
+}
+
+.global-bg {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1000;
+
+  img {
+    position: absolute;
+    &.orange {
+      width: calc(150px + 20vw);
+      height: auto;
+      right: -15vw;
+      top: -5vh;
+    }
+    &.blanc {
+      width: calc(150px + 20vw);
+      height: auto;
+      right: 25vw;
+      top: 35vh;
+    }
+    &.vert {
+      width: calc(150px + 20vw);
+      height: auto;
+      right: -25vw;
+      bottom: -10vh;
+    }
+  }
 }
 
 @keyframes bubbleAnim {
-    0% {
-        transform: translateX(0);
-    }
+  0% {
+    transform: translateX(0);
+  }
 
-    100% {
-        transform: translateX(-150vw);
-    }
+  100% {
+    transform: translateX(-150vw);
+  }
 }
 
 @keyframes gamepadAnim {
-    0% {
-        transform: translateY(0) rotate(36deg);
-    }
+  0% {
+    transform: translateY(0) rotate(36deg);
+  }
 
-    33% {
-        transform: translateY(25px) rotate(36deg);
-    }
+  33% {
+    transform: translateY(25px) rotate(36deg);
+  }
 
-
-    100% {
-        transform: translateY(0) rotate(36deg);
-    }
+  100% {
+    transform: translateY(0) rotate(36deg);
+  }
 }
 
 @media screen and (max-width: 576px) {
-    .game-png {
-        width: 100%;
+  .game-png {
+    width: 100%;
+  }
+
+  .nosjeux-rev {
+    flex-direction: column-reverse;
+  }
+
+  .presentation {
+    .row {
+      justify-content: center;
     }
 
-    .nosjeux-rev {
-        flex-direction: column-reverse;
+    img.boule {
+      &:nth-of-type(2) {
+        width: 30px;
+      }
+
+      &:nth-of-type(3) {
+        width: 17px;
+      }
+
+      &:nth-of-type(4) {
+        width: 26px;
+      }
     }
+  }
 
-    .presentation {
-        img.boule {
-
-            &:nth-of-type(2) {
-                width: 45px;
-            }
-
-            &:nth-of-type(3) {
-                width: 17px;
-            }
-
-            &:nth-of-type(4) {
-                width: 30px;
-            }
-
-
-        }
+  .nosjeux {
+    .d-grid {
+      justify-content: end;
     }
+  }
+}
+@media screen and (min-width: 768px) {
+  .global-bg {
+    img {
+      position: absolute;
+      &.orange {
+        height: auto;
+        right: -15vw;
+        top: -20vh;
+      }
+      &.blanc {
+        top: 25vh;
+      }
+      &.vert {
+        width: calc(150px + 20vw);
+        height: auto;
+        right: -15vw;
+        bottom: -20vh;
+      }
+    }
+  }
 }
