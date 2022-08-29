@@ -1,16 +1,6 @@
 h1 {
   color: $blanc;
   position: relative;
-
-  //   &::after {
-  //     content: "";
-  //     height: 3.5px;
-  //     width: 75px;
-  //     background-color: $orange;
-  //     position: absolute;
-  //     left: 0;
-  //     bottom: -10px;
-  //   }
 }
 
 .presentation {
@@ -75,35 +65,91 @@ h1 {
     }
   }
 }
-
-span.question {
-  color: $gris-O;
-  font-style: italic;
-  font-size: medium;
+.gara {
+  background-color: $dark-O;
+  border-radius: 80px 80px 0 0;
+  .d-flex {
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+  }
 }
-
+.nosservices {
+  background-color: $dark-O;
+  .col {
+    height: 200px;
+    position: relative;
+    margin-top: 80px !important;
+    .card {
+      border-radius: 15px;
+      background-color: $vert;
+      width: 100%;
+      height: 100%;
+      img {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        transform-origin: left;
+        box-shadow: none !important;
+      }
+      img:first-of-type {
+        animation: imgServicesAnim 5s linear infinite;
+        top: -35%;
+      }
+      img:last-of-type {
+        animation: shadowAnim 5s linear infinite;
+        top: 30%;
+      }
+      .card-title {
+        position: absolute;
+        border-radius: 15px;
+        background-color: $vert-C;
+        margin: 0 !important;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: calc($grand - 5px);
+        color: $blanc;
+        padding: 15px 0;
+      }
+      .shadow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+      }
+    }
+  }
+  .col:nth-of-type(1) {
+    img:first-of-type {
+      animation-delay: 1s;
+    }
+    img:last-of-type {
+      animation-delay: 1s;
+    }
+  }
+  .col:nth-of-type(2) {
+    img:first-of-type {
+      animation-delay: 0.3s;
+    }
+    img:last-of-type {
+      animation-delay: 0.3s;
+    }
+  }
+  .col:nth-of-type(3) {
+    img:first-of-type {
+      animation-delay: 1.5s;
+    }
+    img:last-of-type {
+      animation-delay: 1.5s;
+    }
+  }
+}
 .presentation p,
-.nosjeux p {
+.nosjeux p,
+.gara p {
   color: $gris;
-
-  //   &::first-letter {
-  //     font-size: xx-large;
-  //     font-weight: 700;
-  //     color: $orange;
-  //   }
-}
-
-.bubble-generator {
-  position: fixed;
-  width: 5px;
-  height: 100vh;
-  background: red;
-  right: -10vw;
-}
-
-.bubble {
-  position: absolute;
-  animation: bubbleAnim 45s linear forwards;
 }
 
 .glass {
@@ -112,41 +158,37 @@ span.question {
 }
 
 .global-bg {
-  position: fixed;
+  position: absolute;
   width: 100vw;
-  height: 100vh;
+  height: auto;
   z-index: -1000;
 
-  img {
-    position: absolute;
-    &.orange {
-      width: calc(150px + 20vw);
-      height: auto;
-      right: -15vw;
-      top: -5vh;
+  div {
+    position: relative;
+    height: 900px;
+    // border: solid red 1px;
+    img {
+      position: absolute;
+      opacity: 0.2;
+      &.orange {
+        width: calc(190px + 20vw);
+        height: auto;
+        right: -5%;
+        top: -5%;
+      }
+      &.blanc {
+        width: calc(110px + 20vw);
+        height: auto;
+        right: 25%;
+        top: 35%;
+      }
+      &.vert {
+        width: calc(220px + 20vw);
+        height: auto;
+        left: -5%;
+        bottom: 0;
+      }
     }
-    &.blanc {
-      width: calc(150px + 20vw);
-      height: auto;
-      right: 25vw;
-      top: 35vh;
-    }
-    &.vert {
-      width: calc(150px + 20vw);
-      height: auto;
-      right: -25vw;
-      bottom: -10vh;
-    }
-  }
-}
-
-@keyframes bubbleAnim {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(-150vw);
   }
 }
 
@@ -161,6 +203,32 @@ span.question {
 
   100% {
     transform: translateY(0) rotate(36deg);
+  }
+}
+@keyframes imgServicesAnim {
+  0% {
+    transform: scale(1) translate(-50%, 0);
+  }
+
+  50% {
+    transform: scale(0.9) translate(-50%, 25px);
+  }
+
+  100% {
+    transform: scale(1) translate(-50%, 0);
+  }
+}
+@keyframes shadowAnim {
+  0% {
+    transform: scale(0.8) translateX(-50%);
+  }
+
+  50% {
+    transform: scale(1) translateX(-50%);
+  }
+
+  100% {
+    transform: scale(0.8) translateX(-50%);
   }
 }
 
@@ -196,6 +264,9 @@ span.question {
   .nosjeux {
     .d-grid {
       justify-content: end;
+    }
+    .game-png {
+      transform: scale(0.85);
     }
   }
 }

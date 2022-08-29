@@ -154,8 +154,9 @@ body {
   }
 }
 .footer {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.65);
   z-index: -1;
+  backdrop-filter: blur(1px);
 }
 .footer div.row {
   border-bottom: 2px solid #01423a;
@@ -240,6 +241,10 @@ body {
   width: 45px;
   height: 38px;
   position: relative;
+  border: none !important;
+}
+.navbar-toggler:hover {
+  box-shadow: none !important;
 }
 .navbar-toggler i {
   pointer-events: none;
@@ -339,28 +344,87 @@ h1 {
   animation: gamepadAnim 5.5s ease-in-out infinite;
 }
 
-span.question {
-  color: rgba(129, 129, 129, 0.65);
-  font-style: italic;
-  font-size: medium;
+.gara {
+  background-color: rgba(0, 0, 0, 0.65);
+  border-radius: 80px 80px 0 0;
+}
+.gara .d-flex {
+  display: flex;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.nosservices {
+  background-color: rgba(0, 0, 0, 0.65);
+}
+.nosservices .col {
+  height: 200px;
+  position: relative;
+  margin-top: 80px !important;
+}
+.nosservices .col .card {
+  border-radius: 15px;
+  background-color: #01423a;
+  width: 100%;
+  height: 100%;
+}
+.nosservices .col .card img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transform-origin: left;
+  box-shadow: none !important;
+}
+.nosservices .col .card img:first-of-type {
+  animation: imgServicesAnim 5s linear infinite;
+  top: -35%;
+}
+.nosservices .col .card img:last-of-type {
+  animation: shadowAnim 5s linear infinite;
+  top: 30%;
+}
+.nosservices .col .card .card-title {
+  position: absolute;
+  border-radius: 15px;
+  background-color: #009e60;
+  margin: 0 !important;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 25px;
+  color: #fff;
+  padding: 15px 0;
+}
+.nosservices .col .card .shadow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+}
+.nosservices .col:nth-of-type(1) img:first-of-type {
+  animation-delay: 1s;
+}
+.nosservices .col:nth-of-type(1) img:last-of-type {
+  animation-delay: 1s;
+}
+.nosservices .col:nth-of-type(2) img:first-of-type {
+  animation-delay: 0.3s;
+}
+.nosservices .col:nth-of-type(2) img:last-of-type {
+  animation-delay: 0.3s;
+}
+.nosservices .col:nth-of-type(3) img:first-of-type {
+  animation-delay: 1.5s;
+}
+.nosservices .col:nth-of-type(3) img:last-of-type {
+  animation-delay: 1.5s;
 }
 
 .presentation p,
-.nosjeux p {
+.nosjeux p,
+.gara p {
   color: #afafaf;
-}
-
-.bubble-generator {
-  position: fixed;
-  width: 5px;
-  height: 100vh;
-  background: red;
-  right: -10vw;
-}
-
-.bubble {
-  position: absolute;
-  animation: bubbleAnim 45s linear forwards;
 }
 
 .glass {
@@ -369,41 +433,38 @@ span.question {
 }
 
 .global-bg {
-  position: fixed;
+  position: absolute;
   width: 100vw;
-  height: 100vh;
+  height: auto;
   z-index: -1000;
 }
-.global-bg img {
+.global-bg div {
+  position: relative;
+  height: 900px;
+}
+.global-bg div img {
   position: absolute;
+  opacity: 0.2;
 }
-.global-bg img.orange {
-  width: calc(150px + 20vw);
+.global-bg div img.orange {
+  width: calc(190px + 20vw);
   height: auto;
-  right: -15vw;
-  top: -5vh;
+  right: -5%;
+  top: -5%;
 }
-.global-bg img.blanc {
-  width: calc(150px + 20vw);
+.global-bg div img.blanc {
+  width: calc(110px + 20vw);
   height: auto;
-  right: 25vw;
-  top: 35vh;
+  right: 25%;
+  top: 35%;
 }
-.global-bg img.vert {
-  width: calc(150px + 20vw);
+.global-bg div img.vert {
+  width: calc(220px + 20vw);
   height: auto;
-  right: -25vw;
-  bottom: -10vh;
+  left: -5%;
+  bottom: 0;
 }
 
-@keyframes bubbleAnim {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-150vw);
-  }
-}
 @keyframes gamepadAnim {
   0% {
     transform: translateY(0) rotate(36deg);
@@ -413,6 +474,28 @@ span.question {
   }
   100% {
     transform: translateY(0) rotate(36deg);
+  }
+}
+@keyframes imgServicesAnim {
+  0% {
+    transform: scale(1) translate(-50%, 0);
+  }
+  50% {
+    transform: scale(0.9) translate(-50%, 25px);
+  }
+  100% {
+    transform: scale(1) translate(-50%, 0);
+  }
+}
+@keyframes shadowAnim {
+  0% {
+    transform: scale(0.8) translateX(-50%);
+  }
+  50% {
+    transform: scale(1) translateX(-50%);
+  }
+  100% {
+    transform: scale(0.8) translateX(-50%);
   }
 }
 @media screen and (max-width: 576px) {
@@ -436,6 +519,9 @@ span.question {
   }
   .nosjeux .d-grid {
     justify-content: end;
+  }
+  .nosjeux .game-png {
+    transform: scale(0.85);
   }
 }
 @media screen and (min-width: 768px) {

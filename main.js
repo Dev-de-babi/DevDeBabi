@@ -3,11 +3,19 @@ import { rippleAnim } from "./js/btn.js"
 import { gen } from "./js/bubbleGenerator.js";
 
 
+// Mouvement des bulles en arrière plan
+const globalBg = document.querySelector(".global-bg")
+window.addEventListener("scroll", () => {
+    globalBg.style.transform = `translateY(-${window.scrollY}px)`
+})
+
 // Je déplace légèrement la scroll bar pour régler un petit bug
 document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
-        window.scrollBy(0, 10)
-    }, 3000);
+        if (window.scrollY < 5) {
+            window.scrollBy(0, 5)
+        }
+    }, 2000);
 })
 
 // Effet wave des boutons

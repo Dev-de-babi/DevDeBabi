@@ -76,7 +76,10 @@
   width: 45px;
   height: 38px;
   position: relative;
-
+  border: none !important;
+  &:hover {
+    box-shadow: none !important;
+  }
   i {
     pointer-events: none;
     height: 2.3px;
