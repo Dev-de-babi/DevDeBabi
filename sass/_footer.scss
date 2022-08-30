@@ -19,4 +19,23 @@
   form p {
     color: $gris-O !important;
   }
+  .social a {
+    background-color: $vert;
+    color: $vert-C;
+    padding: 15px;
+    margin: 0 5px;
+    font-size: calc($grand - 5px);
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .footer-copy {
+    font-size: calc($petit - 1.2px);
+  }
 }

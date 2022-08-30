@@ -2,7 +2,6 @@ h1 {
   color: $blanc;
   position: relative;
 }
-
 .presentation {
   img.boule {
     position: absolute;
@@ -24,7 +23,6 @@ h1 {
     }
   }
 }
-
 .nosjeux {
   h1,
   span,
@@ -83,22 +81,32 @@ h1 {
     .card {
       border-radius: 15px;
       background-color: $vert;
-      width: 100%;
+      width: 90%;
       height: 100%;
       img {
         position: absolute;
         left: 50%;
+        top: -45%;
         transform: translateX(-50%);
         transform-origin: left;
         box-shadow: none !important;
       }
       img:first-of-type {
-        animation: imgServicesAnim 5s linear infinite;
-        top: -35%;
+        animation: imgServicesAnim 6s linear infinite;
+        top: -40%;
       }
       img:last-of-type {
-        animation: shadowAnim 5s linear infinite;
-        top: 30%;
+        animation: shadowAnim 6s linear infinite;
+        top: 0;
+      }
+      p {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: calc($moyen);
+        color: $blanc;
+        text-align: center;
+        padding: 0 30px;
       }
       .card-title {
         position: absolute;
@@ -109,7 +117,8 @@ h1 {
         left: 0;
         right: 0;
         text-align: center;
-        font-size: calc($grand - 5px);
+        font-size: calc($moyen + 5px);
+        font-weight: 800;
         color: $blanc;
         padding: 15px 0;
       }
@@ -150,6 +159,11 @@ h1 {
 .nosjeux p,
 .gara p {
   color: $gris;
+  span {
+    color: $orange;
+    font-style: italic;
+    font-weight: 700;
+  }
 }
 
 .glass {
@@ -211,7 +225,7 @@ h1 {
   }
 
   50% {
-    transform: scale(0.9) translate(-50%, 25px);
+    transform: scale(0.9) translate(-50%, 15px);
   }
 
   100% {
@@ -266,8 +280,12 @@ h1 {
       justify-content: end;
     }
     .game-png {
-      transform: scale(0.85);
+      transform: scale(0.7);
     }
+  }
+
+  .gara {
+    border-radius: 30px 30px 0 0;
   }
 }
 @media screen and (min-width: 768px) {
