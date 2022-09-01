@@ -124,7 +124,12 @@ body {
   text-shadow: 2px 0 3px rgba(232, 95, 49, 0.65), -2px 0 3px rgba(232, 95, 49, 0.65), 0 2px 3px rgba(232, 95, 49, 0.65), 0 -2px 3px rgba(232, 95, 49, 0.65);
 }
 .navbar .navbar-nav .nav-item .dropdown-menu {
-  transform-origin: top;
+  background-color: #030f21;
+  border: 1px solid #e85f31 !important;
+  padding-top: 0;
+}
+.navbar .navbar-nav .nav-item .dropdown-menu .dropdown-item {
+  color: #afafaf;
 }
 .navbar .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover {
   color: #fff;
@@ -151,6 +156,9 @@ body {
     background-color: #e85f31;
     transform-origin: center;
     animation: animeBefore 0.65s linear forwards;
+  }
+  .navbar .dropdown-menu {
+    padding-left: 0 !important;
   }
 }
 .footer {
@@ -450,14 +458,92 @@ h1 {
   animation-delay: 1.5s;
 }
 
+.equipe {
+  background-color: rgba(0, 0, 0, 0.65);
+}
+.equipe .col {
+  height: 250px;
+  position: relative;
+}
+.equipe .col .card {
+  overflow: hidden;
+  border-radius: 15px;
+  background-color: #01423a;
+  width: 250px;
+  background: url("../../assets/img/OT.png") #01423a;
+}
+.equipe .col .card:hover > .info {
+  transform: translateY(0);
+}
+.equipe .col .card .info {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.795) 31%, transparent);
+  transform: translateY(300px);
+  transition: transform 0.5s ease-in-out;
+}
+.equipe .col .card .info .lol {
+  width: 100%;
+  height: 100%;
+}
+.equipe .col .card .info .lol .nom-prenoms {
+  font-size: 25px;
+  font-weight: bold;
+  position: absolute !important;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+}
+.equipe .col .card .info .lol .fonction {
+  font-size: 12.5px;
+  font-style: italic;
+  position: absolute;
+  top: 60%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  line-height: 14px;
+}
+.equipe .col .card .info .lol .fonction .fondateur {
+  color: #e85f31;
+}
+.equipe .col .card .info .lol .social {
+  font-size: 19.5px;
+  font-style: italic;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  line-height: 14px;
+  width: 50%;
+}
+.equipe .col .card .info .lol .social a {
+  transition: all 0.3s ease;
+}
+.equipe .col .card .info .lol .social a:hover {
+  transform: scale(0.85);
+  color: #e85f31;
+}
+
 .presentation p,
 .nosjeux p,
-.gara p {
+.gara p,
+.equipe p {
   color: #afafaf;
 }
-.presentation p span,
-.nosjeux p span,
-.gara p span {
+.presentation p strong,
+.nosjeux p strong,
+.gara p strong,
+.equipe p strong {
   color: #e85f31;
   font-style: italic;
   font-weight: 700;

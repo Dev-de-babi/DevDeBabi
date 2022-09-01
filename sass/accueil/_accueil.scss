@@ -155,11 +155,94 @@ h1 {
     }
   }
 }
+.equipe {
+  background-color: $dark-O;
+  .col {
+    height: 250px;
+    position: relative;
+    // border: 1px solid red;
+
+    .card {
+      overflow: hidden;
+      border-radius: 15px;
+      background-color: $vert;
+      width: 250px;
+      background: url("../../assets/img/OT.png") $vert;
+
+      &:hover > .info {
+        transform: translateY(0);
+      }
+      .info {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        color: $blanc;
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.795) 31%,
+          transparent
+        );
+        transform: translateY(300px);
+        transition: transform 0.5s ease-in-out;
+        .lol {
+          width: 100%;
+          height: 100%;
+          .nom-prenoms {
+            font-size: calc($grand - 5px);
+            font-weight: bold;
+            position: absolute !important;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: center;
+          }
+          .fonction {
+            font-size: calc($petit - 1.5px);
+            font-style: italic;
+            position: absolute;
+            top: 60%;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            line-height: $petit;
+            .fondateur {
+              color: $orange;
+            }
+          }
+          .social {
+            font-size: calc($moyen + 3px);
+            font-style: italic;
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: space-between;
+            line-height: $petit;
+            width: 50%;
+            a {
+              transition: all 0.3s ease;
+            }
+            a:hover {
+              transform: scale(0.85);
+              color: $orange;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 .presentation p,
 .nosjeux p,
-.gara p {
+.gara p,
+.equipe p {
   color: $gris;
-  span {
+  strong {
     color: $orange;
     font-style: italic;
     font-weight: 700;
