@@ -16,6 +16,10 @@
 
 4 - jquery
 
+5 - swiper js
+
+6 - fontawesome
+
 Les autres librairies présentent dans ./libs n'ont pas encore
 été utilisées.
 
