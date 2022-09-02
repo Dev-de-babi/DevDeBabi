@@ -42,7 +42,8 @@
 
       .dropdown-menu {
         background-color: $navbar-color;
-        border: 1px solid $orange !important;
+        border: none !important;
+        box-shadow: none;
         padding-top: 0;
 
         .dropdown-item {

@@ -1,5 +1,4 @@
 .footer {
-  background-color: $dark-O;
   z-index: -1;
   backdrop-filter: blur(1px);
 
@@ -20,12 +19,8 @@
     color: $gris-O !important;
   }
   .social a {
-    background-color: $vert;
     color: $vert-C;
-    padding: 15px;
-    margin: 0 5px;
     font-size: calc($grand - 5px);
-    border-radius: 50%;
     width: 55px;
     height: 55px;
     display: flex;

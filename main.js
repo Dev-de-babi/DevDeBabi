@@ -1,12 +1,41 @@
 import { animElt } from "./js/elementsAnim.js";
 import { rippleAnim } from "./js/btn.js"
-import { gen } from "./js/bubbleGenerator.js";
 
+
+
+// Caroussel notre equipe
+var swiper = new Swiper(".mySwiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    loop: true,
+    coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 300,
+        modifier: 1,
+        slideShadows: false,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+    },
+});
+
+// Animation d'une card de la section notre equipe
+const roundedBtn = document.querySelectorAll(".btn-rounded")
+roundedBtn.forEach(btn => {
+    btn.addEventListener("click", () => {
+        btn.previousElementSibling.classList.toggle("infosChecked")
+        btn.classList.toggle("infosCheckedR")
+    })
+});
 
 // Mouvement des bulles en arrière plan
 const globalBg = document.querySelector(".global-bg")
 window.addEventListener("scroll", () => {
-    globalBg.style.transform = `translateY(-${window.scrollY}px)`
+    globalBg.style.transform = `translateY(-${window.scrollY - window.scrollY * 70 / 100}px)`
 })
 
 // Je déplace légèrement la scroll bar pour régler un petit bug

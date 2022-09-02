@@ -125,7 +125,8 @@ body {
 }
 .navbar .navbar-nav .nav-item .dropdown-menu {
   background-color: #030f21;
-  border: 1px solid #e85f31 !important;
+  border: none !important;
+  box-shadow: none;
   padding-top: 0;
 }
 .navbar .navbar-nav .nav-item .dropdown-menu .dropdown-item {
@@ -162,7 +163,6 @@ body {
   }
 }
 .footer {
-  background-color: rgba(0, 0, 0, 0.65);
   z-index: -1;
   backdrop-filter: blur(1px);
 }
@@ -180,12 +180,8 @@ body {
   color: rgba(129, 129, 129, 0.65) !important;
 }
 .footer .social a {
-  background-color: #01423a;
   color: #009e60;
-  padding: 15px;
-  margin: 0 5px;
   font-size: 25px;
-  border-radius: 50%;
   width: 55px;
   height: 55px;
   display: flex;
@@ -260,6 +256,11 @@ body {
 }
 .trigged i:nth-of-type(3) {
   transform: translateX(22%);
+}
+
+.btn-rounded {
+  width: 30px;
+  height: 30px;
 }
 
 .navbar-toggler {
@@ -461,61 +462,68 @@ h1 {
 .equipe {
   background-color: rgba(0, 0, 0, 0.65);
 }
-.equipe .col {
-  height: 250px;
-  position: relative;
-}
-.equipe .col .card {
+.equipe .card {
   overflow: hidden;
-  border-radius: 15px;
   background-color: #01423a;
-  width: 250px;
-  background: url("../../assets/img/OT.png") #01423a;
-}
-.equipe .col .card:hover > .info {
-  transform: translateY(0);
-}
-.equipe .col .card .info {
-  position: absolute;
-  width: 100%;
-  height: 100%;
   color: #fff;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.795) 31%, transparent);
-  transform: translateY(300px);
-  transition: transform 0.5s ease-in-out;
+  width: 20em;
+  height: 85%;
+  background-color: #01423a;
+  border-radius: 2em;
+  box-shadow: 0 0 2em rgba(0, 0, 0, 0.2);
+  padding: 2em 1em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 2em;
 }
-.equipe .col .card .info .lol {
+.equipe .card .card-content {
   width: 100%;
   height: 100%;
 }
-.equipe .col .card .info .lol .nom-prenoms {
-  font-size: 25px;
-  font-weight: bold;
-  position: absolute !important;
+.equipe .card .card-content .card-image {
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  border: 2px solid #e85f31;
   position: absolute;
-  top: 50%;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  background-color: #009e60;
+}
+.equipe .card .card-content .card-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.equipe .card .card-content .nom-prenoms {
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 58%;
   left: 0;
   right: 0;
-  transform: translateY(-50%);
   display: flex;
   justify-content: center;
 }
-.equipe .col .card .info .lol .fonction {
-  font-size: 12.5px;
+.equipe .card .card-content .fonction {
+  font-size: 14px;
   font-style: italic;
   position: absolute;
-  top: 60%;
+  top: 71%;
   left: 0;
   right: 0;
   display: flex;
   justify-content: center;
   line-height: 14px;
 }
-.equipe .col .card .info .lol .fonction .fondateur {
+.equipe .card .card-content .fonction .fondateur {
   color: #e85f31;
 }
-.equipe .col .card .info .lol .social {
-  font-size: 19.5px;
+.equipe .card .card-content .social {
+  font-size: 20px;
   font-style: italic;
   position: absolute;
   bottom: 10%;
@@ -524,14 +532,81 @@ h1 {
   display: flex;
   justify-content: space-between;
   line-height: 14px;
-  width: 50%;
+  width: 40%;
 }
-.equipe .col .card .info .lol .social a {
+.equipe .card .card-content .social a {
   transition: all 0.3s ease;
 }
-.equipe .col .card .info .lol .social a:hover {
+.equipe .card .card-content .social a:hover {
   transform: scale(0.85);
   color: #e85f31;
+}
+.equipe .card:hover > .info {
+  transform: translateY(0);
+}
+.equipe .card .btn-rounded {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  transition: transform 0.5s linear;
+}
+.equipe .card .infos {
+  position: absolute;
+  width: 100%;
+  height: 75%;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 110%);
+  background-color: #e85f31;
+  transform-origin: center;
+  border-radius: 13.5% 0 0 0;
+  transition: transform 0.3s linear;
+}
+.equipe .card .infos ul {
+  list-style-type: georgian;
+}
+.equipe .card .infos span {
+  font-weight: 300;
+}
+.equipe .card .infos .container::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: 100.1%;
+  right: 0.2%;
+  border-radius: 0 0 85% 0;
+  background-color: #01423a;
+}
+.equipe .card .infos .container::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: 99%;
+  right: 0%;
+  background-color: #e85f31;
+}
+.equipe .card .infosChecked {
+  transform: translate(-50%, 0);
+}
+.equipe .card .infosCheckedR {
+  transform: rotate(225deg);
+}
+.equipe .swiper {
+  width: 100%;
+  height: 400px;
+}
+.equipe .swiper .swiper-pagination-bullet {
+  background-color: #afafaf;
+}
+.equipe .swiper .swiper-pagination-bullet-active {
+  background-color: #e85f31;
+}
+.equipe .swiper .swiper-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .presentation p,
@@ -620,6 +695,14 @@ h1 {
     transform: scale(0.8) translateX(-50%);
   }
 }
+@keyframes infosAnim {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
 @media screen and (max-width: 576px) {
   .game-png {
     width: 100%;
@@ -667,6 +750,10 @@ h1 {
     right: -15vw;
     bottom: -20vh;
   }
+}
+.swiper {
+  width: 600px;
+  height: 300px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -10,11 +10,17 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.min.css">
+    <!-- Fontawesome -->
     <link rel="stylesheet" href="./libs/fontawesome/css/all.min.css">
+    <!-- Swiper -->
+    <link rel="stylesheet" href="./libs/swiperjs/swiper-bundle.min.css">
+
     <!-- css imports -->
     <link rel="stylesheet" href="./css/style.css">
     <title>Dev De Babi | D2B</title>
-
+    <style>
+        /* ----------- SLIDER ------------ */
+    </style>
 </head>
 
 <body>
@@ -85,19 +91,10 @@
                     <div class="collapse navbar-collapse justify-content-md-between" id="navbarsExampleXxl">
                         <ul class="navbar-nav w-100 justify-content-sm-center">
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle active" href="#" id="accueil-nav"
-                                    data-bs-toggle="dropdown" aria-expanded="false">Accueil</a>
-                                <ul class="dropdown-menu" aria-labelledby="accueil-nav">
-                                    <li><a class="dropdown-item active" href="#presentation">Présentation</a></li>
-                                    <li><a class="dropdown-item" href="#nosjeux">Nos jeux</a></li>
-                                    <li><a class="dropdown-item" href="#gara">GARA</a></li>
-                                    <li><a class="dropdown-item" href="#equipe">Nos services</a></li>
-                                    <li><a class="dropdown-item" href="#">Notre équipe</a></li>
-                                    <li><a class="dropdown-item" href="#">Nous contacter</a></li>
-                                </ul>
+                                <a class="nav-link active" href="#" id="accueil-nav">Accueil</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#">Jeux</a>
+                                <a class="nav-link" href="#">Jeux</a>
                             </li>
                         </ul>
                         <div class="d-flex btns-container">
@@ -105,7 +102,6 @@
                             <a href="#" class="btn">Inscription</a>
                         </div>
                     </div>
-
                 </div>
             </nav>
             <!-- Fin barre de navigation -->
@@ -114,7 +110,7 @@
             <!-- Début des sections -->
 
             <!-- Début section Présentation -->
-            <div id="presentation" class="container col-xxl-8 px-4 pt-5 presentation">
+            <section id="presentation" class="container col-xxl-8 px-4 pt-5 presentation">
                 <div class="row flex-lg-row-reverse align-items-center g-5 py-3 justify-content-center">
                     <div class="col-10 col-sm-8 col-lg-6 position-relative">
                         <img src="./assets/img/MASCOTTE.png" class="d-block mx-lg-auto img-fluid" alt="Mascotte D2B"
@@ -140,12 +136,12 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
             <!-- Fin section Présentation -->
 
             <!-- ----------------------------------------------------------------------- -->
             <!-- Début section Nos jeux -->
-            <div id="nosjeux" class="container col-xxl-8 px-4 py-t mb-5 nosjeux">
+            <section id="nosjeux" class="container col-xxl-8 px-4 py-t mb-5 nosjeux">
                 <div class="row flex-lg-row-reverse align-items-center g-2 py-3 justify-content-sm-center nosjeux-rev">
                     <div class="col-lg-6">
                         <h1 class="display-5 fw-bold lh-1 mb-3">Nos jeux</h1>
@@ -165,14 +161,14 @@
                         <img src="./assets/img/MANETTE.png" alt="boule bleue" class="" width="170" loading="lazy">
                     </div>
                 </div>
-            </div>
+            </section>
             <!-- Fin section Nos jeux -->
             <!-- ----------------------------------------------------------------------- -->
         </div>
 
         <!-- ----------------------------------------------------------------------- -->
         <!-- Début section gara -->
-        <div id="gara" class="container-fluid gara">
+        <section id="gara" class="container-fluid gara">
             <div class="container">
                 <div class="py-5 text-center">
                     <div class="d-flex my-3">
@@ -187,20 +183,20 @@
                             Vous pourrez aussi y télécharger tout nos jeux.
                         </p>
                         <div class="d-flex justify-content-center">
-                            <button type="button" class="btn px-4 w-75">
+                            <a href="https://web.gara.store" target="_blank" class="btn px-4 w-75">
                                 Télecharger
                                 <i class="fas fa-download mx-2"></i>
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         <!-- Fin section gara -->
 
         <!-- ----------------------------------------------------------------------- -->
         <!-- Début section Nos services -->
-        <div id="nosservices" class="container-fluid nosservices">
+        <section id="nosservices" class="container-fluid nosservices">
             <div class="container">
                 <h1 class="display-5 fw-bold text-center mb-3">Services</h1>
                 <div class="row row-cols-1 row-cols-md-2">
@@ -222,226 +218,318 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         <!-- Fin section nosservices -->
 
         <!-- ----------------------------------------------------------------------- -->
         <!-- Début section notre equipe -->
-        <div id="equipe" class="container-fluid equipe py-5">
+        <section id="equipe" class="container-fluid equipe py-5">
             <div class="container">
                 <h1 class="display-5 fw-bold text-center mb-3">Notre équipe</h1>
                 <div class="col-lg-6 mx-auto">
-                    <p class="lead my-5 text-center">
-                        <strong>D2B</strong> est principalement composée de devs, et de designers.
+                    <p class="lead my-2 text-center">
+                        <strong>D2B</strong> est principalement composée de dévéloppeurs, et de designers.
                         Vous pouvez en savoir plus sur l'un des membres en cliquant sur l'une des icônes
-                        qui apparaissent au survol du cadre de la photo.
+                        sur les cadres.
                     </p>
                 </div>
-                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-5">
-                    <div class="col d-flex justify-content-center justify-content-xl-end">
-                        <div class="card">
-                            <!-- Photo du membre en background de l'élément -->
-                            <div class="info">
-                                <div class="lol">
-                                    <div class="nom-prenoms">Issouf Kaboré</div>
-                                    <div class="fonction">Dev jeux | Fondateur <i
-                                            class="fas fa-circle-check mx-1 fondateur"></i>
-                                    </div>
-                                    <div class="social">
-                                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                                        <a href="#"><i class="fab fa-facebook"></i></a>
-                                        <a href="#"><i class="fab fa-github"></i></a>
-                                        <a href="#"><i class="fas fa-globe"></i></a>
-                                    </div>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+
+                        <!-- Issouf -->
+                        <div class="card swiper-slide">
+                            <div class="card-content">
+                                <div class="card-image">
+                                    <img src="./assets/img/OT.png" alt="card image">
                                 </div>
+                                <div class="nom-prenoms">Issouf Kaboré</div>
+                                <div class="fonction">Dévéloppeur de jeux | Fondateur <i
+                                        class="fas fa-circle-check mx-1 fondateur"></i>
+                                </div>
+                                <div class="social">
+                                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                                    <a href="#"><i class="fab fa-facebook"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fas fa-globe"></i></a>
+                                </div>
+                            </div>
+                            <div class="infos">
+                                <div class="container position-relative w-100 h-100 p-3">
+                                    <div class="text-center fs-3 fw-bold my-2">Autres compétences</div>
+                                    <ul>
+                                        <li class="fs-6">
+                                            Dévéloppeur d'application mobile
+                                        </li>
+                                        <span class="text-center d-block">Ionic, Flutter...</span>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="btn btn-rounded">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+
+                        <!-- Désiré -->
+                        <div class="card swiper-slide">
+                            <div class="card-content">
+                                <div class="card-image">
+                                    <img src="./assets/img/OT.png" alt="card image">
+                                </div>
+                                <div class="nom-prenoms">Charles Bally</div>
+                                <div class="fonction">Dévéloppeur de jeux | membre <i
+                                        class="fas fa-circle-check mx-1"></i>
+                                </div>
+                                <div class="social">
+                                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                                    <a href="#"><i class="fab fa-facebook"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fas fa-globe"></i></a>
+                                </div>
+                            </div>
+                            <div class="infos">
+                                <div class="container position-relative w-100 h-100 p-3">
+                                    <div class="text-center fs-3 fw-bold my-2">Autres compétences</div>
+                                    <ul>
+                                        <li class="fs-6">
+                                            Dévéloppeur web frontend
+                                        </li>
+                                        <span class="text-center d-block">React js...</span>
+                                        <li class="fs-6">
+                                            Dévéloppeur web backend
+                                        </li>
+                                        <span class="text-center d-block">Node js, PHP procédural...</span>
+                                        <li class="fs-6">
+                                            Dévéloppeur d'application mobile
+                                        </li>
+                                        <span class="text-center d-block">Swift...</span>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="btn btn-rounded">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+
+                        <!-- Melo -->
+                        <div class="card swiper-slide">
+                            <div class="card-content">
+                                <div class="card-image">
+                                    <img src="./assets/img/OT.png" alt="card image">
+                                </div>
+                                <div class="nom-prenoms">Cédric Datcha</div>
+                                <div class="fonction">Dévéloppeur Web Backend | membre <i
+                                        class="fas fa-circle-check mx-1"></i>
+                                </div>
+                                <div class="social">
+                                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                                    <a href="#"><i class="fab fa-facebook"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fas fa-globe"></i></a>
+                                </div>
+                            </div>
+                            <div class="infos">
+                                <div class="container position-relative w-100 h-100 p-3">
+                                    <div class="text-center fs-3 fw-bold my-2">Autres compétences</div>
+                                    <ul>
+                                        <li class="fs-6">
+                                            Dévéloppeur web fullstack
+                                        </li>
+                                        <span class="text-center d-block">Symphony, Laravel, Vue Js...</span>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="btn btn-rounded">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+
+                        <!-- Franck -->
+                        <div class="card swiper-slide">
+                            <div class="card-content">
+                                <div class="card-image">
+                                    <img src="./assets/img/OT.png" alt="card image">
+                                </div>
+                                <div class="nom-prenoms">Franck Koutouan</div>
+                                <div class="fonction">UI / UI Designer | membre <i class="fas fa-circle-check mx-1"></i>
+                                </div>
+                                <div class="social">
+                                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                                    <a href="#"><i class="fab fa-facebook"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fas fa-globe"></i></a>
+                                </div>
+                            </div>
+                            <div class="infos">
+                                <div class="container position-relative w-100 h-100 p-3">
+                                    <div class="text-center fs-3 fw-bold my-2">Autres compétences</div>
+                                    <ul>
+                                        <li class="fs-6">
+                                            Graphiste
+                                        </li>
+                                        <span class="text-center d-block">Figma, Adobe Photoshop, Illustrator,
+                                            Figma...</span>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="btn btn-rounded">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+
+                        <!-- Moi -->
+                        <div class="card swiper-slide">
+                            <div class="card-content">
+                                <div class="card-image">
+                                    <img src="./assets/img/OT.png" alt="card image">
+                                </div>
+                                <div class="nom-prenoms">Kevin Kouakou</div>
+                                <div class="fonction">Dévéloppeur web frontend | membre <i
+                                        class="fas fa-circle-check mx-1"></i>
+                                </div>
+                                <div class="social">
+                                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                                    <a href="#"><i class="fab fa-facebook"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fas fa-globe"></i></a>
+                                </div>
+                            </div>
+                            <div class="infos">
+                                <div class="container position-relative w-100 h-100 p-3">
+                                    <div class="text-center fs-3 fw-bold my-2">Autres compétences</div>
+                                    <ul>
+                                        <li class="fs-6">
+                                            UI / UX Designer
+                                        </li>
+                                        <span class="text-center d-block">Figma, Illustrator,
+                                            Figma...</span>
+                                        <li class="fs-6">
+                                            Dévéloppeur Backend
+                                        </li>
+                                        <span class="text-center d-block">PHP (MVC pattern)...</span>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="btn btn-rounded">
+                                <i class="fas fa-plus"></i>
                             </div>
                         </div>
                     </div>
-                    <div class="col d-flex justify-content-center">
-                        <div class="card">
-                            <!-- Photo du membre en background de l'élément -->
-                            <div class="info">
-                                <div class="lol">
-                                    <div class="nom-prenoms">Charles Bally </div>
-                                    <div class="fonction">Dev jeux | Membres <i class="fas fa-circle-check mx-1"></i>
-                                    </div>
-                                    <div class="social">
-                                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                                        <a href="#"><i class="fab fa-facebook"></i></a>
-                                        <a href="#"><i class="fab fa-github"></i></a>
-                                        <a href="#"><i class="fas fa-globe"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col d-flex justify-content-center justify-content-xl-start">
-                        <div class="card">
-                            <!-- Photo du membre en background de l'élément -->
-                            <div class="info">
-                                <div class="lol">
-                                    <div class="nom-prenoms">Franck Koutouan</div>
-                                    <div class="fonction">UI/UI Designer | Membre <i
-                                            class="fas fa-circle-check mx-1"></i>
-                                    </div>
-                                    <div class="social">
-                                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                                        <a href="#"><i class="fab fa-facebook"></i></a>
-                                        <a href="#"><i class="fab fa-github"></i></a>
-                                        <a href="#"><i class="fas fa-globe"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-md-2 g-5 my-2">
-                    <div class="col d-flex justify-content-center justify-content-xl-end">
-                        <div class="card">
-                            <!-- Photo du membre en background de l'élément -->
-                            <div class="info">
-                                <div class="lol">
-                                    <div class="nom-prenoms">Cédric Datcha</div>
-                                    <div class="fonction">Dev Web Backend | Membre <i
-                                            class="fas fa-circle-check mx-1"></i>
-                                    </div>
-                                    <div class="social">
-                                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                                        <a href="#"><i class="fab fa-facebook"></i></a>
-                                        <a href="#"><i class="fab fa-github"></i></a>
-                                        <a href="#"><i class="fas fa-globe"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col d-flex justify-content-center justify-content-xl-start">
-                        <div class="card">
-                            <!-- Photo du membre en background de l'élément -->
-                            <div class="info">
-                                <div class="lol">
-                                    <div class="nom-prenoms">Kevin Kouakou</div>
-                                    <div class="fonction">Dev Web Frontend | Menbre <i
-                                            class="fas fa-circle-check mx-1"></i>
-                                    </div>
-                                    <div class="social">
-                                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                                        <a href="#"><i class="fab fa-facebook"></i></a>
-                                        <a href="#"><i class="fab fa-github"></i></a>
-                                        <a href="#"><i class="fas fa-globe"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
-        </div>
-        <!-- Fin section notre equipe -->
+            <!-- Fin section notre equipe -->
 
-        <!-- ----------------------------------------------------------------------- -->
-        <!-- Fin des sections -->
-        <!-- Début du footer -->
-        <div class="container-fluid footer pt-5">
-            <div class="container">
-                <footer class="py-1">
-                    <div class="d-flex justify-content-between align-items-center pb-2">
-                        <a href="#">
-                            <img id="d2b-logo" src="./assets/img/D2B LOGO.png" alt="logo - Dev De Babi" width="50">
-                        </a>
-                        <ul class="list-unstyled d-flex social position-relative m-0">
+            <!-- ----------------------------------------------------------------------- -->
+            <!-- Fin des sections -->
+            <!-- Début du footer -->
+            <div class="container-fluid footer pt-5">
+                <div class="container">
+                    <footer class="py-1">
+                        <div class="d-flex justify-content-between align-items-center pb-2">
                             <a href="#">
-                                <li>
-                                    <i class="fab fa-facebook"></i>
-                                </li>
+                                <img id="d2b-logo" src="./assets/img/D2B LOGO.png" alt="logo - Dev De Babi" width="50">
                             </a>
-                            <a href="#">
-                                <li>
-                                    <i class="fab fa-youtube"></i>
-                                </li>
-                            </a>
-                        </ul>
-                    </div>
-                    <div class="row py-5">
-                        <div class="py-1 col-sm-12 col-md-6 col-xl-4">
-                            <h5>A propos</h5>
-                            <p>
-                                Je ne sais pas quoi écrire, consectetur adipisicing elit. Corporis, explicabo. Quibusdam
-                                consectetur sint odio dolorum nam, molestiae aliquam minima consequuntur iure
-                                consequatur voluptas exercitationem veniam? Debitis eos veniam aliquid doloremque.
-                            </p>
-                        </div>
-
-                        <div class="py-1 col-sm-12 col-md-6 col-xl-2">
-                            <h5>Jeux</h5>
-                            <ul class="nav flex-column">
-                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Ivoire run</a>
-                                </li>
-                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Gnama Gnama</a>
-                                </li>
-                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Référence
-                                        ivoirienne</a></li>
+                            <ul class="list-unstyled d-flex social position-relative m-0">
+                                <a href="#">
+                                    <li>
+                                        <i class="fab fa-facebook"></i>
+                                    </li>
+                                </a>
+                                <a href="#">
+                                    <li>
+                                        <i class="fab fa-youtube"></i>
+                                    </li>
+                                </a>
                             </ul>
                         </div>
-
-                        <div class="py-1 col-sm-12 col-md-6 col-xl-2">
-                            <h5>Navigation</h5>
-                            <ul class="nav flex-column">
-                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Présentation</a>
-                                </li>
-                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Nos jeux</a></li>
-                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">GARA</a></li>
-                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Nos services</a>
-                                </li>
-                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Notre équipe</a>
-                                </li>
-                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Nous contacter</a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="py-1 col-sm-12 col-md-6 col-xl-4">
-                            <form>
-                                <h5>News Letter</h5>
-                                <p class="text-white fw-thin">Abonnez vous à notre news letter pour ne rien rater du
-                                    contenu de
-                                    nos nouveaux jeux
+                        <div class="row py-5">
+                            <div class="py-1 col-sm-12 col-md-6 col-xl-4">
+                                <h5>A propos</h5>
+                                <p>
+                                    Je ne sais pas quoi écrire, consectetur adipisicing elit. Corporis, explicabo.
+                                    Quibusdam
+                                    consectetur sint odio dolorum nam, molestiae aliquam minima consequuntur iure
+                                    consequatur voluptas exercitationem veniam? Debitis eos veniam aliquid doloremque.
                                 </p>
-                                <div class="d-flex w-100 gap-2">
-                                    <input type="email" class="input-field rounded" placeholder="Adresse mail">
-                                    <button class="btn btn-icon rounded" type="submit">
-                                        <i class="fa-solid fa-paper-plane"></i>
-                                    </button>
-                                </div>
-                            </form>
+                            </div>
+
+                            <div class="py-1 col-sm-12 col-md-6 col-xl-2">
+                                <h5>Jeux</h5>
+                                <ul class="nav flex-column">
+                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Ivoire run</a>
+                                    </li>
+                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Gnama
+                                            Gnama</a>
+                                    </li>
+                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Référence
+                                            ivoirienne</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="py-1 col-sm-12 col-md-6 col-xl-2">
+                                <h5>Navigation</h5>
+                                <ul class="nav flex-column">
+                                    <li class="nav-item mb-2"><a href="#"
+                                            class="nav-link p-0 text-muted">Présentation</a>
+                                    </li>
+                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Nos jeux</a>
+                                    </li>
+                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">GARA</a></li>
+                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Nos
+                                            services</a>
+                                    </li>
+                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Notre
+                                            équipe</a>
+                                    </li>
+                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Nous
+                                            contacter</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="py-1 col-sm-12 col-md-6 col-xl-4">
+                                <form>
+                                    <h5>News Letter</h5>
+                                    <p class="text-white fw-thin">Abonnez vous à notre news letter pour ne rien rater du
+                                        contenu de
+                                        nos nouveaux jeux
+                                    </p>
+                                    <div class="d-flex w-100 gap-2">
+                                        <input type="email" class="input-field rounded" placeholder="Adresse mail">
+                                        <button class="btn btn-icon rounded" type="submit">
+                                            <i class="fa-solid fa-paper-plane"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                    </div>
-                    <p class="footer-copy py-3 text-center">Copyright ©
-                        <script>
-                            document.write(new Date().getFullYear());
-                        </script> Dev de Babi | Tout droit réservé
-                    </p>
-                </footer>
+                        <p class="footer-copy py-3 text-center">Copyright ©
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script> Dev de Babi | Tout droit réservé
+                        </p>
+                    </footer>
+                </div>
             </div>
-        </div>
-        <!-- Fin du footer -->
+            <!-- Fin du footer -->
 
-    </div>
+        </section>
 
-    <!-- js imports -->
-    <script src="./libs/jquery/js/jquery.js"></script>
-    <script src="./libs/scrollreveal/js/scrollreveal.js"></script>
-    <script src="./libs/animejs/lib/anime.min.js"></script>
-    <script src="./libs/typewriter/js/typewriter.js"></script>
-    <script src="./libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script>
-        $(window).on('load', function () {
-            $(".loader").fadeOut(1000);
-            $(".global-container").fadeIn(1000);
-        });
-    </script>
+        <!-- js imports -->
+        <script src="./libs/jquery/js/jquery.js"></script>
+        <script src="./libs/scrollreveal/js/scrollreveal.js"></script>
+        <script src="./libs/animejs/lib/anime.min.js"></script>
+        <script src="./libs/typewriter/js/typewriter.js"></script>
+        <script src="./libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="./libs/swiperjs/swiper-bundle.min.js"></script>
+        <script>
+            $(window).on('load', function () {
+                $(".loader").fadeOut(1000);
+                $(".global-container").fadeIn(1000);
+            });
+        </script>
 
-    <script type="module" src="./main.js"></script>
+        <script type="module" src="./main.js"></script>
 </body>
 
 </html>
