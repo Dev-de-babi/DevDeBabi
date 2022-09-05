@@ -75,7 +75,16 @@
   width: 30px;
   height: 30px;
 }
-
+.user-icon {
+  font-size: calc($grand - 3px);
+  margin: 0 10px;
+  border: none !important;
+  width: auto !important;
+  height: auto !important;
+  &:hover {
+    box-shadow: none !important;
+  }
+}
 .navbar-toggler {
   border-radius: 5px;
   width: 45px;

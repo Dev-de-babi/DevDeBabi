@@ -74,6 +74,15 @@
 // ECRAN TABLETTE > 768px
 @media screen and (min-width: 768px) {
   .navbar {
+    // On enlève l'icone user qui permet de se connecter
+    .user-icon {
+      display: none;
+    }
+    // On met les boutons de connexion et de déconnexion
+    .btns-container {
+      display: flex !important;
+    }
+
     .nav-item {
       & > a.active {
         &::before {

@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./assets/img/D2B LOGO.png" type="image/x-icon">
 
-
     <!-- Bootstrap -->
     <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.min.css">
     <!-- Fontawesome -->
@@ -32,7 +31,7 @@
     </div>
     <!-- Global container -->
     <div class="global-container">
-        <div class="global-bg">
+        <!-- <div class="global-bg">
             <div>
                 <img src="./assets/img/ORANGE.png" alt="Bulle orange" class="orange">
                 <img src="./assets/img/BLANC.png" alt="Bulle blanche" class="blanc">
@@ -73,7 +72,7 @@
                 <img src="./assets/img/BLANC.png" alt="Bulle blanche" class="blanc">
                 <img src="./assets/img/VERT.png" alt="Bulle verte" class="vert">
             </div>
-        </div>
+        </div> -->
         <div class="glass">
             <!-- Début barre de navigation -->
             <nav class="navbar navbar-expand-md sticky-top navbar-dark bg-dark" aria-label="Main navigation">
@@ -81,13 +80,16 @@
                     <a href="#" class="navbar-brand">
                         <img id="d2b-logo" src="./assets/img/D2B LOGO.png" alt="logo - Dev De Babi" width="50">
                     </a>
-                    <button class="btn btn-outlined navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarsExampleXxl" aria-controls="navbarsExampleXxl" aria-expanded="true"
-                        aria-label="Toggle navigation">
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                    </button>
+                    <div class="d-flex">
+                        <a href="#" class="btn btn-outlined user-icon"><i class="fas fa-user-tie"></i></a>
+                        <button class="btn btn-outlined navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarsExampleXxl" aria-controls="navbarsExampleXxl" aria-expanded="true"
+                            aria-label="Toggle navigation">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </button>
+                    </div>
                     <div class="collapse navbar-collapse justify-content-md-between" id="navbarsExampleXxl">
                         <ul class="navbar-nav w-100 justify-content-sm-center">
                             <li class="nav-item dropdown">
@@ -97,7 +99,7 @@
                                 <a class="nav-link" href="#">Jeux</a>
                             </li>
                         </ul>
-                        <div class="d-flex btns-container">
+                        <div class="d-none btns-container">
                             <a href="#" class="btn btn-outlined mx-2">Connexion</a>
                             <a href="#" class="btn">Inscription</a>
                         </div>
@@ -129,10 +131,10 @@
                             aussi
                             divers
                             services liés
-                            à l'informatique que vous pourrez consulter dans l'une sections de la page d'accueil.
+                            à l'informatique que vous pourrez consulter <a class="fw-bold" href="#nosservices">ici</a>.
                         </p>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                            <button type="button" class="btn">Nous joindre</button>
+                            <a href="#contact" class="btn">Nous joindre</a>
                         </div>
                     </div>
                 </div>
@@ -142,12 +144,13 @@
             <!-- ----------------------------------------------------------------------- -->
             <!-- Début section Nos jeux -->
             <section id="nosjeux" class="container col-xxl-8 px-4 py-t mb-5 nosjeux">
-                <div class="row flex-lg-row-reverse align-items-center g-2 py-3 justify-content-sm-center nosjeux-rev">
+                <div class="row flex-sm-row-reverse align-items-center g-2 py-3 justify-content-sm-center nosjeux-rev">
                     <div class="col-lg-6">
                         <h1 class="display-5 fw-bold lh-1 mb-3">Nos jeux</h1>
                         <p class="lead text-end">
-                            <strong>D2B</strong> a déjà plusieurs jeux à son actif. Vous pourrez voir la liste
-                            complète des jeux et les tous les détails sur la page agréé à cet effet.
+                            Nous vous présentons la liste de nos <strong>jeux</strong> créées. Vous pourrez voir la
+                            liste
+                            complète, ainsi que leurs détails en cliquant sur le bouton juste en dessous.
                         </p>
                         <div class="d-grid gap-2 d-md-flex justify-content-sm-end">
                             <button type="button" class="btn">Liste des jeux</button>
@@ -198,7 +201,13 @@
         <!-- Début section Nos services -->
         <section id="nosservices" class="container-fluid nosservices">
             <div class="container">
-                <h1 class="display-5 fw-bold text-center mb-3">Services</h1>
+                <h1 class="display-5 fw-bold text-center mb-3">Nos services</h1>
+                <div class="col-lg-6 mx-auto">
+                    <p class="lead my-2 text-center">
+                        Ci-dessous la liste de tout nos services. Intéressé par l'un de nos services? Joignez nous
+                        depuis <a class="fw-bold" href="#contact">ici</a> !
+                    </p>
+                </div>
                 <div class="row row-cols-1 row-cols-md-2">
                     <div class="col d-flex justify-content-center">
                         <div class="card w-75">
@@ -210,7 +219,7 @@
                     </div>
                     <div class="col d-flex justify-content-center">
                         <div class="card w-75">
-                            <img src="./assets/img/MESSAGE.png" alt="MESSAGE" width="140" height="100" loading="lazy">
+                            <img src="./assets/img/MANETTE.png" alt="MESSAGE" width="160" loading="lazy">
                             <img src="./assets/img/OMBRE.png" alt="OMBRE" width="200" class="shadow" loading="lazy">
                             <p class="lead">Conception de logo, flyer, carte de visite, kakémono...</p>
                             <h3 class="card-title">Infographie</h3>
@@ -417,106 +426,171 @@
                     <div class="swiper-pagination"></div>
                 </div>
             </div>
-            <!-- Fin section notre equipe -->
+        </section>
+        <!-- Fin section notre equipe -->
 
-            <!-- ----------------------------------------------------------------------- -->
-            <!-- Fin des sections -->
-            <!-- Début du footer -->
-            <div class="container-fluid footer pt-5">
-                <div class="container">
-                    <footer class="py-1">
-                        <div class="d-flex justify-content-between align-items-center pb-2">
-                            <a href="#">
-                                <img id="d2b-logo" src="./assets/img/D2B LOGO.png" alt="logo - Dev De Babi" width="50">
-                            </a>
-                            <ul class="list-unstyled d-flex social position-relative m-0">
-                                <a href="#">
-                                    <li>
-                                        <i class="fab fa-facebook"></i>
-                                    </li>
-                                </a>
-                                <a href="#">
-                                    <li>
-                                        <i class="fab fa-youtube"></i>
-                                    </li>
-                                </a>
-                            </ul>
-                        </div>
-                        <div class="row py-5">
-                            <div class="py-1 col-sm-12 col-md-6 col-xl-4">
-                                <h5>A propos</h5>
-                                <p>
-                                    Je ne sais pas quoi écrire, consectetur adipisicing elit. Corporis, explicabo.
-                                    Quibusdam
-                                    consectetur sint odio dolorum nam, molestiae aliquam minima consequuntur iure
-                                    consequatur voluptas exercitationem veniam? Debitis eos veniam aliquid doloremque.
-                                </p>
+        <!-- ----------------------------------------------------------------------- -->
+
+        <!-- Début section Contact -->
+        <section id="contact" class="container-fluid contact">
+            <div class="container">
+                <h1 class="display-5 fw-bold text-center mb-3">Contact</h1>
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-md-5">
+                        <p class="lead mb-4 mt-2 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Corrupti, explicabo? Quos amet eos ducimus atque! Ratione accusamus quam, corporis
+                            blanditiis quis pariatur incidunt, reiciendis ad earum maxime, quidem tempora!</p>
+                        <ul class="list-unstyled pl-md-5 mb-5 position-relative">
+                            <li class="d-flex align-items-center justify-content-start"><i class="fas fa-map mx-3"></i>
+                                Abidjan, côte
+                                d'ivoire</li>
+                            <li class="d-flex align-items-center justify-content-start"><i
+                                    class="fas fa-phone mx-3"></i>
+                                (+225) 07 09 66 43
+                                00</li>
+                            <li class="d-flex align-items-center justify-content-start"><i class="fas fa-box mx-3"></i>
+                                d2b@lol.com
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-6">
+                        <form method="post" id="contactForm" name="contactForm">
+                            <div class="row">
+
+                                <div class="col-md-12 form-group">
+                                    <label for="name" class="col-form-label">Nom</label>
+                                    <input type="text" class="input-field rounded" name="name" id="name"
+                                        placeholder="Qui êtes vous ?">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 form-group">
+                                    <label for="email" class="col-form-label">Email</label>
+                                    <input type="text" class="input-field rounded" name="email" id="email"
+                                        placeholder="Saisissez votre adresse mail">
+                                </div>
                             </div>
 
-                            <div class="py-1 col-sm-12 col-md-6 col-xl-2">
-                                <h5>Jeux</h5>
-                                <ul class="nav flex-column">
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Ivoire run</a>
-                                    </li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Gnama
-                                            Gnama</a>
-                                    </li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Référence
-                                            ivoirienne</a></li>
-                                </ul>
+                            <div class="row">
+                                <div class="col-md-12 form-group">
+                                    <label for="message" class="col-form-label">Message</label>
+                                    <textarea class="input-field rounded" name="message" id="message" cols="30" rows="7"
+                                        placeholder="Qu'avez vous à nous dire ?"></textarea>
+                                </div>
                             </div>
-
-                            <div class="py-1 col-sm-12 col-md-6 col-xl-2">
-                                <h5>Navigation</h5>
-                                <ul class="nav flex-column">
-                                    <li class="nav-item mb-2"><a href="#"
-                                            class="nav-link p-0 text-muted">Présentation</a>
-                                    </li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Nos jeux</a>
-                                    </li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">GARA</a></li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Nos
-                                            services</a>
-                                    </li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Notre
-                                            équipe</a>
-                                    </li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Nous
-                                            contacter</a>
-                                    </li>
-                                </ul>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input type="submit" value="Envoyer" class="btn w-50 mx-auto my-3 py-2 px-4">
+                                    <span class="submitting"></span>
+                                </div>
                             </div>
-
-                            <div class="py-1 col-sm-12 col-md-6 col-xl-4">
-                                <form>
-                                    <h5>News Letter</h5>
-                                    <p class="text-white fw-thin">Abonnez vous à notre news letter pour ne rien rater du
-                                        contenu de
-                                        nos nouveaux jeux
-                                    </p>
-                                    <div class="d-flex w-100 gap-2">
-                                        <input type="email" class="input-field rounded" placeholder="Adresse mail">
-                                        <button class="btn btn-icon rounded" type="submit">
-                                            <i class="fa-solid fa-paper-plane"></i>
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <p class="footer-copy py-3 text-center">Copyright ©
-                            <script>
-                                document.write(new Date().getFullYear());
-                            </script> Dev de Babi | Tout droit réservé
-                        </p>
-                    </footer>
+                        </form>
+                    </div>
                 </div>
             </div>
-            <!-- Fin du footer -->
-
         </section>
+        <!-- Fin section Contact -->
+
+
+
+        <!-- Fin des sections -->
+        <!-- Début du footer -->
+        <div class="container-fluid footer pt-5">
+            <div class="container">
+                <footer class="py-1">
+                    <div class="d-flex justify-content-between align-items-center pb-2">
+                        <a href="#">
+                            <img id="d2b-logo" src="./assets/img/D2B LOGO.png" alt="logo - Dev De Babi" width="50">
+                        </a>
+                        <ul class="list-unstyled d-flex social position-relative m-0">
+                            <a href="#">
+                                <li>
+                                    <i class="fab fa-facebook"></i>
+                                </li>
+                            </a>
+                            <a href="#">
+                                <li>
+                                    <i class="fab fa-youtube"></i>
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="row py-5">
+                        <div class="py-1 col-sm-12 col-md-6 col-xl-4">
+                            <h5>A propos</h5>
+                            <p>
+                                Je ne sais pas quoi écrire, consectetur adipisicing elit. Corporis, explicabo.
+                                Quibusdam
+                                consectetur sint odio dolorum nam, molestiae aliquam minima consequuntur iure
+                                consequatur voluptas exercitationem veniam? Debitis eos veniam aliquid doloremque.
+                            </p>
+                        </div>
+
+                        <div class="py-1 col-sm-12 col-md-6 col-xl-2">
+                            <h5>Jeux</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Ivoire run</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Gnama
+                                        Gnama</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Référence
+                                        ivoirienne</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="py-1 col-sm-12 col-md-6 col-xl-2">
+                            <h5>Navigation</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Présentation</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#nosjeux" class="nav-link p-0 text-muted">Nos
+                                        jeux</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#gara" class="nav-link p-0 text-muted">GARA</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#nosservices" class="nav-link p-0 text-muted">Nos
+                                        services</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#equipe" class="nav-link p-0 text-muted">Notre
+                                        équipe</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#contact" class="nav-link p-0 text-muted">Nous
+                                        contacter</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="py-1 col-sm-12 col-md-6 col-xl-4">
+                            <form>
+                                <h5>Newsletter</h5>
+                                <p class="text-white fw-thin">Abonnez vous à notre news letter pour ne rien rater du
+                                    contenu de
+                                    nos nouveaux jeux
+                                </p>
+                                <div class="d-flex w-100 gap-2">
+                                    <input type="email" class="input-field rounded" placeholder="Adresse mail">
+                                    <button class="btn btn-icon rounded" type="submit">
+                                        <i class="fa-solid fa-paper-plane"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <p class="footer-copy py-3 text-center">Copyright ©
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script> Dev de Babi | Tout droit réservé
+                    </p>
+                </footer>
+            </div>
+        </div>
+        <!-- Fin du footer -->
 
         <!-- js imports -->
         <script src="./libs/jquery/js/jquery.js"></script>
+        <script src="./libs/jquery/js/jquery.validate.min.js"></script>
         <script src="./libs/scrollreveal/js/scrollreveal.js"></script>
         <script src="./libs/animejs/lib/anime.min.js"></script>
         <script src="./libs/typewriter/js/typewriter.js"></script>

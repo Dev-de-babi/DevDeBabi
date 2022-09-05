@@ -1,7 +1,9 @@
 import { animElt } from "./js/elementsAnim.js";
-import { rippleAnim } from "./js/btn.js"
+import { rippleAnim } from "./js/btn.js";
+import { contactForm } from "./js/formValidation.js";
 
-
+// Vérification des données du formulaire
+contactForm()
 
 // Caroussel notre equipe
 var swiper = new Swiper(".mySwiper", {
@@ -33,10 +35,10 @@ roundedBtn.forEach(btn => {
 });
 
 // Mouvement des bulles en arrière plan
-const globalBg = document.querySelector(".global-bg")
-window.addEventListener("scroll", () => {
-    globalBg.style.transform = `translateY(-${window.scrollY - window.scrollY * 70 / 100}px)`
-})
+// const globalBg = document.querySelector(".global-bg")
+// window.addEventListener("scroll", () => {
+//     globalBg.style.transform = `translateY(-${window.scrollY - window.scrollY * 70 / 100}px)`
+// })
 
 // Je déplace légèrement la scroll bar pour régler un petit bug
 document.addEventListener("DOMContentLoaded", () => {

@@ -87,7 +87,7 @@ body {
   height: auto;
   z-index: 10;
   display: none;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -148,6 +148,12 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+  .navbar .user-icon {
+    display: none;
+  }
+  .navbar .btns-container {
+    display: flex !important;
+  }
   .navbar .nav-item > a.active::before {
     content: "";
     position: absolute;
@@ -165,6 +171,7 @@ body {
 .footer {
   z-index: -1;
   backdrop-filter: blur(1px);
+  background-color: rgba(0, 0, 0, 0.65);
 }
 .footer div.row {
   border-bottom: 2px solid #01423a;
@@ -263,6 +270,17 @@ body {
   height: 30px;
 }
 
+.user-icon {
+  font-size: 27px;
+  margin: 0 10px;
+  border: none !important;
+  width: auto !important;
+  height: auto !important;
+}
+.user-icon:hover {
+  box-shadow: none !important;
+}
+
 .navbar-toggler {
   border-radius: 5px;
   width: 45px;
@@ -308,6 +326,16 @@ body {
     opacity: 0;
   }
 }
+.submitting {
+  float: left;
+  width: 100%;
+  padding: 10px 0;
+  display: none;
+  font-weight: bold;
+  font-size: 12px;
+  color: #fff;
+}
+
 .input-field {
   border: none;
   outline: none;
@@ -315,6 +343,15 @@ body {
   height: 40px;
   padding: 3px 15px;
   color: #fff;
+  width: 100%;
+  border: 1.5px solid transparent;
+}
+.input-field:focus {
+  border: 1.5px solid #e85f31;
+}
+
+textarea.input-field {
+  height: auto !important;
 }
 
 h1 {
@@ -548,7 +585,7 @@ h1 {
   position: absolute;
   top: 5%;
   right: 5%;
-  transition: transform 0.5s linear;
+  transition: transform 0.2s linear;
 }
 .equipe .card .infos {
   position: absolute;
@@ -609,17 +646,51 @@ h1 {
   align-items: center;
 }
 
+.contact {
+  background-color: rgba(0, 0, 0, 0.65);
+}
+.contact ul,
+.contact label {
+  color: #fff;
+}
+.contact ul li {
+  width: 80%;
+  font-size: 16.5px;
+  margin: 15px auto;
+}
+.contact ul i {
+  font-size: 16.5px;
+  width: 65px;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+.contact label.error {
+  font-size: 12px;
+  color: #e85f31 !important;
+}
+.contact #message {
+  resize: vertical;
+}
+
 .presentation p,
 .nosjeux p,
 .gara p,
-.equipe p {
+.equipe p,
+.nosservices p,
+.contact p {
   color: #afafaf;
 }
 .presentation p strong,
 .nosjeux p strong,
 .gara p strong,
-.equipe p strong {
-  color: #e85f31;
+.equipe p strong,
+.nosservices p strong,
+.contact p strong {
+  color: #e85f31 !important;
   font-style: italic;
   font-weight: 700;
 }
@@ -632,7 +703,7 @@ h1 {
 .global-bg {
   position: absolute;
   width: 100vw;
-  height: auto;
+  height: 100vh;
   z-index: -1000;
 }
 .global-bg div {
@@ -695,14 +766,6 @@ h1 {
     transform: scale(0.8) translateX(-50%);
   }
 }
-@keyframes infosAnim {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
-}
 @media screen and (max-width: 576px) {
   .game-png {
     width: 100%;
@@ -750,10 +813,6 @@ h1 {
     right: -15vw;
     bottom: -20vh;
   }
-}
-.swiper {
-  width: 600px;
-  height: 300px;
 }
 
 /*# sourceMappingURL=style.css.map */
