@@ -2,6 +2,7 @@ import { animElt } from "./js/elementsAnim.js";
 import { rippleAnim } from "./js/btn.js";
 import { contactForm } from "./js/formValidation.js";
 
+
 // Vérification des données du formulaire
 contactForm()
 

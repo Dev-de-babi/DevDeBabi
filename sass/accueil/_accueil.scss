@@ -75,7 +75,7 @@ h1 {
 .nosservices {
   background-color: $dark-O;
   .col {
-    height: 200px;
+    height: 220px;
     position: relative;
     margin-top: 80px !important;
     .card {
@@ -93,7 +93,7 @@ h1 {
       }
       img:first-of-type {
         animation: imgServicesAnim 6s linear infinite;
-        top: -40%;
+        top: -30%;
       }
       img:last-of-type {
         animation: shadowAnim 6s linear infinite;
@@ -227,7 +227,7 @@ h1 {
         display: flex;
         justify-content: space-between;
         line-height: $petit;
-        width: 40%;
+        width: 30%;
         a {
           transition: all 0.3s ease;
         }
@@ -313,25 +313,30 @@ h1 {
 }
 .contact {
   background-color: $dark-O;
-
-  ul,
   label {
     color: $blanc;
   }
-  ul {
-    li {
-      width: 80%;
-      font-size: $moyen;
-      margin: 15px auto;
+  .item {
+    .title {
+      color: $blanc;
+      font-size: calc($moyen + 1px);
+      font-weight: 500;
+    }
+    .value {
+      color: $gris;
+      font-weight: 400;
+      font-size: calc($moyen - 4px);
     }
     i {
+      // position: absolute;
+      color: $vert-C;
+      background-color: $vert;
       font-size: $moyen;
       width: 65px;
       height: 65px;
       display: flex;
       justify-content: center;
       align-items: center;
-      border: 2px solid $blanc;
       border-radius: 50%;
     }
   }
@@ -339,9 +344,13 @@ h1 {
     font-size: 12px;
     color: $orange !important;
   }
-
   #message {
     resize: vertical;
+  }
+  .toast {
+    font-size: $moyen !important;
+    background-color: $vert-C !important;
+    width: 100% !important;
   }
 }
 
@@ -353,9 +362,15 @@ h1 {
 .contact p {
   color: $gris;
   strong {
-    color: $orange !important;
+    color: $blanc !important;
     font-style: italic;
     font-weight: 700;
+  }
+  a {
+    color: $orange;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 

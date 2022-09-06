@@ -90,6 +90,22 @@ body {
   overflow-x: hidden;
 }
 
+.swal2-timer-progress-bar {
+  background-color: #009e60 !important;
+}
+
+.swal2-title {
+  font-size: 14px !important;
+}
+
+.submitted-message {
+  color: #fff !important;
+}
+
+.hubspot-link__container {
+  display: none !important;
+}
+
 .navbar {
   background-color: #030f21 !important;
   box-shadow: 0 3px 13px #000000;
@@ -422,7 +438,7 @@ h1 {
   background-color: rgba(0, 0, 0, 0.65);
 }
 .nosservices .col {
-  height: 200px;
+  height: 220px;
   position: relative;
   margin-top: 80px !important;
 }
@@ -442,7 +458,7 @@ h1 {
 }
 .nosservices .col .card img:first-of-type {
   animation: imgServicesAnim 6s linear infinite;
-  top: -40%;
+  top: -30%;
 }
 .nosservices .col .card img:last-of-type {
   animation: shadowAnim 6s linear infinite;
@@ -569,7 +585,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   line-height: 14px;
-  width: 40%;
+  width: 30%;
 }
 .equipe .card .card-content .social a {
   transition: all 0.3s ease;
@@ -649,23 +665,28 @@ h1 {
 .contact {
   background-color: rgba(0, 0, 0, 0.65);
 }
-.contact ul,
 .contact label {
   color: #fff;
 }
-.contact ul li {
-  width: 80%;
-  font-size: 16.5px;
-  margin: 15px auto;
+.contact .item .title {
+  color: #fff;
+  font-size: 17.5px;
+  font-weight: 500;
 }
-.contact ul i {
+.contact .item .value {
+  color: #afafaf;
+  font-weight: 400;
+  font-size: 12.5px;
+}
+.contact .item i {
+  color: #009e60;
+  background-color: #01423a;
   font-size: 16.5px;
   width: 65px;
   height: 65px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid #fff;
   border-radius: 50%;
 }
 .contact label.error {
@@ -674,6 +695,11 @@ h1 {
 }
 .contact #message {
   resize: vertical;
+}
+.contact .toast {
+  font-size: 16.5px !important;
+  background-color: #009e60 !important;
+  width: 100% !important;
 }
 
 .presentation p,
@@ -690,9 +716,25 @@ h1 {
 .equipe p strong,
 .nosservices p strong,
 .contact p strong {
-  color: #e85f31 !important;
+  color: #fff !important;
   font-style: italic;
   font-weight: 700;
+}
+.presentation p a,
+.nosjeux p a,
+.gara p a,
+.equipe p a,
+.nosservices p a,
+.contact p a {
+  color: #e85f31;
+}
+.presentation p a:hover,
+.nosjeux p a:hover,
+.gara p a:hover,
+.equipe p a:hover,
+.nosservices p a:hover,
+.contact p a:hover {
+  text-decoration: underline;
 }
 
 .glass {

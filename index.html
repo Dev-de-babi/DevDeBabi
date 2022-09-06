@@ -10,10 +10,12 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.min.css">
     <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v6.2.0/css/pro.min.css">
     <link rel="stylesheet" href="./libs/fontawesome/css/all.min.css">
     <!-- Swiper -->
     <link rel="stylesheet" href="./libs/swiperjs/swiper-bundle.min.css">
-
+    <!-- sweetalert -->
+    <link rel="stylesheet" href="./libs/sweetalertjs/dist/sweetalert2.min.css">
     <!-- css imports -->
     <link rel="stylesheet" href="./css/style.css">
     <title>Dev De Babi | D2B</title>
@@ -124,14 +126,14 @@
                     <div class="col-lg-6">
                         <h1 class="display-5 fw-bold lh-1 mb-3">Dev De Babi</h1>
                         <p class="lead">
-                            <strong>D2B</strong> est une start-up fondée par <strong>Issouf Kaboré</strong>. Elle est
+                            <strong>D2B</strong> est un groupe fondé par <strong>Issouf Kaboré</strong>. Elle est
                             composée
                             de 5
-                            membres, dont la principale activité est la conception de jeux. <strong>D2B</strong> offre
+                            membres, dont la principale activité est la conception de jeux. Nous offrons
                             aussi
                             divers
                             services liés
-                            à l'informatique que vous pourrez consulter <a class="fw-bold" href="#nosservices">ici</a>.
+                            à l'informatique que vous pourrez consulter <a href="#nosservices">ici</a>.
                         </p>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
                             <a href="#contact" class="btn">Nous joindre</a>
@@ -148,9 +150,10 @@
                     <div class="col-lg-6">
                         <h1 class="display-5 fw-bold lh-1 mb-3">Nos jeux</h1>
                         <p class="lead text-end">
-                            Nous vous présentons la liste de nos <strong>jeux</strong> créées. Vous pourrez voir la
-                            liste
-                            complète, ainsi que leurs détails en cliquant sur le bouton juste en dessous.
+                            <strong>D2B</strong> compte de nombreux jeux à son actif. Visitez notre catalogue de jeux et
+                            restez à l'affût
+                            de nos nouvelles sorties en vous abonnant à notre <a href="#newsletter">newsletter</a>.
+
                         </p>
                         <div class="d-grid gap-2 d-md-flex justify-content-sm-end">
                             <button type="button" class="btn">Liste des jeux</button>
@@ -205,7 +208,7 @@
                 <div class="col-lg-6 mx-auto">
                     <p class="lead my-2 text-center">
                         Ci-dessous la liste de tout nos services. Intéressé par l'un de nos services? Joignez nous
-                        depuis <a class="fw-bold" href="#contact">ici</a> !
+                        depuis <a href="#contact">ici</a> !
                     </p>
                 </div>
                 <div class="row row-cols-1 row-cols-md-2">
@@ -213,7 +216,7 @@
                         <div class="card w-75">
                             <img src="./assets/img/MANETTE.png" alt="MANETTE" width="160" loading="lazy">
                             <img src="./assets/img/OMBRE.png" alt="OMBRE" width="200" class="shadow" loading="lazy">
-                            <p class="lead">Conception de jeux (2D/3D) en Tout genre. Pour PC, MAC et Android.</p>
+                            <p class="lead">Conception de jeux (2D/3D) pour mobile et PC.</p>
                             <h3 class="card-title">Jeux</h3>
                         </div>
                     </div>
@@ -221,8 +224,9 @@
                         <div class="card w-75">
                             <img src="./assets/img/MANETTE.png" alt="MESSAGE" width="160" loading="lazy">
                             <img src="./assets/img/OMBRE.png" alt="OMBRE" width="200" class="shadow" loading="lazy">
-                            <p class="lead">Conception de logo, flyer, carte de visite, kakémono...</p>
-                            <h3 class="card-title">Infographie</h3>
+                            <p class="lead">Conception de maquette d'applications web et mobile, de logo, de flyer
+                                etc...</p>
+                            <h3 class="card-title">Graphic design</h3>
                         </div>
                     </div>
                 </div>
@@ -237,9 +241,8 @@
                 <h1 class="display-5 fw-bold text-center mb-3">Notre équipe</h1>
                 <div class="col-lg-6 mx-auto">
                     <p class="lead my-2 text-center">
-                        <strong>D2B</strong> est principalement composée de dévéloppeurs, et de designers.
-                        Vous pouvez en savoir plus sur l'un des membres en cliquant sur l'une des icônes
-                        sur les cadres.
+                        <strong>D2B</strong> est principalement composée de dévéloppeurs et de designers.
+                        Vous pouvez en savoir plus, cliquez sur l'une des icônes ci-dessous.
                     </p>
                 </div>
                 <div class="swiper mySwiper">
@@ -252,12 +255,11 @@
                                     <img src="./assets/img/OT.png" alt="card image">
                                 </div>
                                 <div class="nom-prenoms">Issouf Kaboré</div>
-                                <div class="fonction">Dévéloppeur de jeux | Fondateur <i
-                                        class="fas fa-circle-check mx-1 fondateur"></i>
+                                <div class="fonction">Dévéloppeur de jeux <i class="fas fa-gamepad mx-1"></i> |
+                                    Fondateur
                                 </div>
                                 <div class="social">
                                     <a href="#"><i class="fab fa-whatsapp"></i></a>
-                                    <a href="#"><i class="fab fa-facebook"></i></a>
                                     <a href="#"><i class="fab fa-linkedin"></i></a>
                                     <a href="#"><i class="fas fa-globe"></i></a>
                                 </div>
@@ -285,12 +287,11 @@
                                     <img src="./assets/img/OT.png" alt="card image">
                                 </div>
                                 <div class="nom-prenoms">Charles Bally</div>
-                                <div class="fonction">Dévéloppeur de jeux | membre <i
-                                        class="fas fa-circle-check mx-1"></i>
+                                <div class="fonction">Dévéloppeur de jeux <i class="fas fa-gamepad mx-1"></i> |
+                                    Co-fondateur
                                 </div>
                                 <div class="social">
                                     <a href="#"><i class="fab fa-whatsapp"></i></a>
-                                    <a href="#"><i class="fab fa-facebook"></i></a>
                                     <a href="#"><i class="fab fa-linkedin"></i></a>
                                     <a href="#"><i class="fas fa-globe"></i></a>
                                 </div>
@@ -326,12 +327,11 @@
                                     <img src="./assets/img/OT.png" alt="card image">
                                 </div>
                                 <div class="nom-prenoms">Cédric Datcha</div>
-                                <div class="fonction">Dévéloppeur Web Backend | membre <i
-                                        class="fas fa-circle-check mx-1"></i>
+                                <div class="fonction">Dévéloppeur Web Backend <i class="fas fa-gamepad mx-1"></i> |
+                                    Co-fondateur
                                 </div>
                                 <div class="social">
                                     <a href="#"><i class="fab fa-whatsapp"></i></a>
-                                    <a href="#"><i class="fab fa-facebook"></i></a>
                                     <a href="#"><i class="fab fa-linkedin"></i></a>
                                     <a href="#"><i class="fas fa-globe"></i></a>
                                 </div>
@@ -359,11 +359,9 @@
                                     <img src="./assets/img/OT.png" alt="card image">
                                 </div>
                                 <div class="nom-prenoms">Franck Koutouan</div>
-                                <div class="fonction">UI / UI Designer | membre <i class="fas fa-circle-check mx-1"></i>
-                                </div>
+                                <div class="fonction">UI / UI Designer <i class="fas fa-circle-check mx-1"></i> </div>
                                 <div class="social">
                                     <a href="#"><i class="fab fa-whatsapp"></i></a>
-                                    <a href="#"><i class="fab fa-facebook"></i></a>
                                     <a href="#"><i class="fab fa-linkedin"></i></a>
                                     <a href="#"><i class="fas fa-globe"></i></a>
                                 </div>
@@ -392,12 +390,10 @@
                                     <img src="./assets/img/OT.png" alt="card image">
                                 </div>
                                 <div class="nom-prenoms">Kevin Kouakou</div>
-                                <div class="fonction">Dévéloppeur web frontend | membre <i
-                                        class="fas fa-circle-check mx-1"></i>
+                                <div class="fonction">Dévéloppeur web frontend<i class="fas fa-circle-check mx-1"></i>
                                 </div>
                                 <div class="social">
                                     <a href="#"><i class="fab fa-whatsapp"></i></a>
-                                    <a href="#"><i class="fab fa-facebook"></i></a>
                                     <a href="#"><i class="fab fa-linkedin"></i></a>
                                     <a href="#"><i class="fas fa-globe"></i></a>
                                 </div>
@@ -435,29 +431,49 @@
         <section id="contact" class="container-fluid contact">
             <div class="container">
                 <h1 class="display-5 fw-bold text-center mb-3">Contact</h1>
-                <div class="row align-items-center justify-content-between">
-                    <div class="col-md-5">
-                        <p class="lead mb-4 mt-2 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Corrupti, explicabo? Quos amet eos ducimus atque! Ratione accusamus quam, corporis
-                            blanditiis quis pariatur incidunt, reiciendis ad earum maxime, quidem tempora!</p>
-                        <ul class="list-unstyled pl-md-5 mb-5 position-relative">
-                            <li class="d-flex align-items-center justify-content-start"><i class="fas fa-map mx-3"></i>
-                                Abidjan, côte
-                                d'ivoire</li>
-                            <li class="d-flex align-items-center justify-content-start"><i
-                                    class="fas fa-phone mx-3"></i>
-                                (+225) 07 09 66 43
-                                00</li>
-                            <li class="d-flex align-items-center justify-content-start"><i class="fas fa-box mx-3"></i>
-                                d2b@lol.com
-                            </li>
-                        </ul>
+                <div class="row align-items-start justify-content-between">
+                    <div class="col-lg-7">
+                        <p class="lead mb-4 mt-2 text-center">Remplissez le formulaire ci-contre en vu de nous joindre
+                            pour en apprendre un peu plus sur les services que nous proposons. Vous pouvez aussi
+                            utiliser ce formulaire pour nous signaler un bug, ou tout disfonctionnement que vous aurez
+                            rencontrer en utilisant un de nos produits, ou en jouant à l'un de nos jeux.</p>
+                        <div class="row row-cols-3 justify-content-center">
+                            <div
+                                class="item d-flex flex-column mx-0 my-2 px-0 justify-content-center align-items-center">
+                                <div>
+                                    <i class="fas fa-map mx-2"></i>
+                                </div>
+                                <div class="d-flex flex-column justify-content-center align-items-center">
+                                    <div class="title mb-1">Localisation</div>
+                                    <div class="value">Abidjan, côte d'ivoire</div>
+                                </div>
+                            </div>
+                            <div
+                                class="item d-flex flex-column mx-0 my-2 px-0 justify-content-center align-items-center">
+                                <div>
+                                    <i class="fas fa-map mx-2"></i>
+                                </div>
+                                <div class="d-flex flex-column justify-content-center align-items-center">
+                                    <div class="title mb-1">Téléphone</div>
+                                    <div class="value">(+225) 05 65 1000 29</div>
+                                </div>
+                            </div>
+                            <div
+                                class="item d-flex flex-column mx-0 my-2 px-0 justify-content-center align-items-center">
+                                <div>
+                                    <i class="fas fa-map mx-2"></i>
+                                </div>
+                                <div class="d-flex flex-column justify-content-center align-items-center">
+                                    <div class="title mb-1">E-mail</div>
+                                    <div class="value">kevinkouakou113@gmail.com</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="col-md-6">
-                        <form method="post" id="contactForm" name="contactForm">
+                    <div class="col-lg-5 mt-2 mt-md-0">
+                        <form id="contactForm" name="contactForm">
                             <div class="row">
-
                                 <div class="col-md-12 form-group">
                                     <label for="name" class="col-form-label">Nom</label>
                                     <input type="text" class="input-field rounded" name="name" id="name"
@@ -471,18 +487,35 @@
                                         placeholder="Saisissez votre adresse mail">
                                 </div>
                             </div>
-
                             <div class="row">
                                 <div class="col-md-12 form-group">
                                     <label for="message" class="col-form-label">Message</label>
                                     <textarea class="input-field rounded" name="message" id="message" cols="30" rows="7"
-                                        placeholder="Qu'avez vous à nous dire ?"></textarea>
+                                        placeholder="En quoi pouvons nous vous aider ?"></textarea>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <input type="submit" value="Envoyer" class="btn w-50 mx-auto my-3 py-2 px-4">
-                                    <span class="submitting"></span>
+                                    <button type="submit" class="btn w-50 mx-auto my-3 py-2 px-4">
+                                        <div class="envoyer">Envoyer</div>
+                                        <div class="wait d-none d-flex align-items-center">
+                                            <div class="spinner-border spinner-border-sm" role="status"
+                                                aria-hidden="true">
+                                            </div>
+                                            <div class="mx-1">Un instant...</div>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="toast align-items-center text-white bg-primary border-0 d-none" role="alert"
+                                aria-live="assertive" aria-atomic="true">
+                                <div class="d-flex">
+                                    <div class="toast-body">
+                                        Votre message a bien été envoyer, merci de votre attetion !
+                                    </div>
+                                    <button type="button" class="btn-close btn-close-white me-2 m-auto"
+                                        data-bs-dismiss="toast" aria-label="Close"></button>
                                 </div>
                             </div>
                         </form>
@@ -511,22 +544,17 @@
                             </a>
                             <a href="#">
                                 <li>
+                                    <i class="fab fa-tiktok"></i>
+                                </li>
+                            </a>
+                            <a href="#">
+                                <li>
                                     <i class="fab fa-youtube"></i>
                                 </li>
                             </a>
                         </ul>
                     </div>
-                    <div class="row py-5">
-                        <div class="py-1 col-sm-12 col-md-6 col-xl-4">
-                            <h5>A propos</h5>
-                            <p>
-                                Je ne sais pas quoi écrire, consectetur adipisicing elit. Corporis, explicabo.
-                                Quibusdam
-                                consectetur sint odio dolorum nam, molestiae aliquam minima consequuntur iure
-                                consequatur voluptas exercitationem veniam? Debitis eos veniam aliquid doloremque.
-                            </p>
-                        </div>
-
+                    <div class="row py-5 justify-content-center">
                         <div class="py-1 col-sm-12 col-md-6 col-xl-2">
                             <h5>Jeux</h5>
                             <ul class="nav flex-column">
@@ -562,18 +590,23 @@
                             </ul>
                         </div>
 
-                        <div class="py-1 col-sm-12 col-md-6 col-xl-4">
+                        <div id="newsletter" class="py-1 col-sm-12 col-md-6 col-xl-4">
                             <form>
                                 <h5>Newsletter</h5>
                                 <p class="text-white fw-thin">Abonnez vous à notre news letter pour ne rien rater du
                                     contenu de
-                                    nos nouveaux jeux
+                                    nos nouveaux jeux.
                                 </p>
                                 <div class="d-flex w-100 gap-2">
-                                    <input type="email" class="input-field rounded" placeholder="Adresse mail">
-                                    <button class="btn btn-icon rounded" type="submit">
-                                        <i class="fa-solid fa-paper-plane"></i>
-                                    </button>
+                                    <script charset="utf-8" type="text/javascript"
+                                        src="//js-eu1.hsforms.net/forms/v2.js?pre=1"></script>
+                                    <script>
+                                        hbspt.forms.create({
+                                            region: "eu1",
+                                            portalId: "26226296",
+                                            formId: "1add8fcc-7c7c-42a7-ba0f-03e5a96dab82"
+                                        });
+                                    </script>
                                 </div>
                             </form>
                         </div>
@@ -584,11 +617,13 @@
                         </script> Dev de Babi | Tout droit réservé
                     </p>
                 </footer>
+
             </div>
         </div>
         <!-- Fin du footer -->
 
         <!-- js imports -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
         <script src="./libs/jquery/js/jquery.js"></script>
         <script src="./libs/jquery/js/jquery.validate.min.js"></script>
         <script src="./libs/scrollreveal/js/scrollreveal.js"></script>
@@ -596,6 +631,7 @@
         <script src="./libs/typewriter/js/typewriter.js"></script>
         <script src="./libs/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="./libs/swiperjs/swiper-bundle.min.js"></script>
+        <script src="./libs/sweetalertjs/dist/sweetalert2.all.min.js"></script>
         <script>
             $(window).on('load', function () {
                 $(".loader").fadeOut(1000);
