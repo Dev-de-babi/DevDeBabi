@@ -2,6 +2,17 @@ import { animElt } from "./js/elementsAnim.js";
 import { rippleAnim } from "./js/btn.js";
 import { contactForm } from "./js/formValidation.js";
 
+$(document).ready(function () {
+    $("[data-bs-toggle='popover']").popover({ html: true });
+});
+// Gestion du bouton to-top
+window.addEventListener("scroll", () => {
+    if (window.scrollY > window.innerHeight) {
+        document.querySelector(".to-top").classList.remove("d-none")
+    } else {
+        document.querySelector(".to-top").classList.add("d-none")
+    }
+})
 
 // Vérification des données du formulaire
 contactForm()

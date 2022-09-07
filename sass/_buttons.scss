@@ -14,7 +14,12 @@
   font-size: $petit;
   font-weight: bold;
   transition: 0.25s box-shadow;
-
+  div,
+  span,
+  i,
+  p {
+    pointer-events: none !important;
+  }
   /* Span = Ripple */
   span {
     position: absolute;
@@ -33,6 +38,10 @@
   &:focus {
     box-shadow: none;
   }
+}
+.btn-send {
+  width: 40px !important;
+  height: 40px !important;
 }
 
 .btn-outlined {

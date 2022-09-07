@@ -1,5 +1,16 @@
 var contactForm = function () {
     const form = document.querySelector("#contactForm")
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3500,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+    })
     form.addEventListener("submit", (e) => {
         e.preventDefault()
 
@@ -34,29 +45,35 @@ var contactForm = function () {
                 submitBtn.disabled = true
 
                 setTimeout(() => {
-                    emailjs.sendForm("service_3l9e0lh", "template_lvmp0oi", form, "08NpTkuFM9KM8__vV")
                     toast.classList.add("show")
                     envoyer.classList.remove("d-none")
                     wait.classList.add("d-none")
                     submitBtn.disabled = false
                     form.reset()
 
-                    const Toast = Swal.mixin({
-                        toast: true,
-                        position: 'top-end',
-                        showConfirmButton: false,
-                        timer: 3000,
-                        timerProgressBar: true,
-                        didOpen: (toast) => {
-                            toast.addEventListener('mouseenter', Swal.stopTimer)
-                            toast.addEventListener('mouseleave', Swal.resumeTimer)
-                        }
-                    })
+                    emailjs.sendForm("service_3l9e0lh", "template_lvmp0oi", form, "08NpTkuFM9KM8__vV")
+                        .then(function () {
+                            // Dans le cas où le message est bien envoyé
+                            Toast.fire({
+                                icon: 'success',
+                                title: 'Vôtre message a bien été envoyer, merci de votre attention ;) !'
+                            })
+                            document.querySelector(".swal2-timer-progress-bar").classList.remove("rouge")
+                            document.querySelector(".swal2-timer-progress-bar").classList.add("vert")
 
-                    Toast.fire({
-                        icon: 'success',
-                        title: 'Vôtre message a bien été envoyer, merci de votre attention ;) !'
-                    })
+
+                        },
+                            function () {
+                                // Dans le message n'est pas envoyé
+                                Toast.fire({
+                                    icon: 'error',
+                                    title: 'Vérifiez vôtre connexion internet puis réessayez s\'il vous plaît :('
+                                })
+                                document.querySelector(".swal2-timer-progress-bar").classList.remove("vert")
+                                document.querySelector(".swal2-timer-progress-bar").classList.add("rouge")
+                            }
+                        )
+
                 }, 2000);
             }
         }

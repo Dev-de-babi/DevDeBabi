@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="./assets/img/D2B LOGO.png" type="image/x-icon">
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./libs/bootstrap/scss/bootstrap.css">
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v6.2.0/css/pro.min.css">
     <link rel="stylesheet" href="./libs/fontawesome/css/all.min.css">
@@ -26,64 +26,23 @@
 
 <body>
     <div class="loader">
-        <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
-            <span class="visually-hidden">Loading...</span>
+        <div class="spinner" role="status">
+
         </div>
         <div>Un instant...</div>
     </div>
     <!-- Global container -->
     <div class="global-container">
-        <!-- <div class="global-bg">
-            <div>
-                <img src="./assets/img/ORANGE.png" alt="Bulle orange" class="orange">
-                <img src="./assets/img/BLANC.png" alt="Bulle blanche" class="blanc">
-                <img src="./assets/img/VERT.png" alt="Bulle verte" class="vert">
-            </div>
-            <div>
-                <img src="./assets/img/ORANGE.png" alt="Bulle orange" class="orange">
-                <img src="./assets/img/BLANC.png" alt="Bulle blanche" class="blanc">
-                <img src="./assets/img/VERT.png" alt="Bulle verte" class="vert">
-            </div>
-            <div>
-                <img src="./assets/img/ORANGE.png" alt="Bulle orange" class="orange">
-                <img src="./assets/img/BLANC.png" alt="Bulle blanche" class="blanc">
-                <img src="./assets/img/VERT.png" alt="Bulle verte" class="vert">
-            </div>
-            <div>
-                <img src="./assets/img/ORANGE.png" alt="Bulle orange" class="orange">
-                <img src="./assets/img/BLANC.png" alt="Bulle blanche" class="blanc">
-                <img src="./assets/img/VERT.png" alt="Bulle verte" class="vert">
-            </div>
-            <div>
-                <img src="./assets/img/ORANGE.png" alt="Bulle orange" class="orange">
-                <img src="./assets/img/BLANC.png" alt="Bulle blanche" class="blanc">
-                <img src="./assets/img/VERT.png" alt="Bulle verte" class="vert">
-            </div>
-            <div>
-                <img src="./assets/img/ORANGE.png" alt="Bulle orange" class="orange">
-                <img src="./assets/img/BLANC.png" alt="Bulle blanche" class="blanc">
-                <img src="./assets/img/VERT.png" alt="Bulle verte" class="vert">
-            </div>
-            <div>
-                <img src="./assets/img/ORANGE.png" alt="Bulle orange" class="orange">
-                <img src="./assets/img/BLANC.png" alt="Bulle blanche" class="blanc">
-                <img src="./assets/img/VERT.png" alt="Bulle verte" class="vert">
-            </div>
-            <div>
-                <img src="./assets/img/ORANGE.png" alt="Bulle orange" class="orange">
-                <img src="./assets/img/BLANC.png" alt="Bulle blanche" class="blanc">
-                <img src="./assets/img/VERT.png" alt="Bulle verte" class="vert">
-            </div>
-        </div> -->
+        <a href="#" class="btn to-top"><i class="fas fa-arrow-turn-up"></i></a>
         <div class="glass">
             <!-- Début barre de navigation -->
             <nav class="navbar navbar-expand-md sticky-top navbar-dark bg-dark" aria-label="Main navigation">
                 <div class="container">
-                    <a href="#" class="navbar-brand">
+                    <a href="index.html" class="navbar-brand">
                         <img id="d2b-logo" src="./assets/img/D2B LOGO.png" alt="logo - Dev De Babi" width="50">
                     </a>
                     <div class="d-flex">
-                        <a href="#" class="btn btn-outlined user-icon"><i class="fas fa-user-tie"></i></a>
+                        <a href="#" class="btn btn-outlined user-icon"><i class="fa-duotone fa-user"></i></a>
                         <button class="btn btn-outlined navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarsExampleXxl" aria-controls="navbarsExampleXxl" aria-expanded="true"
                             aria-label="Toggle navigation">
@@ -94,11 +53,12 @@
                     </div>
                     <div class="collapse navbar-collapse justify-content-md-between" id="navbarsExampleXxl">
                         <ul class="navbar-nav w-100 justify-content-sm-center">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link active" href="#" id="accueil-nav">Accueil</a>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#" id="accueil-nav">
+                                    Accueil</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Jeux</a>
+                                <a class="nav-link" href="jeux.html"><i class="fas-fa fa-home-chimney"></i> Jeux</a>
                             </li>
                         </ul>
                         <div class="d-none btns-container">
@@ -136,7 +96,8 @@
                             à l'informatique que vous pourrez consulter <a href="#nosservices">ici</a>.
                         </p>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                            <a href="#contact" class="btn">Nous joindre</a>
+                            <a href="#contact" class="btn">Nous joindre <i
+                                    class="fa-duotone fa-handshake mx-1 mt-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -146,17 +107,18 @@
             <!-- ----------------------------------------------------------------------- -->
             <!-- Début section Nos jeux -->
             <section id="nosjeux" class="container col-xxl-8 px-4 py-t mb-5 nosjeux">
-                <div class="row flex-sm-row-reverse align-items-center g-2 py-3 justify-content-sm-center nosjeux-rev">
+                <div
+                    class="row flex-column-reverse flex-lg-row-reverse align-items-center g-2 py-3 justify-content-sm-center nosjeux-rev">
                     <div class="col-lg-6">
                         <h1 class="display-5 fw-bold lh-1 mb-3">Nos jeux</h1>
                         <p class="lead text-end">
                             <strong>D2B</strong> compte de nombreux jeux à son actif. Visitez notre catalogue de jeux et
                             restez à l'affût
                             de nos nouvelles sorties en vous abonnant à notre <a href="#newsletter">newsletter</a>.
-
                         </p>
                         <div class="d-grid gap-2 d-md-flex justify-content-sm-end">
-                            <button type="button" class="btn">Liste des jeux</button>
+                            <button type="button" class="btn">Liste des jeux <i
+                                    class="fa-duotone fa-grid-2 mx-2 mt-1"></i></button>
                         </div>
                     </div>
                     <div class="col-10 col-sm-8 col-lg-6 position-relative justify-content-sm-center game-png">
@@ -191,7 +153,7 @@
                         <div class="d-flex justify-content-center">
                             <a href="https://web.gara.store" target="_blank" class="btn px-4 w-75">
                                 Télecharger
-                                <i class="fas fa-download mx-2"></i>
+                                <i class="fa-duotone fa-download mx-2 mt-1"></i>
                             </a>
                         </div>
                     </div>
@@ -204,7 +166,8 @@
         <!-- Début section Nos services -->
         <section id="nosservices" class="container-fluid nosservices">
             <div class="container">
-                <h1 class="display-5 fw-bold text-center mb-3">Nos services</h1>
+                <h1 class="display-5 fw-bold text-center mb-3">Nos services
+                </h1>
                 <div class="col-lg-6 mx-auto">
                     <p class="lead my-2 text-center">
                         Ci-dessous la liste de tout nos services. Intéressé par l'un de nos services? Joignez nous
@@ -214,19 +177,21 @@
                 <div class="row row-cols-1 row-cols-md-2">
                     <div class="col d-flex justify-content-center">
                         <div class="card w-75">
-                            <img src="./assets/img/MANETTE.png" alt="MANETTE" width="160" loading="lazy">
+                            <img src="./assets/img/GAMEPAD.png" alt="MANETTE" width="140" loading="lazy">
                             <img src="./assets/img/OMBRE.png" alt="OMBRE" width="200" class="shadow" loading="lazy">
                             <p class="lead">Conception de jeux (2D/3D) pour mobile et PC.</p>
-                            <h3 class="card-title">Jeux</h3>
+                            <h3 class="card-title"><i class="fa-duotone fa-laptop-code mt-1 mx-1"></i> Développement de
+                                Jeux
+                            </h3>
                         </div>
                     </div>
                     <div class="col d-flex justify-content-center">
                         <div class="card w-75">
-                            <img src="./assets/img/MANETTE.png" alt="MESSAGE" width="160" loading="lazy">
+                            <img src="./assets/img/GRAPHIC.png" alt="MESSAGE" width="150" loading="lazy">
                             <img src="./assets/img/OMBRE.png" alt="OMBRE" width="200" class="shadow" loading="lazy">
                             <p class="lead">Conception de maquette d'applications web et mobile, de logo, de flyer
                                 etc...</p>
-                            <h3 class="card-title">Graphic design</h3>
+                            <h3 class="card-title"><i class="fa-duotone fa-palette mx-1"></i> Graphic design</h3>
                         </div>
                     </div>
                 </div>
@@ -255,21 +220,22 @@
                                     <img src="./assets/img/OT.png" alt="card image">
                                 </div>
                                 <div class="nom-prenoms">Issouf Kaboré</div>
-                                <div class="fonction">Dévéloppeur de jeux <i class="fas fa-gamepad mx-1"></i> |
+                                <div class="fonction">Dévéloppeur de jeux <i class="fa-duotone fa-gamepad mx-1"></i> |
                                     Fondateur
                                 </div>
-                                <div class="social">
+                                <div class=" social">
                                     <a href="#"><i class="fab fa-whatsapp"></i></a>
                                     <a href="#"><i class="fab fa-linkedin"></i></a>
-                                    <a href="#"><i class="fas fa-globe"></i></a>
+                                    <a href="#"><i class="fa-light fa-earth-africa"></i></a>
                                 </div>
                             </div>
                             <div class="infos">
                                 <div class="container position-relative w-100 h-100 p-3">
-                                    <div class="text-center fs-3 fw-bold my-2">Autres compétences</div>
+                                    <div class="text-center fs-3 fw-bold my-2"><i
+                                            class="fa-duotone fa-list mx-1 mt-1"></i> Autres Skills</div>
                                     <ul>
-                                        <li class="fs-6">
-                                            Dévéloppeur d'application mobile
+                                        <li class=" fs-6">
+                                            <i class="fa-duotone fa-circle-check"></i> Dévéloppeur d'application mobile
                                         </li>
                                         <span class="text-center d-block">Ionic, Flutter...</span>
                                     </ul>
@@ -287,29 +253,30 @@
                                     <img src="./assets/img/OT.png" alt="card image">
                                 </div>
                                 <div class="nom-prenoms">Charles Bally</div>
-                                <div class="fonction">Dévéloppeur de jeux <i class="fas fa-gamepad mx-1"></i> |
+                                <div class="fonction">Dévéloppeur de jeux <i class="fa-duotone fa-gamepad mx-1"></i> |
                                     Co-fondateur
                                 </div>
-                                <div class="social">
+                                <div class=" social">
                                     <a href="#"><i class="fab fa-whatsapp"></i></a>
                                     <a href="#"><i class="fab fa-linkedin"></i></a>
-                                    <a href="#"><i class="fas fa-globe"></i></a>
+                                    <a href="#"><i class="fa-light fa-earth-africa"></i></a>
                                 </div>
                             </div>
                             <div class="infos">
                                 <div class="container position-relative w-100 h-100 p-3">
-                                    <div class="text-center fs-3 fw-bold my-2">Autres compétences</div>
+                                    <div class="text-center fs-3 fw-bold my-2"><i class="fa-duotone fa-list"></i> Autres
+                                        Skills</div>
                                     <ul>
                                         <li class="fs-6">
-                                            Dévéloppeur web frontend
+                                            <i class="fa-duotone fa-circle-check"></i> Dévéloppeur web frontend
                                         </li>
                                         <span class="text-center d-block">React js...</span>
                                         <li class="fs-6">
-                                            Dévéloppeur web backend
+                                            <i class="fa-duotone fa-circle-check"></i> Dévéloppeur web backend
                                         </li>
                                         <span class="text-center d-block">Node js, PHP procédural...</span>
                                         <li class="fs-6">
-                                            Dévéloppeur d'application mobile
+                                            <i class="fa-duotone fa-circle-check"></i> Dévéloppeur d'application mobile
                                         </li>
                                         <span class="text-center d-block">Swift...</span>
                                     </ul>
@@ -327,21 +294,22 @@
                                     <img src="./assets/img/OT.png" alt="card image">
                                 </div>
                                 <div class="nom-prenoms">Cédric Datcha</div>
-                                <div class="fonction">Dévéloppeur Web Backend <i class="fas fa-gamepad mx-1"></i> |
+                                <div class="fonction">Dévéloppeur Web Backend <i class="fa-duotone fa-code mx-1"></i> |
                                     Co-fondateur
                                 </div>
-                                <div class="social">
+                                <div class=" social">
                                     <a href="#"><i class="fab fa-whatsapp"></i></a>
                                     <a href="#"><i class="fab fa-linkedin"></i></a>
-                                    <a href="#"><i class="fas fa-globe"></i></a>
+                                    <a href="#"><i class="fa-light fa-earth-africa"></i></a>
                                 </div>
                             </div>
                             <div class="infos">
                                 <div class="container position-relative w-100 h-100 p-3">
-                                    <div class="text-center fs-3 fw-bold my-2">Autres compétences</div>
+                                    <div class="text-center fs-3 fw-bold my-2"><i class="fa-duotone fa-list"></i> Autres
+                                        Skills</div>
                                     <ul>
                                         <li class="fs-6">
-                                            Dévéloppeur web fullstack
+                                            <i class="fa-duotone fa-circle-check"></i> Dévéloppeur web fullstack
                                         </li>
                                         <span class="text-center d-block">Symphony, Laravel, Vue Js...</span>
                                     </ul>
@@ -359,19 +327,21 @@
                                     <img src="./assets/img/OT.png" alt="card image">
                                 </div>
                                 <div class="nom-prenoms">Franck Koutouan</div>
-                                <div class="fonction">UI / UI Designer <i class="fas fa-circle-check mx-1"></i> </div>
+                                <div class="fonction">UI / UX Designer <i class="fa-duotone fa-pen-paintbrush mx-1"></i>
+                                </div>
                                 <div class="social">
                                     <a href="#"><i class="fab fa-whatsapp"></i></a>
                                     <a href="#"><i class="fab fa-linkedin"></i></a>
-                                    <a href="#"><i class="fas fa-globe"></i></a>
+                                    <a href="#"><i class="fa-light fa-earth-africa"></i></a>
                                 </div>
                             </div>
                             <div class="infos">
                                 <div class="container position-relative w-100 h-100 p-3">
-                                    <div class="text-center fs-3 fw-bold my-2">Autres compétences</div>
+                                    <div class="text-center fs-3 fw-bold my-2"><i class="fa-duotone fa-list"></i> Autres
+                                        Skills</div>
                                     <ul>
                                         <li class="fs-6">
-                                            Graphiste
+                                            <i class="fa-duotone fa-circle-check"></i> Graphiste
                                         </li>
                                         <span class="text-center d-block">Figma, Adobe Photoshop, Illustrator,
                                             Figma...</span>
@@ -390,25 +360,27 @@
                                     <img src="./assets/img/OT.png" alt="card image">
                                 </div>
                                 <div class="nom-prenoms">Kevin Kouakou</div>
-                                <div class="fonction">Dévéloppeur web frontend<i class="fas fa-circle-check mx-1"></i>
+                                <div class="fonction">Dévéloppeur web frontend <i
+                                        class="fa-duotone fa-laptop-mobile mx-1"></i>
                                 </div>
                                 <div class="social">
                                     <a href="#"><i class="fab fa-whatsapp"></i></a>
                                     <a href="#"><i class="fab fa-linkedin"></i></a>
-                                    <a href="#"><i class="fas fa-globe"></i></a>
+                                    <a href="#"><i class="fa-light fa-earth-africa"></i></a>
                                 </div>
                             </div>
                             <div class="infos">
                                 <div class="container position-relative w-100 h-100 p-3">
-                                    <div class="text-center fs-3 fw-bold my-2">Autres compétences</div>
+                                    <div class="text-center fs-3 fw-bold my-2"><i class="fa-duotone fa-list"></i> Autres
+                                        Skills</div>
                                     <ul>
                                         <li class="fs-6">
-                                            UI / UX Designer
+                                            <i class="fa-duotone fa-circle-check"></i> UI / UX Designer
                                         </li>
                                         <span class="text-center d-block">Figma, Illustrator,
                                             Figma...</span>
                                         <li class="fs-6">
-                                            Dévéloppeur Backend
+                                            <i class="fa-duotone fa-circle-check"></i> Dévéloppeur Backend
                                         </li>
                                         <span class="text-center d-block">PHP (MVC pattern)...</span>
                                     </ul>
@@ -433,39 +405,42 @@
                 <h1 class="display-5 fw-bold text-center mb-3">Contact</h1>
                 <div class="row align-items-start justify-content-between">
                     <div class="col-lg-7">
-                        <p class="lead mb-4 mt-2 text-center">Remplissez le formulaire ci-contre en vu de nous joindre
-                            pour en apprendre un peu plus sur les services que nous proposons. Vous pouvez aussi
-                            utiliser ce formulaire pour nous signaler un bug, ou tout disfonctionnement que vous aurez
-                            rencontrer en utilisant un de nos produits, ou en jouant à l'un de nos jeux.</p>
-                        <div class="row row-cols-3 justify-content-center">
-                            <div
-                                class="item d-flex flex-column mx-0 my-2 px-0 justify-content-center align-items-center">
+                        <p class="lead mb-4 mt-2 px-5 text-center">Vous voulez signaler un problème ou en savoir
+                            un peu
+                            plus
+                            sur l'un de nos services ? Contactez-nous !</p>
+                        <div class="row row-cols-3 justify-content-center means">
+                            <div class="item d-flex mx-0 my-2 px-0 justify-content-center align-items-center">
                                 <div>
-                                    <i class="fas fa-map mx-2"></i>
-                                </div>
-                                <div class="d-flex flex-column justify-content-center align-items-center">
-                                    <div class="title mb-1">Localisation</div>
-                                    <div class="value">Abidjan, côte d'ivoire</div>
+                                    <a tabindex="0" class="btn" role="button" data-bs-toggle="popover"
+                                        data-bs-custom-class="custom-popover" data-bs-trigger="focus"
+                                        title="<div class='text-center w-100'>Localisation</div>"
+                                        data-bs-placement="bottom"
+                                        data-bs-content="<a class='extern-link' target='_blank' href='https://www.google.com/search?q=Abidjan&oq=abidjan%2C+C%C3%B4te+d%27ivoire&aqs=edge..69i57j0i512l2j0i22i30l2.30969j0j4&sourceid=chrome&ie=UTF-8'>Abidjan, Côte d'ivoire.</a>">
+                                        <i class="fa-duotone fa-map-location-dot"></i>
+                                    </a>
                                 </div>
                             </div>
-                            <div
-                                class="item d-flex flex-column mx-0 my-2 px-0 justify-content-center align-items-center">
+                            <div class="item d-flex mx-0 my-2 px-0 justify-content-center align-items-center">
                                 <div>
-                                    <i class="fas fa-map mx-2"></i>
-                                </div>
-                                <div class="d-flex flex-column justify-content-center align-items-center">
-                                    <div class="title mb-1">Téléphone</div>
-                                    <div class="value">(+225) 05 65 1000 29</div>
+                                    <a tabindex="0" class="btn" role="button" data-bs-toggle="popover"
+                                        data-bs-custom-class="custom-popover" data-bs-trigger="focus"
+                                        title="<div class='text-center w-100'>Adresse mail</div>"
+                                        data-bs-placement="bottom"
+                                        data-bs-content="<a class='extern-link' target='_blank' href='mailto:game2babi.g2b@gmail.com'>game2babi.g2b@gmail.com</a>">
+                                        <i class="fa-duotone fa-mailbox"></i>
+                                    </a>
                                 </div>
                             </div>
-                            <div
-                                class="item d-flex flex-column mx-0 my-2 px-0 justify-content-center align-items-center">
+                            <div class="item d-flex mx-0 my-2 px-0 justify-content-center align-items-center">
                                 <div>
-                                    <i class="fas fa-map mx-2"></i>
-                                </div>
-                                <div class="d-flex flex-column justify-content-center align-items-center">
-                                    <div class="title mb-1">E-mail</div>
-                                    <div class="value">kevinkouakou113@gmail.com</div>
+                                    <a tabindex="0" class="btn" role="button" data-bs-toggle="popover"
+                                        data-bs-custom-class="custom-popover" data-bs-trigger="focus"
+                                        title="<div class='text-center w-100'>Téléphone</div>"
+                                        data-bs-placement="bottom"
+                                        data-bs-content="<a class='extern-link' target='_blank' href='tel:+225 0709664300'>+225 0709664300</a>">
+                                        <i class="fa-duotone fa-phone-rotary"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -497,7 +472,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <button type="submit" class="btn w-50 mx-auto my-3 py-2 px-4">
-                                        <div class="envoyer">Envoyer</div>
+                                        <div class="envoyer">Envoyer <i class="fa-duotone fa-paper-plane"></i></div>
                                         <div class="wait d-none d-flex align-items-center">
                                             <div class="spinner-border spinner-border-sm" role="status"
                                                 aria-hidden="true">
@@ -537,7 +512,7 @@
                             <img id="d2b-logo" src="./assets/img/D2B LOGO.png" alt="logo - Dev De Babi" width="50">
                         </a>
                         <ul class="list-unstyled d-flex social position-relative m-0">
-                            <a href="#">
+                            <a href="https://www.facebook.com/Dev2Babi" target="_blank">
                                 <li>
                                     <i class="fab fa-facebook"></i>
                                 </li>
@@ -555,8 +530,8 @@
                         </ul>
                     </div>
                     <div class="row py-5 justify-content-center">
-                        <div class="py-1 col-sm-12 col-md-6 col-xl-2">
-                            <h5>Jeux</h5>
+                        <div class="py-1 col-sm-12 col-md-3">
+                            <h5>Jeux <i class="fa-duotone fa-gamepad-modern"></i></h5>
                             <ul class="nav flex-column">
                                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Ivoire run</a>
                                 </li>
@@ -568,8 +543,8 @@
                             </ul>
                         </div>
 
-                        <div class="py-1 col-sm-12 col-md-6 col-xl-2">
-                            <h5>Navigation</h5>
+                        <div class="py-1 col-sm-12 col-md-3">
+                            <h5>Navigation <i class="fa-duotone fa-compass"></i></h5>
                             <ul class="nav flex-column">
                                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Présentation</a>
                                 </li>
@@ -590,23 +565,18 @@
                             </ul>
                         </div>
 
-                        <div id="newsletter" class="py-1 col-sm-12 col-md-6 col-xl-4">
+                        <div id="newsletter" class="py-1 col-sm-12 col-md-6">
                             <form>
-                                <h5>Newsletter</h5>
+                                <h5>Newsletter<i class="fa-duotone fa-envelope mx-1"></i></h5>
                                 <p class="text-white fw-thin">Abonnez vous à notre news letter pour ne rien rater du
                                     contenu de
                                     nos nouveaux jeux.
                                 </p>
-                                <div class="d-flex w-100 gap-2">
-                                    <script charset="utf-8" type="text/javascript"
-                                        src="//js-eu1.hsforms.net/forms/v2.js?pre=1"></script>
-                                    <script>
-                                        hbspt.forms.create({
-                                            region: "eu1",
-                                            portalId: "26226296",
-                                            formId: "1add8fcc-7c7c-42a7-ba0f-03e5a96dab82"
-                                        });
-                                    </script>
+                                <div class="d-flex gap-2">
+                                    <input type="email" name="email" class="input-field rounded"
+                                        placeholder="Saisissez votre adresse mail">
+                                    <button type="submit" class="btn btn-send rounded"><i
+                                            class="fa-duotone fa-paper-plane"></i></button>
                                 </div>
                             </form>
                         </div>
@@ -623,16 +593,21 @@
         <!-- Fin du footer -->
 
         <!-- js imports -->
+
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
         <script src="./libs/jquery/js/jquery.js"></script>
         <script src="./libs/jquery/js/jquery.validate.min.js"></script>
         <script src="./libs/scrollreveal/js/scrollreveal.js"></script>
         <script src="./libs/animejs/lib/anime.min.js"></script>
         <script src="./libs/typewriter/js/typewriter.js"></script>
-        <script src="./libs/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="./libs/swiperjs/swiper-bundle.min.js"></script>
         <script src="./libs/sweetalertjs/dist/sweetalert2.all.min.js"></script>
+        <script src="./libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="./libs/bootstrap/dist/js/popper.min.js"></script>
+        <script src="./libs/bootstrap/dist/js/tooltip.js"></script>
+
         <script>
+            // load
             $(window).on('load', function () {
                 $(".loader").fadeOut(1000);
                 $(".global-container").fadeIn(1000);

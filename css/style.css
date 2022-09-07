@@ -73,25 +73,37 @@ body {
 .loader {
   width: 100vw;
   height: 100vh;
-  background-color: #020a14;
+  background-color: #01423a;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   color: #fff;
 }
+.loader .spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-radius: 50%;
+  animation: spinerAnim 0.7s linear infinite;
+}
 
 .global-container {
   position: relative;
-  background-color: #020a14;
+  background-color: #01423a;
   height: auto;
   z-index: 10;
   display: none;
   overflow-x: hidden;
 }
 
-.swal2-timer-progress-bar {
-  background-color: #009e60 !important;
+.rouge {
+  background-color: #f05656 !important;
+}
+
+.vert {
+  background-color: #009e60;
 }
 
 .swal2-title {
@@ -106,10 +118,56 @@ body {
   display: none !important;
 }
 
+a.to-top {
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  background-color: #e85f31;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  color: #fff;
+}
+a.to-top i {
+  pointer-events: none;
+}
+
+a.extern-link {
+  color: #fff !important;
+  transition: color 0.3s ease-in-out;
+}
+a.extern-link:hover {
+  color: #e85f31 !important;
+}
+
+@keyframes spinerAnim {
+  0% {
+    border: 5px solid #e85f31;
+    border-bottom: 5px solid transparent;
+    transform: rotateZ(0deg);
+  }
+  33% {
+    border: 5px solid #fff;
+    border-bottom: 5px solid transparent;
+  }
+  66% {
+    border: 5px solid #009e60;
+    border-bottom: 5px solid transparent;
+  }
+  100% {
+    border: 5px solid #e85f31;
+    border-bottom: 5px solid transparent;
+    transform: rotateZ(360deg);
+  }
+}
 .navbar {
-  background-color: #030f21 !important;
-  box-shadow: 0 3px 13px #000000;
-  color: #000000;
+  background-color: #001a17 !important;
+  box-shadow: 0 3px 13px rgba(0, 26, 23, 0.768627451);
+  color: #001a17;
 }
 .navbar .navbar-nav .nav-item {
   position: relative;
@@ -146,7 +204,7 @@ body {
   padding-top: 0;
 }
 .navbar .navbar-nav .nav-item .dropdown-menu .dropdown-item {
-  color: #afafaf;
+  color: #dddddd;
 }
 .navbar .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover {
   color: #fff;
@@ -187,7 +245,7 @@ body {
 .footer {
   z-index: -1;
   backdrop-filter: blur(1px);
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: #001a17;
 }
 .footer div.row {
   border-bottom: 2px solid #01423a;
@@ -235,6 +293,12 @@ body {
   transition: 0.25s box-shadow;
   /* Span = Ripple */
 }
+.btn div,
+.btn span,
+.btn i,
+.btn p {
+  pointer-events: none !important;
+}
 .btn span {
   position: absolute;
   background-color: #fff;
@@ -249,6 +313,11 @@ body {
 }
 .btn:focus {
   box-shadow: none;
+}
+
+.btn-send {
+  width: 40px !important;
+  height: 40px !important;
 }
 
 .btn-outlined {
@@ -425,7 +494,8 @@ h1 {
 }
 
 .gara {
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: #001a17;
+  box-shadow: 0 3px 13px rgba(0, 24, 21, 0.8901960784);
   border-radius: 80px 80px 0 0;
 }
 .gara .d-flex {
@@ -435,7 +505,7 @@ h1 {
 }
 
 .nosservices {
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: #001a17;
 }
 .nosservices .col {
   height: 220px;
@@ -451,7 +521,7 @@ h1 {
 .nosservices .col .card img {
   position: absolute;
   left: 50%;
-  top: -45%;
+  top: -55%;
   transform: translateX(-50%);
   transform-origin: left;
   box-shadow: none !important;
@@ -459,6 +529,7 @@ h1 {
 .nosservices .col .card img:first-of-type {
   animation: imgServicesAnim 6s linear infinite;
   top: -30%;
+  z-index: 300;
 }
 .nosservices .col .card img:last-of-type {
   animation: shadowAnim 6s linear infinite;
@@ -468,10 +539,11 @@ h1 {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 16.5px;
+  font-size: 14.5px;
   color: #fff;
   text-align: center;
   padding: 0 30px;
+  font-weight: 400;
 }
 .nosservices .col .card .card-title {
   position: absolute;
@@ -482,7 +554,7 @@ h1 {
   left: 0;
   right: 0;
   text-align: center;
-  font-size: 21.5px;
+  font-size: 16.5px;
   font-weight: 800;
   color: #fff;
   padding: 15px 0;
@@ -513,7 +585,7 @@ h1 {
 }
 
 .equipe {
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: #001a17;
 }
 .equipe .card {
   overflow: hidden;
@@ -616,7 +688,8 @@ h1 {
   transition: transform 0.3s linear;
 }
 .equipe .card .infos ul {
-  list-style-type: georgian;
+  list-style-type: none;
+  padding: 0 !important;
 }
 .equipe .card .infos span {
   font-weight: 300;
@@ -651,7 +724,7 @@ h1 {
   height: 400px;
 }
 .equipe .swiper .swiper-pagination-bullet {
-  background-color: #afafaf;
+  background-color: #dddddd;
 }
 .equipe .swiper .swiper-pagination-bullet-active {
   background-color: #e85f31;
@@ -663,7 +736,7 @@ h1 {
 }
 
 .contact {
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: #001a17;
 }
 .contact label {
   color: #fff;
@@ -674,20 +747,27 @@ h1 {
   font-weight: 500;
 }
 .contact .item .value {
-  color: #afafaf;
+  color: #dddddd;
   font-weight: 400;
   font-size: 12.5px;
 }
-.contact .item i {
-  color: #009e60;
+.contact .item a {
+  color: #fff;
   background-color: #01423a;
-  font-size: 16.5px;
-  width: 65px;
-  height: 65px;
+  font-size: 19.5px;
+  width: 75px;
+  height: 75px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  border: 2.5px solid transparent;
+  transition: all 0.5s ease-in-out;
+  white-space: nowrap;
+}
+.contact .item a:hover, .contact .item a:active {
+  border: 2.5px solid #e85f31;
+  color: #e85f31;
 }
 .contact label.error {
   font-size: 12px;
@@ -708,7 +788,7 @@ h1 {
 .equipe p,
 .nosservices p,
 .contact p {
-  color: #afafaf;
+  color: #dddddd;
 }
 .presentation p strong,
 .nosjeux p strong,
@@ -808,7 +888,7 @@ h1 {
     transform: scale(0.8) translateX(-50%);
   }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 600px) {
   .game-png {
     width: 100%;
   }
@@ -835,6 +915,10 @@ h1 {
   }
   .gara {
     border-radius: 30px 30px 0 0;
+  }
+  .contact .means .value,
+.contact .means .title {
+    display: none;
   }
 }
 @media screen and (min-width: 768px) {
