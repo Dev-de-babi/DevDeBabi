@@ -5,24 +5,6 @@
 
 2 - sass --watch ../../sass/style.scss ../../css/style.css
 
-## Librairies utilisées ##
-==========================
-
-1 - bootstrap
-
-2 - scroll reveal
-
-3 - anime js
-
-4 - jquery
-
-5 - swiper js
-
-6 - fontawesome
-
-Les autres librairies présentent dans ./libs n'ont pas encore
-été utilisées.
-
 ## Pousser les modifs effectuées sur le repo en ligne ##
 ========================================================
 

@@ -5,19 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/img/D2B LOGO.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/images/D2B LOGO.png" type="image/x-icon">
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="./libs/bootstrap/scss/bootstrap.css">
-    <!-- Fontawesome -->
+    <link rel="stylesheet" href="../assets/vendors/css/vendor.bundle.base.css" />
+
+    <link rel="stylesheet" href="./assets/vendors/bootstrap/scss/bootstrap.css">
     <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v6.2.0/css/pro.min.css">
-    <link rel="stylesheet" href="./libs/fontawesome/css/all.min.css">
-    <!-- Swiper -->
-    <link rel="stylesheet" href="./libs/swiperjs/swiper-bundle.min.css">
-    <!-- sweetalert -->
-    <link rel="stylesheet" href="./libs/sweetalertjs/dist/sweetalert2.min.css">
-    <!-- css imports -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./assets/vendors/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="./assets/vendors/swiperjs/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/vendors/sweetalertjs/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <link rel="stylesheet" href="../assets/vendors/css/vendor.bundle.base.css" />
+
     <title>Dev De Babi | D2B</title>
 </head>
 
@@ -31,12 +31,19 @@
     <!-- Global container -->
     <div class="global-container">
         <a href="#" class="btn to-top"><i class="fas fa-arrow-turn-up"></i></a>
+        <div class="bubbles">
+            <img src="./assets/images/ORANGE.png" class="orange" alt="bulle ORANGE" width="200">
+            <img src="./assets/images/VERT.png" class="verte" alt="bulle VERTE" width="100">
+            <img src="./assets/images/BLANC.png" class="blanc" alt="bulle BLANCHE" width="150">
+        </div>
         <div class="glass">
+
             <!-- Début barre de navigation -->
             <nav class="navbar navbar-expand-md sticky-top navbar-dark bg-dark" aria-label="Main navigation">
                 <div class="container">
                     <a href="index.html" class="navbar-brand">
-                        <img id="d2b-logo" src="./assets/img/D2B LOGO.png" alt="logo - Dev De Babi" width="50">
+                        <img id="d2b-logo" src="../assets/images/D2B LOGO.png" alt="logo - Dev De Babi" width="40"
+                            height="40">
                     </a>
                     <div class="d-flex">
                         <a href="#" class="btn btn-outlined user-icon"><i class="fa-duotone fa-user"></i></a>
@@ -55,12 +62,13 @@
                                     Accueil</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fas-fa fa-home-chimney"></i> Jeux</a>
+                                <a class="nav-link" href="./pages/jeux.html"><i class="fas-fa fa-home-chimney"></i>
+                                    Jeux</a>
                             </li>
                         </ul>
                         <div class="d-none btns-container">
-                            <a href="#" class="btn btn-outlined mx-2">Connexion</a>
-                            <a href="#" class="btn">Inscription</a>
+                            <a href="./pages/maintenance.html" class="btn btn-outlined mx-2">Connexion</a>
+                            <a href="./pages/maintenance.html" class="btn">Inscription</a>
                         </div>
                     </div>
                 </div>
@@ -74,17 +82,20 @@
             <section id="presentation" class="container col-xxl-8 px-4 pt-5 presentation">
                 <div class="row flex-lg-row-reverse align-items-center g-5 py-3 justify-content-center">
                     <div class="col-10 col-sm-8 col-lg-6 position-relative">
-                        <img src="./assets/img/MASCOTTE.png" class="d-block mx-lg-auto img-fluid" alt="Mascotte D2B"
-                            width="700" height="500" loading="lazy">
-                        <img src="./assets/img/BOULE.png" alt="boule bleue" class="boule" width="45" loading="lazy">
-                        <img src="./assets/img/BOULE.png" alt="boule bleue" class="boule" width="22" loading="lazy">
-                        <img src="./assets/img/BOULE.png" alt="boule bleue" class="boule" width="35" loading="lazy">
+                        <img src="./assets/images/avatar/MASCOTTE.png" class="d-block mx-lg-auto img-fluid" alt="Mascotte D2B"
+                            loading="lazy">
+                        <img src="./assets/images/items/PC.png" alt="boule bleue" class="boule" width="185" loading="lazy">
+                        <img src="./assets/images/items/pen-tool-6238748-5117066.png" alt="boule bleue" class="boule" width="75" loading="lazy">
+                        <img src="./assets/images/items/drawing-tool-5663944-4719145.png" alt="boule bleue" class="boule" width="95" loading="lazy">
+                        <img src="./assets/images/avatar/square_render.png" alt="boule bleue" class="boule" width="105" loading="lazy">
+                        <img src="./assets/images/avatar/x_render.png" alt="boule bleue" class="boule" width="85" loading="lazy">
+                        <img src="./assets/images/avatar/circle_render.png" alt="boule bleue" class="boule" width="105" loading="lazy">
+                        <img src="./assets/images/avatar/triangle_render.png" alt="boule bleue" class="boule" width="125" loading="lazy">
                     </div>
                     <div class="col-lg-6">
                         <h1 class="display-5 fw-bold lh-1 mb-3">Dev De Babi</h1>
                         <p class="lead">
-                            <strong>D2B</strong> est un groupe fondé par <strong>Issouf Kaboré</strong>. Elle est
-                            composée
+                            <strong>Dev De Babi</strong> alias <strong>D2B</strong> est un groupe composée
                             de 5
                             membres, dont la principale activité est la conception de jeux. Nous offrons
                             aussi
@@ -103,7 +114,7 @@
 
             <!-- ----------------------------------------------------------------------- -->
             <!-- Début section Nos jeux -->
-            <section id="nosjeux" class="container col-xxl-8 px-4 py-t mb-5 nosjeux">
+            <section id="nosjeux" class="container col-xxl-8 px-4 pb-5 nosjeux">
                 <div
                     class="row flex-column-reverse flex-lg-row-reverse align-items-center g-2 py-3 justify-content-sm-center nosjeux-rev">
                     <div class="col-lg-6">
@@ -111,19 +122,19 @@
                         <p class="lead text-end">
                             <strong>D2B</strong> compte de nombreux jeux à son actif. Visitez notre catalogue de jeux et
                             restez à l'affût
-                            de nos nouvelles sorties en vous abonnant à notre <a href="#newsletter">newsletter</a>.
+                            de nos nouvelles sorties en vous abonnant à notre <a href="#newsletter">newsletter</a>, et à nôtre page <a target="_blank" href="https://www.facebook.com/Dev2Babi">facebook</a>.
                         </p>
                         <div class="d-grid gap-2 d-md-flex justify-content-sm-end">
-                            <button type="button" class="btn">Liste des jeux <i
-                                    class="fa-duotone fa-grid-2 mx-2 mt-1"></i></button>
+                            <a href="./pages/jeux.html" class="btn">Liste des jeux <i
+                                    class="fa-duotone fa-grid-2 mx-2 mt-1"></i></a>
                         </div>
                     </div>
                     <div class="col-10 col-sm-8 col-lg-6 position-relative justify-content-sm-center game-png">
-                        <img src="./assets/img/PHONE.png" alt="boule bleue" class="" width="310" loading="lazy">
-                        <img src="./assets/img/BOULE.png" alt="boule bleue" class="" width="58" loading="lazy">
-                        <img src="./assets/img/BOULE.png" alt="boule bleue" class="" width="77" loading="lazy">
-                        <img src="./assets/img/ENVOYER.png" alt="boule bleue" class="" width="105" loading="lazy">
-                        <img src="./assets/img/MANETTE.png" alt="boule bleue" class="" width="170" loading="lazy">
+                        <img src="./assets/images/PHONE.png" alt="boule bleue" class="" width="290" loading="lazy">
+                        <img src="./assets/images/BOULE.png" alt="boule bleue" class="" width="58" loading="lazy">
+                        <img src="./assets/images/BOULE.png" alt="boule bleue" class="" width="77" loading="lazy">
+                        <img src="./assets/images/ENVOYER.png" alt="boule bleue" class="" width="105" loading="lazy">
+                        <img src="./assets/images/MANETTE.png" alt="boule bleue" class="" width="170" loading="lazy">
                     </div>
                 </div>
             </section>
@@ -137,7 +148,7 @@
             <div class="container">
                 <div class="py-5 text-center">
                     <div class="d-flex my-3">
-                        <img class="mx-3" src="./assets/img/GARA CARD.png" alt="Logo gara" width="100">
+                        <img class="mx-3" src="./assets/images/GARA CARD.png" alt="Logo gara" width="100">
                         <h1 class="fw-bold ">GARA STORE</h1>
                     </div>
                     <div class="col-lg-6 mx-auto">
@@ -174,10 +185,10 @@
                 <div class="row row-cols-1 row-cols-md-2">
                     <div class="col d-flex justify-content-center">
                         <div class="card w-75">
-                            <img src="./assets/img/GAMEPAD.png" alt="MANETTE" width="140" loading="lazy">
-                            <img src="./assets/img/OMBRE.png" alt="OMBRE" width="200" class="shadow" loading="lazy">
+                            <img src="./assets/images/GAMEPAD.png" alt="MANETTE" width="140" loading="lazy">
+                            <img src="./assets/images/OMBRE.png" alt="OMBRE" width="200" class="shadow" loading="lazy">
                             <p class="lead w-100 mx-auto text-center">Conception de jeux (2D/3D) pour mobile et PC.</p>
-                            <h3 class=" card-title"><i class="fa-duotone fa-laptop-code mt-1 mx-1"></i> Développement
+                            <h3 class=" card-title"><i class="fa-duotone fa-dice mt-1 mx-1"></i> Développement
                                 de
                                 Jeux
                             </h3>
@@ -185,8 +196,8 @@
                     </div>
                     <div class="col d-flex justify-content-center">
                         <div class="card w-75">
-                            <img src="./assets/img/GRAPHIC.png" alt="MESSAGE" width="150" loading="lazy">
-                            <img src="./assets/img/OMBRE.png" alt="OMBRE" width="200" class="shadow" loading="lazy">
+                            <img src="./assets/images/GRAPHIC.png" alt="MESSAGE" width="150" loading="lazy">
+                            <img src="./assets/images/OMBRE.png" alt="OMBRE" width="200" class="shadow" loading="lazy">
                             <p class="lead">Conception de maquette d'applications web et mobile, de logo, de flyer
                                 etc...</p>
                             <h3 class="card-title"><i class="fa-duotone fa-palette mx-1"></i> Graphic design</h3>
@@ -205,7 +216,7 @@
                 <div class="col-lg-6 mx-auto">
                     <p class="lead my-2 text-center">
                         <strong>D2B</strong> est principalement composée de dévéloppeurs et de designers.
-                        Vous pouvez en savoir plus, cliquez sur l'une des icônes ci-dessous.
+                        Vous pouvez en savoir plus sur l'un de nous en cliquant sur l'une des icônes ci-dessous.
                     </p>
                 </div>
                 <div class="swiper mySwiper">
@@ -215,16 +226,32 @@
                         <div class="card swiper-slide">
                             <div class="card-content">
                                 <div class="card-image">
-                                    <img src="./assets/img/OT.png" alt="card image">
+                                    <img src="./assets/images/team/ISSOUF_1.jpg" alt="card image">
                                 </div>
                                 <div class="nom-prenoms">Issouf Kaboré</div>
                                 <div class="fonction">Dévéloppeur de jeux <i class="fa-duotone fa-gamepad mx-1"></i> |
                                     Fondateur
                                 </div>
-                                <div class=" social">
-                                    <a href="#"><i class="fab fa-whatsapp"></i></a>
-                                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                                    <a href="#"><i class="fa-light fa-earth-africa"></i></a>
+                                <div class="social">
+                                    <!-- Whatsapp -->
+                                    <a href="https://wa.me/+225 0709664300" class="mx-2" target="_blank"
+                                        data-bs-toggle="tooltip" data-bs-placement="top" title="Whatsapp"><i
+                                            class="fab fa-whatsapp"></i></a>
+
+                                    <!-- E-mail -->
+                                    <a href="mailto:issouf.kabore@devdebabi.com" class="mx-2" target="_blank"
+                                        data-bs-toggle="tooltip" data-bs-placement="top" title="E-mail"><i
+                                            class="fa-duotone fa-at"></i></a>
+
+                                    <!-- LinkedIn -->
+                                    <a href="https://www.linkedin.com/in/issouf-kabor%C3%A9-3814a4191" class="mx-2"
+                                        target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
+                                        title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+
+                                    <!-- Portfolio -->
+                                    <a href="https://kaboreissouf.github.io/kaboreissouf-portofolio" class="mx-2"
+                                        target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
+                                        title="Portfolio"><i class="fa-duotone fa-earth-africa"></i></a>
                                 </div>
                             </div>
                             <div class="infos">
@@ -248,16 +275,26 @@
                         <div class="card swiper-slide">
                             <div class="card-content">
                                 <div class="card-image">
-                                    <img src="./assets/img/OT.png" alt="card image">
+                                    <img src="./assets/images/team/CHARLES_1.jpg" alt="card image">
                                 </div>
                                 <div class="nom-prenoms">Charles Bally</div>
                                 <div class="fonction">Dévéloppeur de jeux <i class="fa-duotone fa-gamepad mx-1"></i> |
                                     Co-fondateur
                                 </div>
-                                <div class=" social">
-                                    <a href="#"><i class="fab fa-whatsapp"></i></a>
-                                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                                    <a href="#"><i class="fa-light fa-earth-africa"></i></a>
+                                <div class="social">
+                                    <!-- Whatsapp -->
+                                    <a href="https://wa.me/+225 0707909319" target="_blank" class="mx-2"
+                                        data-bs-toggle="tooltip" data-bs-placement="top" title="Whatsapp"><i
+                                            class="fab fa-whatsapp"></i></a>
+                                    <!-- Email -->
+                                    <a href="mailto:charles.bally@devdebabi.com" class="mx-2" data-bs-toggle="tooltip"
+                                        data-bs-placement="top" title="E-mail">
+                                        <i class="fa-duotone fa-at"></i></a>
+                                    <!-- LinkedIn -->
+                                    <a href="https://www.linkedin.com/in/charles-désiré-bally-018566248/" class="mx-2"
+                                        target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
+                                        title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+
                                 </div>
                             </div>
                             <div class="infos">
@@ -289,16 +326,33 @@
                         <div class="card swiper-slide">
                             <div class="card-content">
                                 <div class="card-image">
-                                    <img src="./assets/img/OT.png" alt="card image">
+                                    <img src="./assets/images/team/MELO_1.jpg" alt="card image">
                                 </div>
                                 <div class="nom-prenoms">Cédric Datcha</div>
-                                <div class="fonction">Dévéloppeur Web Backend <i class="fa-duotone fa-code mx-1"></i> |
+                                <div class="fonction">Dévéloppeur Web Backend <i
+                                        class="fa-duotone fa-laptop-code mx-1"></i> |
                                     Co-fondateur
                                 </div>
-                                <div class=" social">
-                                    <a href="#"><i class="fab fa-whatsapp"></i></a>
-                                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                                    <a href="#"><i class="fa-light fa-earth-africa"></i></a>
+                                <div class="social">
+                                    <!-- Whatsapp -->
+                                    <a href="https://wa.me/+225 0153981497" target="_blank" data-bs-toggle="tooltip"
+                                        class=" mx-2" data-bs-placement="top" title="Whatsapp"><i
+                                            class="fab fa-whatsapp"></i></a>
+
+                                    <!-- Email -->
+                                    <a href="mailto:cedric.datcha@devdebabi.com" class="mx-2" data-bs-toggle="tooltip"
+                                        data-bs-placement="top" title="E-mail">
+                                        <i class="fa-duotone fa-at"></i></a>
+
+                                    <!-- LinkedIn -->
+                                    <a href="https://www.linkedin.com/in/mel-cedric-datcha-898909210" target="_blank"
+                                        class=" mx-2" data-bs-toggle="tooltip" data-bs-placement="top"
+                                        title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+
+                                    <!-- Portfolio -->
+                                    <a href="https://melo-dev16.github.io/portfolio/ " target="_blank" class=" mx-2"
+                                        data-bs-toggle="tooltip" data-bs-placement="top" title="Portfolio"><i
+                                            class="fa-duotone fa-earth-africa"></i></a>
                                 </div>
                             </div>
                             <div class="infos">
@@ -322,15 +376,26 @@
                         <div class="card swiper-slide">
                             <div class="card-content">
                                 <div class="card-image">
-                                    <img src="./assets/img/OT.png" alt="card image">
+                                    <img src="./assets/images/team/FRANCK_1.jpg" alt="card image">
                                 </div>
                                 <div class="nom-prenoms">Franck Koutouan</div>
                                 <div class="fonction">UI / UX Designer <i class="fa-duotone fa-pen-paintbrush mx-1"></i>
                                 </div>
                                 <div class="social">
-                                    <a href="#"><i class="fab fa-whatsapp"></i></a>
-                                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                                    <a href="#"><i class="fa-light fa-earth-africa"></i></a>
+                                    <!-- Whatsapp -->
+                                    <a href="https://wa.me/+225 0779935381" target="_blank" class="mx-2"
+                                        data-bs-toggle="tooltip" data-bs-placement="top" title="Whatsapp"><i
+                                            class="fab fa-whatsapp"></i></a>
+
+                                    <!-- E-mail -->
+                                    <a href="mailto:franck.koutouan@devdebabi.com" target="_blank" class="mx-2"
+                                        data-bs-toggle="tooltip" data-bs-placement="top" title="E-mail"><i
+                                            class="fa-duotone fa-at"></i></a>
+
+                                    <!-- LinkedIn -->
+                                    <a href="#" target="_blank" class="mx-2" data-bs-toggle="tooltip"
+                                        data-bs-placement="top" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+
                                 </div>
                             </div>
                             <div class="infos">
@@ -355,16 +420,31 @@
                         <div class="card swiper-slide">
                             <div class="card-content">
                                 <div class="card-image">
-                                    <img src="./assets/img/OT.png" alt="card image">
+                                    <img src="./assets/images/team/Just_me.png" alt="card image">
                                 </div>
                                 <div class="nom-prenoms">Kevin Kouakou</div>
                                 <div class="fonction">Dévéloppeur web frontend <i
-                                        class="fa-duotone fa-laptop-mobile mx-1"></i>
+                                        class="fa-duotone fa-laptop-code mx-1"></i>
                                 </div>
                                 <div class="social">
-                                    <a href="#"><i class="fab fa-whatsapp"></i></a>
-                                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                                    <a href="#"><i class="fa-light fa-earth-africa"></i></a>
+                                    <!-- Whatsapp -->
+                                    <a href="https://wa.me/+225 0565100029" target="_blank" data-bs-toggle="tooltip"
+                                        class=" mx-2" data-bs-placement="top" title="Whatsapp"><i
+                                            class="fab fa-whatsapp"></i></a>
+
+                                    <!-- Email -->
+                                    <a href="mailto:kevin.kouakou@devdebabi.com" class="mx-2" data-bs-toggle="tooltip"
+                                        data-bs-placement="top" title="E-mail">
+                                        <i class="fa-duotone fa-at"></i></a>
+
+                                    <!-- LinkedIn -->
+                                    <a href="https://www.linkedin.com/in/kevin-kouakou-319725251/" target="_blank" class=" mx-2" data-bs-toggle="tooltip"
+                                        data-bs-placement="top" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+
+                                    <!-- Portfolio -->
+                                    <a href="https://justkevin225.github.io/portfolio" target="_blank" class=" mx-2"
+                                        data-bs-toggle="tooltip" data-bs-placement="top" title="Portfolio"><i
+                                            class="fa-duotone fa-earth-africa"></i></a>
                                 </div>
                             </div>
                             <div class="infos">
@@ -375,12 +455,16 @@
                                         <li class="fs-6">
                                             <i class="fa-duotone fa-circle-check"></i> UI / UX Designer
                                         </li>
-                                        <span class="text-center d-block">Figma, Illustrator,
+                                        <span class="text-center d-block">Adobe XD, Illustrator,
                                             Figma...</span>
                                         <li class="fs-6">
                                             <i class="fa-duotone fa-circle-check"></i> Dévéloppeur Backend
                                         </li>
                                         <span class="text-center d-block">PHP (MVC pattern)...</span>
+                                        <li class="fs-6">
+                                            <i class="fa-duotone fa-circle-check"></i> Dévéloppeur d'application mobile
+                                        </li>
+                                        <span class="text-center d-block">REACT NATIVE</span>
                                     </ul>
                                 </div>
                             </div>
@@ -388,6 +472,7 @@
                                 <i class="fas fa-plus"></i>
                             </div>
                         </div>
+
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
@@ -407,38 +492,28 @@
                             un peu
                             plus
                             sur l'un de nos services ? Contactez-nous !</p>
-                        <div class="row row-cols-3 justify-content-center means">
+                        <div class="row row-cols-2 justify-content-center means">
                             <div class="item d-flex mx-0 my-2 px-0 justify-content-center align-items-center">
-                                <div>
-                                    <a tabindex="0" class="btn" role="button" data-bs-toggle="popover"
-                                        data-bs-custom-class="custom-popover" data-bs-trigger="focus"
-                                        title="<div class='text-center w-100'>Localisation</div>"
-                                        data-bs-placement="bottom"
-                                        data-bs-content="<a class='extern-link' target='_blank' href='https://www.google.com/search?q=Abidjan&oq=abidjan%2C+C%C3%B4te+d%27ivoire&aqs=edge..69i57j0i512l2j0i22i30l2.30969j0j4&sourceid=chrome&ie=UTF-8'>Abidjan, Côte d'ivoire.</a>">
-                                        <i class="fa-duotone fa-map-location-dot"></i>
-                                    </a>
+                                <div class="d-flex ">
+                                    <a target="_blank"
+                                        href='https://www.google.com/search?q=Abidjan&oq=abidjan%2C+C%C3%B4te+d%27ivoire&aqs=edge..69i57j0i512l2j0i22i30l2.30969j0j4&sourceid=chrome&ie=UTF-8'
+                                        class="lien-icon"><i class="fa-duotone fa-map-location-dot"></i></a>
+                                    <div class="d-flex flex-column contact-item-text mx-2">
+                                        <div class="mb-2">Localisation</div>
+                                        <a class="lien" target='_blank'
+                                            href='https://www.google.com/search?q=Abidjan&oq=abidjan%2C+C%C3%B4te+d%27ivoire&aqs=edge..69i57j0i512l2j0i22i30l2.30969j0j4&sourceid=chrome&ie=UTF-8'>Abidjan,
+                                            Côte d'ivoire.</a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="item d-flex mx-0 my-2 px-0 justify-content-center align-items-center">
-                                <div>
-                                    <a tabindex="0" class="btn" role="button" data-bs-toggle="popover"
-                                        data-bs-custom-class="custom-popover" data-bs-trigger="focus"
-                                        title="<div class='text-center w-100'>Adresse mail</div>"
-                                        data-bs-placement="bottom"
-                                        data-bs-content="<a class='extern-link' target='_blank' href='mailto:game2babi.g2b@gmail.com'>game2babi.g2b@gmail.com</a>">
-                                        <i class="fa-duotone fa-mailbox"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="item d-flex mx-0 my-2 px-0 justify-content-center align-items-center">
-                                <div>
-                                    <a tabindex="0" class="btn" role="button" data-bs-toggle="popover"
-                                        data-bs-custom-class="custom-popover" data-bs-trigger="focus"
-                                        title="<div class='text-center w-100'>Téléphone</div>"
-                                        data-bs-placement="bottom"
-                                        data-bs-content="<a class='extern-link' target='_blank' href='tel:+225 0709664300'>+225 0709664300</a>">
-                                        <i class="fa-duotone fa-phone-rotary"></i>
-                                    </a>
+                                <div class="d-flex ">
+                                    <a target="_blank" href='mailto:contact@devdebabi.com' class="lien-icon"><i
+                                            class="fa-duotone fa-mailbox"></i></a>
+                                    <div class="d-flex flex-column contact-item-text mx-2">
+                                        <div class="mb-2">Adresse mail</div>
+                                        <a class="lien" href='mailto:contact@devdebabi.com'>contact@devdebabi.com</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -505,7 +580,7 @@
                 <footer class="py-1">
                     <div class="d-flex justify-content-between align-items-center pb-2">
                         <a href="#">
-                            <img id="d2b-logo" src="./assets/img/D2B LOGO.png" alt="logo - Dev De Babi" width="50">
+                            <img id="d2b-logo" src="./assets/images/D2B LOGO.png" alt="logo - Dev De Babi" width="50">
                         </a>
                         <ul class="list-unstyled d-flex social position-relative m-0">
                             <a href="https://www.facebook.com/Dev2Babi" target="_blank">
@@ -587,30 +662,30 @@
             </div>
         </div>
         <!-- Fin du footer -->
+    </div>
+    <!-- js imports -->
 
-        <!-- js imports -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript" src="./assets/vendors/jquery/js/jquery.js"></script>
+    <script type="text/javascript" src="./assets/vendors/jquery/js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="./assets/vendors/scrollreveal/js/scrollreveal.js"></script>
+    <script type="text/javascript" src="./assets/vendors/animejs/lib/anime.min.js"></script>
+    <script type="text/javascript" src="./assets/vendors/typewriter/js/typewriter.js"></script>
+    <script type="text/javascript" src="./assets/vendors/swiperjs/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="./assets/vendors/sweetalertjs/dist/sweetalert2.all.min.js"></script>
+    <script type="text/javascript" src="./assets/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="./assets/vendors/bootstrap/dist/js/popper.min.js"></script>
+    <script type="text/javascript" src="./assets/vendors/bootstrap/dist/js/tooltip.js"></script>
+    <script type="text/javascript" src="./assets/js/formValidation.js"></script>
+    <script>
+        // load
+        $(window).on('load', function () {
+            $(".loader").fadeOut(1000);
+            $(".global-container").fadeIn(1000);
+        });
+    </script>
 
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-        <script type="text/javascript" src="./libs/jquery/js/jquery.js"></script>
-        <script type="text/javascript" src="./libs/jquery/js/jquery.validate.min.js"></script>
-        <script type="text/javascript" src="./libs/scrollreveal/js/scrollreveal.js"></script>
-        <script type="text/javascript" src="./libs/animejs/lib/anime.min.js"></script>
-        <script type="text/javascript" src="./libs/typewriter/js/typewriter.js"></script>
-        <script type="text/javascript" src="./libs/swiperjs/swiper-bundle.min.js"></script>
-        <script type="text/javascript" src="./libs/sweetalertjs/dist/sweetalert2.all.min.js"></script>
-        <script type="text/javascript" src="./libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-        <script type="text/javascript" src="./libs/bootstrap/dist/js/popper.min.js"></script>
-        <script type="text/javascript" src="./libs/bootstrap/dist/js/tooltip.js"></script>
-
-        <script>
-            // load
-            $(window).on('load', function () {
-                $(".loader").fadeOut(1000);
-                $(".global-container").fadeIn(1000);
-            });
-        </script>
-
-        <script type="module" src="./main.js"></script>
+    <script type="module" src="./assets/js/main.js"></script>
 </body>
 
 </html>

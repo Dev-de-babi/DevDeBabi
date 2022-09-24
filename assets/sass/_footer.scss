@@ -1,0 +1,44 @@
+.footer {
+  z-index: -1;
+  backdrop-filter: blur(1px);
+  background-color: $dark;
+  font-family: "Montserrat";
+
+  div.row {
+    border-bottom: 2px solid $vert;
+    border-top: 2px solid $vert;
+  }
+a{
+  color: $gris !important;
+}
+  h5 {
+    color: $blanc;
+    font-size: 20px;
+  }
+p {
+  font-size: .85rem ;
+}
+  .footer-copy {
+    color: $blanc;
+  }
+
+  form p {
+    color: $gris !important;
+    font-weight: 300 !important;
+  }
+  .social a {
+    color: $vert-C;
+    font-size: calc($grand - 5px);
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .footer-copy {
+    font-size: calc($petit - 1.2px) !important;
+  }
+}

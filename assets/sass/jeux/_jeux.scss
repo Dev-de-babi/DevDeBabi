@@ -1,0 +1,238 @@
+.gamePage {
+  .game-list {
+    .card {
+      position: relative;
+      width: 220px;
+      height: 220px;
+      overflow: hidden;
+      background-color: transparent !important;
+      box-shadow: none;
+      border-radius: 10px !important;
+      border: 0px solid transparent;
+      img {
+        width: 105% !important;
+        height: 105% !important;
+        border-radius: 10px !important;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) !important;
+      }
+      .plus {
+        border-radius: 10px !important;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.212);
+        backdrop-filter: blur(5px);
+        transform-origin: center;
+        transform: scale(0);
+        transition: transform 0.5s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        i {
+          transform: scale(1);
+          transition: transform 0.3s ease;
+          color: $blanc;
+          font-size: $moyen;
+          &:hover {
+            cursor: pointer;
+            color: $orange;
+            transform: scale(0.85);
+          }
+        }
+        &::after {
+          content: "";
+          border-left: 4px solid $blanc;
+          border-top: 4px solid $blanc;
+          border-top-left-radius: 10px;
+          position: absolute;
+          left: 10%;
+          top: 10%;
+          width: 20%;
+          height: 20%;
+        }
+        &::before {
+          content: "";
+          border-right: 4px solid $blanc;
+          border-bottom: 4px solid $blanc;
+          border-bottom-right-radius: 10px;
+          position: absolute;
+          right: 10%;
+          bottom: 10%;
+          width: 20%;
+          height: 20%;
+        }
+      }
+      &:hover > .plus {
+        transform: scale(1);
+      }
+
+      div.swiper-button-prev::after {
+        font-size: $moyen !important;
+        color: $blanc !important;
+        background: $orange;
+        border-radius: 50%;
+      }
+    }
+  }
+  .swiper {
+    height: 220px;
+
+    .swiper-pagination-bullet {
+      background-color: $gris;
+    }
+    .swiper-pagination-bullet-active {
+      background-color: $orange;
+    }
+  }
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .footer {
+    z-index: -1;
+    border-radius: 65px 65px 0 0;
+    background-color: $dark;
+  }
+}
+
+.gamesModals {
+  font-family: "Montserrat";
+  .modal {
+    backdrop-filter: blur(5px);
+    .modal-body {
+      color: $blanc;
+      .game-icon {
+        border-radius: 20px;
+      }
+      .titre {
+        font-size: calc($moyen + 1px);
+        font-weight: 600;
+      }
+      .description {
+        font-size: calc($petit - 0.5px);
+        color: $gris;
+        position: relative;
+        max-width: 260px;
+        &.ellipsis::after {
+          content: "...";
+          position: absolute;
+          right: -12px;
+          bottom: 4px;
+        }
+      }
+      .text-concat {
+        position: relative;
+        display: inline-block;
+        word-wrap: break-word;
+        overflow: hidden;
+        max-height: 3.6em;
+        line-height: 1.2em;
+        text-align: justify;
+      }
+      .swiper {
+        width: 100%;
+        height: 238px;
+        .card {
+          height: 200px;
+          position: relative;
+          width: 20em;
+          background-color: $orange;
+          padding: 2em 1em;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          margin: 0 2em;
+          border-radius: 15px;
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+          color: $blanc;
+          width: 40px;
+          height: 40px;
+          background-color: $vert-C;
+          border-radius: 50%;
+          &::after {
+            font-size: $moyen !important;
+          }
+        }
+        .swiper-wrapper {
+          width: 100%;
+          display: flex;
+          align-items: center;
+        }
+      }
+      .btn-dl {
+        width: 50px;
+        height: 50px;
+        color: $blanc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-style: none;
+        border-radius: 8px;
+        overflow: hidden;
+        font-family: "Montserrat";
+        font-weight: bold;
+        transition: 0.25s box-shadow;
+        transition: transform 0.25s ease;
+        &:hover {
+          transform: scale(1.1);
+        }
+        &:first-child {
+          background-color: $orange;
+          font-size: $moyen;
+        }
+        &:nth-of-type(2) {
+          background-color: $noir;
+        }
+        &:last-child {
+          background-color: $bleuc;
+          font-size: $moyen;
+        }
+      }
+    }
+  }
+  .modal-content {
+    border-radius: 20px !important;
+    background-color: $dark !important;
+    padding: 5px;
+  }
+}
+@media (min-width: 570px) {
+  .btn-dl {
+    height: 45px !important;
+    width: 150px !important;
+    border-radius: 45px !important;
+    & > span {
+      display: inline !important;
+      font-size: $petit;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .game-list {
+    padding-top: 0 !important;
+    .row {
+      width: 75%;
+      margin: auto;
+    }
+  }
+}
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 600px;
+    margin: 1.75rem auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  .gamePage {
+    .footer {
+      border-radius: 30px 30px 0 0;
+    }
+  }
+}

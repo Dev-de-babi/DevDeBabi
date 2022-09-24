@@ -1,0 +1,26 @@
+.submitting {
+  float: left;
+  width: 100%;
+  padding: 10px 0;
+  display: none;
+  font-weight: bold;
+  font-size: 12px;
+  color: $blanc;
+}
+.input-field {
+  border: none;
+  outline: none;
+  background-color: $vert-O;
+  height: 40px;
+  padding: 3px 15px;
+  color: $blanc;
+  width: 100%;
+  border: 1.5px solid transparent;
+
+  &:focus {
+    border: 1.5px solid $orange;
+  }
+}
+textarea.input-field {
+  height: auto !important;
+}

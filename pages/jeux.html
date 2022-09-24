@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/images/D2B LOGO.png"  type="image/x-icon">
+
+    <link rel="stylesheet" href="../assets/vendors/bootstrap/scss/bootstrap.css">
+    <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v6.2.0/css/pro.min.css">
+    <link rel="stylesheet" href="../assets/vendors/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../assets/vendors/swiperjs/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/vendors/sweetalertjs/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+
+    <title>Dev De Babi | Jeux</title>
+</head>
+
+<body>
+    <div class="loader">
+        <div class="spinner" role="status">
+
+        </div>
+        <div>Un instant...</div>
+    </div>
+    <!-- Global container -->
+    <div class="global-container gamePage">
+        <a href="#" class="btn to-top"><i class="fas fa-arrow-turn-up"></i></a>
+        <div class="bubbles">
+            <img src="../assets/images/ORANGE.png" class="orange" alt="bulle ORANGE" width="200">
+            <img src="../assets/images/VERT.png" class="verte" alt="bulle VERTE" width="100">
+            <img src="../assets/images/BLANC.png" class="blanc" alt="bulle BLANCHE" width="150">
+        </div>
+        <div class="glass">
+            <!-- Début barre de navigation -->
+            <nav class="navbar navbar-expand-md sticky-top navbar-dark bg-dark" aria-label="Main navigation">
+                <div class="container">
+                    <a href="index.html" class="navbar-brand">
+                        <img id="d2b-logo" src="../assets/images/D2B LOGO.png" alt="logo - Dev De Babi" width="40"
+                            height="40">
+                    </a>
+                    <div class="d-flex">
+                        <a href="#" class="btn btn-outlined user-icon"><i class="fa-duotone fa-user"></i></a>
+                        <button class="btn btn-outlined navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarsExampleXxl" aria-controls="navbarsExampleXxl" aria-expanded="true"
+                            aria-label="Toggle navigation">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse justify-content-md-between" id="navbarsExampleXxl">
+                        <ul class="navbar-nav w-100 justify-content-sm-center">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html" id="accueil-nav">
+                                    Accueil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./pages/jeux.html"><i
+                                        class="fas-fa fa-home-chimney"></i>
+                                    Jeux</a>
+                            </li>
+                        </ul>
+                        <div class="d-none btns-container">
+                            <a href="#" class="btn btn-outlined mx-2">Connexion</a>
+                            <a href="#" class="btn">Inscription</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Fin barre de navigation -->
+            <div class="swiper gamesTopSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="../assets/images/carousel/banner_1.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="../assets/images/carousel/banner_7.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="../assets/images/carousel/banner_7.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="../assets/images/carousel/login-bg.jpg" alt=""></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="game-list py-5">
+                <div class="container">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5">
+                        <div class="col d-flex align-items-center justify-content-center justify-content-lg-end">
+                            <div class="card shadow-sm">
+                                <img src="../assets/images/games/apex-featured-image-escape-season.jpg.adapt.crop191x100.1200w.png" alt="..." class="w-100 h-100">
+                                <div class="plus">
+                                    <i class="fas fa-plus" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-flex align-items-center justify-content-center">
+                            <div class="card shadow-sm">
+                                <img src="../assets/images/games/hover 3.png" alt="..." class="w-100 h-100">
+                                <div class="plus"><i class="fas fa-plus"></i></div>
+                            </div>
+                        </div>
+                        <div class="col d-flex align-items-center justify-content-center justify-content-lg-start">
+                            <div class="card shadow-sm">
+                                <img src="../assets/images/games/hover 5.png" alt="..." class="w-100 h-100">
+                                <div class="plus"><i class="fas fa-plus"></i></div>
+                            </div>
+                        </div>
+                        <div class="col d-flex align-items-center justify-content-center justify-content-lg-end">
+                            <div class="card shadow-sm">
+                                <img src="../assets/images/games/hover 4.png" alt="..." class="w-100 h-100">
+                                <div class="plus">
+                                    <i class="fas fa-plus" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-flex align-items-center justify-content-center">
+                            <div class="card shadow-sm">
+                                <img src="../assets/images/games/hover 1.png" alt="..." class="w-100 h-100">
+                                <div class="plus"><i class="fas fa-plus"></i></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Début du footer -->
+        <div class="container-fluid footer pt-5">
+            <div class="container">
+                <footer class="py-1">
+                    <div class="d-flex justify-content-between align-items-center pb-2">
+                        <a href="#">
+                            <img id="d2b-logo" src="../assets/images/D2B LOGO.png" alt="logo - Dev De Babi" width="50">
+                        </a>
+                        <ul class="list-unstyled d-flex social position-relative m-0">
+                            <a href="https://www.facebook.com/Dev2Babi" target="_blank">
+                                <li>
+                                    <i class="fab fa-facebook"></i>
+                                </li>
+                            </a>
+                            <a href="#">
+                                <li>
+                                    <i class="fab fa-tiktok"></i>
+                                </li>
+                            </a>
+                            <a href="#">
+                                <li>
+                                    <i class="fab fa-youtube"></i>
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="row py-5 justify-content-center">
+                        <div class="py-1 col-sm-12 col-md-3">
+                            <h5>Jeux <i class="fa-duotone fa-gamepad-modern"></i></h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Ivoire run</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Gnama
+                                        Gnama</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Référence
+                                        ivoirienne</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Ziguehi</a></li>
+                            </ul>
+                        </div>
+
+                        <div id="newsletter" class="py-1 col-sm-12 col-md-6">
+                            <form>
+                                <h5>Newsletter<i class="fa-duotone fa-envelope mx-1"></i></h5>
+                                <p class="text-white fw-thin">Abonnez vous à notre news letter pour ne rien rater du
+                                    contenu de
+                                    nos nouveaux jeux.
+                                </p>
+                                <div class="d-flex gap-2">
+                                    <input type="email" name="email" class="input-field rounded"
+                                        placeholder="Saisissez votre adresse mail">
+                                    <button type="submit" class="btn btn-send rounded"><i
+                                            class="fa-duotone fa-paper-plane"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <p class="footer-copy py-3 text-center">Copyright ©
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script> Dev de Babi | Tout droit réservé
+                    </p>
+                </footer>
+
+            </div>
+        </div>
+        <!-- Fin du footer -->
+    </div>
+    <!-- js imports -->
+    <div class="gamesModals">
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+
+                        <!-- Icon et description début -->
+                        <div class="d-flex justify-content-center">
+                            <img src="../assets/images/carousel/banner_2.jpg" class="game-icon" width="100" height="100"
+                                alt="icon jeu">
+                            <div class="d-flex flex-column justify-content-center px-3 py-1">
+                                <span class="titre fw-bold">IVOIRE RUN</span>
+                                <div class="description ellipsis">
+                                    <span class="text-concat">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                        unknown printer took a galley of type and scrambled it to make a type specimen
+                                        book Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores,
+                                        delectus?.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Icon et description fin -->
+                        
+                        
+                        <!-- Sliders fin -->
+                        <div class="swiper gameDetailSwiper">
+                            <div class="swiper-wrapper">
+
+                                <!-- slide 1 -->
+                                <div class="card swiper-slide">
+                                    <div class="card-content">
+
+                                    </div>
+                                </div>
+                                <div class="card swiper-slide">
+                                    <div class="card-content">
+
+                                    </div>
+                                </div>
+                                <div class="card swiper-slide">
+                                    <div class="card-content">
+
+                                    </div>
+                                </div>
+                                <!-- slide 1 -->
+
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                        <!-- Sliders fin -->
+
+
+                        <div class="d-flex align-items-center justify-content-around">
+                            <button class="btn-dl"><i class="fas fa-download"></i> <span class="d-none mx-2">Télécharger</span></button>
+                            <button class="btn-dl"><img src="../assets/images/PLAYSTORE.png" alt="PlayStore" width="20"> <span class="d-none mx-2">Play Store</span></button>
+                            <button class="btn-dl"><img src="../assets/images/GARA CARD.png" alt="PlayStore" width="20"> <span class="d-none mx-2">GARA Store</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript" src="../assets/vendors/jquery/js/jquery.js"></script>
+    <script type="text/javascript" src="../assets/vendors/jquery/js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../assets/vendors/scrollreveal/js/scrollreveal.js"></script>
+    <script type="text/javascript" src="../assets/vendors/animejs/lib/anime.min.js"></script>
+    <script type="text/javascript" src="../assets/vendors/typewriter/js/typewriter.js"></script>
+    <script type="text/javascript" src="../assets/vendors/swiperjs/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="../assets/vendors/sweetalertjs/dist/sweetalert2.all.min.js"></script>
+    <script type="text/javascript" src="../assets/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../assets/vendors/bootstrap/dist/js/popper.min.js"></script>
+    <script type="text/javascript" src="../assets/vendors/bootstrap/dist/js/tooltip.js"></script>
+
+    <script>
+        // load
+        $(window).on('load', function () {
+            $(".loader").fadeOut(1000);
+            $(".global-container").fadeIn(1000);
+        });
+    </script>
+
+    <script type="module" src="../assets/js/main.js"></script>
+</body>
+
+</html>

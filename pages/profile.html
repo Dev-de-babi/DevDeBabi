@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/images/D2B LOGO.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="../assets/vendors/bootstrap/scss/bootstrap.css">
+    <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v6.2.0/css/pro.min.css">
+    <link rel="stylesheet" href="../assets/vendors/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../assets/vendors/swiperjs/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/vendors/sweetalertjs/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="../assets/css/profile.css" />
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <title>Dev De Babi | profil</title>
+</head>
+
+<body>
+    <form action="" id="contactForm"></form>
+    <div class="loader">
+        <div class="spinner" role="status">
+
+        </div>
+        <div>Un instant...</div>
+    </div>
+    <!-- Global container -->
+    <div class="global-container">
+        <a href="#" class="btn to-top"><i class="fas fa-arrow-turn-up"></i></a>
+        <div class="glass">
+            <!-- Début barre de navigation -->
+            <nav class="navbar navbar-expand-md sticky-top navbar-dark bg-dark" aria-label="Main navigation">
+                <div class="container">
+                    <a href="index.html" class="navbar-brand">
+                        <img id="d2b-logo" src="../assets/images/D2B LOGO.png" alt="logo - Dev De Babi" width="40"
+                            height="40">
+                    </a>
+                    <div class="d-flex">
+                        <div class="user-info d-flex align-items-center justify-content-between">
+                            <div class="img">
+                                <img src="../assets/images/faces/face11.jpg" alt="Photo Utilisateur">
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn nav-dropdown dropdown-toggle" data-bs-toggle="dropdown"
+                                    data-bs-display="static" aria-expanded="false"></button>
+                                <ul class="dropdown-menu dropdown-menu-end mx-0 shadow" style="width: 220px;">
+                                    <li>
+                                        <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+                                            <svg class="bi" width="16" height="16">
+                                                <use xlink:href="#files"></use>
+                                            </svg>
+                                            Documents
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+                                            <svg class="bi" width="16" height="16">
+                                                <use xlink:href="#image-fill"></use>
+                                            </svg>
+                                            Photos
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+                                            <svg class="bi" width="16" height="16">
+                                                <use xlink:href="#film"></use>
+                                            </svg>
+                                            Movies
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+                                            <svg class="bi" width="16" height="16">
+                                                <use xlink:href="#music-note-beamed"></use>
+                                            </svg>
+                                            Music
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+                                            <svg class="bi" width="16" height="16">
+                                                <use xlink:href="#joystick"></use>
+                                            </svg>
+                                            Games
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center"
+                                            href="#">
+                                            <i class="fas fa-home"></i> Déconnexion
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button class="btn btn-outlined navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarsExampleXxl" aria-controls="navbarsExampleXxl" aria-expanded="true"
+                            aria-label="Toggle navigation">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse justify-content-md-between" id="navbarsExampleXxl">
+                        <ul class="navbar-nav w-100 justify-content-sm-center">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#" id="accueil-nav">
+                                    Accueil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/jeux.html">
+                                    Jeux</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="user-info-md d-flex align-items-center justify-content-between">
+                        <div class="img mx-2">
+                            <img src="../assets/images/faces/face4.jpg" alt="Photo Utilisateur">
+                        </div>
+                        <div class="d-flex flex-column">
+                            <span>Kevin Kouakou</span>
+                            <span>15000 <div class="d-inline fw-bold">C</div></span>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn nav-dropdown dropdown-toggle" data-bs-toggle="dropdown"
+                                data-bs-display="static" aria-expanded="false"></button>
+                            <ul class="dropdown-menu dropdown-menu-end mx-0 shadow" style="width: 220px;">
+                                <li>
+                                    <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+                                        <i class="fa-duotone fa-address-card"></i>
+                                        Profil
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+                                        <i class="fa-duotone fa-store"></i>
+                                        Achat
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+                                        <i class="fa-duotone fa-gears"></i> Paramètres
+                                    </a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center"
+                                        href="#">
+                                        <i class="fa-duotone fa-person-from-portal"></i> Déconnexion
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Fin barre de navigation -->
+
+            <div class="container my-3">
+                <div class="card-profile">
+                    <div class="card-body">
+                        <h4 class="card-title">Historique de transactions</h4>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Montant Payé</th>
+                                        <th>Ancien Solde</th>
+                                        <th>Nouveau Solde</th>
+                                        <th>Date</th>
+                                        <th>Méthode de Paiement</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>-</td>
+                                        <td><span class="fw-bold">C</span> 14,500</td>
+                                        <td><span class="fw-bold">C</span> 10,500</td>
+                                        <td>04 Dec 2022</td>
+                                        <td>
+                                            -
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="fw-bold">$</span> 1500</td>
+                                        <td><span class="fw-bold">C</span> 8,500</td>
+                                        <td><span class="fw-bold">C</span> 1,500</td>
+                                        <td>04 Nov 2019</td>
+                                        <td>
+                                            <div class="badge badge-orange">
+                                                ORANGE MONEY
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- Fin des sections -->
+        <!-- Début du footer -->
+        <div class="container-fluid footer pt-5">
+            <div class="container">
+                <footer class="py-1">
+                    <div class="d-flex justify-content-between align-items-center pb-2">
+                        <a href="#">
+                            <img id="d2b-logo" src="../assets/images/D2B LOGO.png" alt="logo - Dev De Babi" width="50">
+                        </a>
+                        <ul class="list-unstyled d-flex social position-relative m-0">
+                            <a href="https://www.facebook.com/Dev2Babi" target="_blank">
+                                <li>
+                                    <i class="fab fa-facebook"></i>
+                                </li>
+                            </a>
+                            <a href="#">
+                                <li>
+                                    <i class="fab fa-tiktok"></i>
+                                </li>
+                            </a>
+                            <a href="#">
+                                <li>
+                                    <i class="fab fa-youtube"></i>
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="row py-5 justify-content-center">
+                        <div class="py-1 col-sm-12 col-md-3">
+                            <h5>Jeux <i class="fa-duotone fa-gamepad-modern"></i></h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Ivoire run</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Gnama
+                                        Gnama</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Référence
+                                        ivoirienne</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="py-1 col-sm-12 col-md-3">
+                            <h5>Navigation <i class="fa-duotone fa-compass"></i></h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Présentation</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#nosjeux" class="nav-link p-0 text-muted">Nos
+                                        jeux</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#gara" class="nav-link p-0 text-muted">GARA</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#nosservices" class="nav-link p-0 text-muted">Nos
+                                        services</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#equipe" class="nav-link p-0 text-muted">Notre
+                                        équipe</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#contact" class="nav-link p-0 text-muted">Nous
+                                        contacter</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div id="newsletter" class="py-1 col-sm-12 col-md-6">
+                            <form>
+                                <h5>Newsletter<i class="fa-duotone fa-envelope mx-1"></i></h5>
+                                <p class="text-white fw-thin">Abonnez vous à notre news letter pour ne rien rater du
+                                    contenu de
+                                    nos nouveaux jeux.
+                                </p>
+                                <div class="d-flex gap-2">
+                                    <input type="email" name="email" class="input-field rounded"
+                                        placeholder="Saisissez votre adresse mail">
+                                    <button type="submit" class="btn btn-send rounded"><i
+                                            class="fa-duotone fa-paper-plane"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <p class="footer-copy py-3 text-center">Copyright ©
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script> Dev de Babi | Tout droit réservé
+                    </p>
+                </footer>
+
+            </div>
+        </div>
+        <!-- Fin du footer -->
+    </div>
+    <!-- js imports -->
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript" src="../assets/vendors/jquery/js/jquery.js"></script>
+    <script type="text/javascript" src="../assets/vendors/jquery/js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../assets/vendors/scrollreveal/js/scrollreveal.js"></script>
+    <script type="text/javascript" src="../assets/vendors/animejs/lib/anime.min.js"></script>
+    <script type="text/javascript" src="../assets/vendors/typewriter/js/typewriter.js"></script>
+    <script type="text/javascript" src="../assets/vendors/swiperjs/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="../assets/vendors/sweetalertjs/dist/sweetalert2.all.min.js"></script>
+    <script type="text/javascript" src="../assets/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../assets/vendors/bootstrap/dist/js/popper.min.js"></script>
+    <script type="text/javascript" src="../assets/vendors/bootstrap/dist/js/tooltip.js"></script>
+
+    <script>
+        // load
+        $(window).on('load', function () {
+            $(".loader").fadeOut(1000);
+            $(".global-container").fadeIn(1000);
+        });
+    </script>
+
+    <script type="module" src="../assets/js/main.js"></script>
+</body>
+
+</html>
