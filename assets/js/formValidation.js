@@ -59,6 +59,7 @@ var contactForm = function () {
                                 title: 'Vôtre message a bien été envoyer, merci de votre attention ;) !'
                             })
                             document.querySelector(".swal2-timer-progress-bar").classList.remove("rouge")
+                            document.querySelector(".swal2-timer-progress-bar").classList.remove("orangee")
                             document.querySelector(".swal2-timer-progress-bar").classList.add("vert")
 
 
@@ -70,6 +71,7 @@ var contactForm = function () {
                                     title: 'Vérifiez vôtre connexion internet puis réessayez s\'il vous plaît :('
                                 })
                                 document.querySelector(".swal2-timer-progress-bar").classList.remove("vert")
+                                document.querySelector(".swal2-timer-progress-bar").classList.remove("orangee")
                                 document.querySelector(".swal2-timer-progress-bar").classList.add("rouge")
                             }
                         )

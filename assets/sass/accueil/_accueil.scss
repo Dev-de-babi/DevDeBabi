@@ -6,40 +6,50 @@ h1 {
   img.img-fluid {
     transform: scale(1.3);
   }
-  img.boule {
+  img.img-items {
     position: absolute;
-
+    // PC
     &:nth-of-type(2) {
+      width: 185px;
       left: 10%;
       top: 17%;
     }
-
+    // pen-tool
     &:nth-of-type(3) {
+      width: 75px;
       right: 32%;
       top: 75%;
       z-index: -1;
     }
-    
+    // drawing-tool
     &:nth-of-type(4) {
+      width: 95px;
       left: 28%;
       top: 78%;
     }
-
+    // square
     &:nth-of-type(5) {
+      width: 100px;
       right: 0;
       top: 5%;
       z-index: -1;
     }
+    // X
     &:nth-of-type(6) {
+      width: 85px;
       right: 20%;
       top: -5%;
       z-index: -1;
     }
+    // circle
     &:nth-of-type(7) {
+      width: 100px;
       right: 25%;
       top: 25%;
     }
+    // triangle
     &:nth-of-type(8) {
+      width: 125px;
       right: 12%;
       top: 38%;
     }
@@ -360,7 +370,7 @@ h1 {
       a.lien {
         font-size: calc($moyen - 1.5px);
         color: $gris;
-        transition: all .5s ease;
+        transition: all 0.5s ease;
         &:hover {
           color: $orange;
         }
@@ -461,6 +471,172 @@ h1 {
   }
 }
 
+@media screen and (max-width: 1199px) {
+  .presentation {
+    img.img-items {
+      position: absolute;
+      // PC
+      &:nth-of-type(2) {
+        width: 145px;
+        left: 10%;
+        top: 17%;
+      }
+      // pen-tool
+      &:nth-of-type(3) {
+        width: 70px;
+        right: 32%;
+        top: 75%;
+        z-index: -1;
+      }
+      // drawing-tool
+      &:nth-of-type(4) {
+        width: 65px;
+        left: 28%;
+        top: 78%;
+      }
+      // square
+      &:nth-of-type(5) {
+        width: 80px;
+        right: 0;
+        top: 5%;
+        z-index: -1;
+      }
+      // X
+      &:nth-of-type(6) {
+        width: 65px;
+        right: 20%;
+        top: -5%;
+        z-index: -1;
+      }
+      // circle
+      &:nth-of-type(7) {
+        width: 70px;
+        right: 25%;
+        top: 25%;
+      }
+      // triangle
+      &:nth-of-type(8) {
+        width: 100px;
+        right: 12%;
+        top: 38%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .presentation {
+    img.img-items {
+      position: absolute;
+      // PC
+      &:nth-of-type(2) {
+        width: 105px;
+        left: 12%;
+        top: 15%;
+      }
+      // pen-tool
+      &:nth-of-type(3) {
+        width: 55px;
+        right: 32%;
+        top: 75%;
+        z-index: -1;
+      }
+      // drawing-tool
+      &:nth-of-type(4) {
+        width: 50px;
+        left: 28%;
+        top: 78%;
+      }
+      // square
+      &:nth-of-type(5) {
+        width: 65px;
+        right: 0;
+        top: 5%;
+        z-index: -1;
+      }
+      // X
+      &:nth-of-type(6) {
+        width: 50px;
+        right: 20%;
+        top: -5%;
+        z-index: -1;
+      }
+      // circle
+      &:nth-of-type(7) {
+        width: 55px;
+        right: 25%;
+        top: 25%;
+      }
+      // triangle
+      &:nth-of-type(8) {
+        width: 85px;
+        right: 12%;
+        top: 38%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 575px) {
+  .presentation {
+    img.img-items {
+      position: absolute;
+      // PC
+      &:nth-of-type(2) {
+        width: 28%;
+        left: 13%;
+        top: 18%;
+      }
+      // pen-tool
+      &:nth-of-type(3) {
+        width: 14%;
+        right: 32%;
+        top: 71%;
+        z-index: -1;
+      }
+      // drawing-tool
+      &:nth-of-type(4) {
+        width: 13%;
+        left: 28%;
+        top: 76%;
+      }
+      // square
+      &:nth-of-type(5) {
+        width: 15%;
+        right: 0;
+        top: 5%;
+        z-index: -1;
+      }
+      // X
+      &:nth-of-type(6) {
+        width: 12%;
+        right: 20%;
+        top: -5%;
+        z-index: -1;
+      }
+      // circle
+      &:nth-of-type(7) {
+        width: 13.5%;
+        right: 25%;
+        top: 25%;
+      }
+      // triangle
+      &:nth-of-type(8) {
+        width: 19%;
+        right: 12%;
+        top: 38%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  .contact-item-text {
+    div {
+      font-size: calc($moyen) !important;
+    }
+    a.lien {
+      font-size: calc($petit - 2px) !important;
+    }
+  }
+}
 @media screen and (max-width: 600px) {
   .game-png {
     width: 100%;

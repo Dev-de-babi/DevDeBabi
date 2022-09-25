@@ -1,6 +1,31 @@
 import { animElt } from "./elementsAnim.js";
 import { rippleAnim } from "./btn.js";
 
+// Toast de page bientot disponible
+const onWorkBtns = document.querySelectorAll(".on-work");
+const Toast = Swal.mixin({
+  toast: true,
+  position: 'top-end',
+  showConfirmButton: false,
+  timer: 3500,
+  timerProgressBar: true,
+  didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+  }
+})
+onWorkBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    Toast.fire({
+      icon: 'warning',
+      title: 'Connexion et inscription momentanément indisponible, désolé... :('
+  })
+  document.querySelector(".swal2-timer-progress-bar").classList.remove("vert")
+  document.querySelector(".swal2-timer-progress-bar").classList.remove("rouge")
+  document.querySelector(".swal2-timer-progress-bar").classList.add("orangee")
+  })
+});
+
 // Pop-up section contact
 $(document).ready(function () {
   $("[data-bs-toggle='popover']").popover({ html: true });
@@ -78,12 +103,6 @@ roundedBtn.forEach((btn) => {
     btn.classList.toggle("infosCheckedR");
   });
 });
-
-// Mouvement des bulles en arrière plan
-// const globalBg = document.querySelector(".global-bg")
-// window.addEventListener("scroll", () => {
-//     globalBg.style.transform = `translateY(-${window.scrollY - window.scrollY * 70 / 100}px)`
-// })
 
 // Je déplace légèrement la scroll bar pour régler un petit bug
 document.addEventListener("DOMContentLoaded", () => {
