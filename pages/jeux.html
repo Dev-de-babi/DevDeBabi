@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v6.2.0/css/pro.min.css">
     <link rel="stylesheet" href="../assets/vendors/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../assets/vendors/swiperjs/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/vendors/splidejs/css/splide.min.css">
     <link rel="stylesheet" href="../assets/vendors/sweetalertjs/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
 
@@ -72,13 +73,18 @@
             </nav>
             <!-- Fin barre de navigation -->
 
-            <div class="swiper gamesTopSwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="../assets/images/carousel/flyer_104631.png" alt="slide"></div>
-                    <div class="swiper-slide"><img src="../assets/images//carousel/flyer_104520.png" alt="slide"></div>
+            <div class="splide gamesTopSplide" role="group" aria-label="Splide Basic HTML Example">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide"><img src="../assets/images/carousel/flyer_104520.png" alt="slide">
+                        </li>
+                        <li class="splide__slide"><img src="../assets/images/carousel/flyer_104631.png" alt="slide">
+                        </li>
+                    </ul>
                 </div>
-                <div class="swiper-pagination"></div>
             </div>
+
+
             <div class="game-list py-5">
                 <div class="container">
                     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5">
@@ -135,7 +141,7 @@
                                     <i class="fas fa-plus mx-1"></i>
                                     <span>Détails</span>
                                 </div>
-                                
+
                             </div>
                         </div>
                         <!-- Ziguehi Ivoirienne Icône Fin -->
@@ -200,7 +206,7 @@
                                 <div class="d-flex gap-2">
                                     <input type="email" name="email" class="input-field rounded"
                                         placeholder="Saisissez votre adresse mail">
-                                    <button type="submit" class="btn btn-send rounded"><i
+                                    <button class="btn btn-send rounded"><i
                                             class="fa-duotone fa-paper-plane"></i></button>
                                 </div>
                             </form>
@@ -226,6 +232,10 @@
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-body">
+                        <!-- Bouton de fermeture -->
+                        <button type="button" class="MyBtnClose" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="fas fa-xmark"></i>
+                        </button>
 
                         <!-- Icon et description début -->
                         <div class="d-flex justify-content-center">
@@ -250,19 +260,16 @@
 
                                 <!-- slide 1 -->
                                 <div class="card swiper-slide">
-                                    <div class="card-content">
-
-                                    </div>
+                                    <img src="../assets/images/games/Ivoire Run/Capture d’écran 2022-09-24 112958.png"
+                                        alt="slide">
                                 </div>
                                 <div class="card swiper-slide">
-                                    <div class="card-content">
-
-                                    </div>
+                                    <img src="../assets/images/games/Ivoire Run/Capture d’écran 2022-09-24 113039.png"
+                                        alt="slide">
                                 </div>
                                 <div class="card swiper-slide">
-                                    <div class="card-content">
-
-                                    </div>
+                                    <img src="../assets/images/games/Ivoire Run/Capture d’écran 2022-09-24 113107.png"
+                                        alt="slide">
                                 </div>
                                 <!-- slide 1 -->
 
@@ -274,14 +281,15 @@
 
 
                         <div class="d-flex align-items-center justify-content-around">
-                            <button class="btn-dl"><img src="../assets/images/logos/APPLE.png" alt="Apple" width="20">
-                                <span class="d-none mx-2">Jouer</span></button>
-                            <button class="btn-dl"><img src="../assets/images/logos/PLAYSTORE.png" alt="PlayStore"
+                            <a href="#" class="btn-dl indispo"><img src="../assets/images/logos/APPLE.png" alt="Apple"
                                     width="20">
-                                <span class="d-none mx-2">Play Store</span></button>
-                            <button class="btn-dl"><img src="../assets/images/logos/GARA CARD.png" alt="PlayStore"
+                                <span class="d-none mx-2">Jouer</span></a>
+                            <a href="#" class="btn-dl indispo"><img src="../assets/images/logos/PLAYSTORE.png" alt="PlayStore"
                                     width="20">
-                                <span class="d-none mx-2">GARA Store</span></button>
+                                <span class="d-none mx-2">Play Store</span></a>
+                            <a href="#" class="btn-dl indispo"><img src="../assets/images/logos/GARA CARD.png" alt="PlayStore"
+                                    width="20">
+                                <span class="d-none mx-2">GARA Store</span></a>
                         </div>
                     </div>
                 </div>
@@ -296,6 +304,9 @@
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-body">
+                        <button type="button" class="MyBtnClose" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="fas fa-xmark"></i>
+                        </button>
 
                         <!-- Icon et description début -->
                         <div class="d-flex justify-content-center">
@@ -319,19 +330,22 @@
 
                                 <!-- slide 1 -->
                                 <div class="card swiper-slide">
-                                    <div class="card-content">
-
-                                    </div>
+                                    <img src="../assets/images/games/Gnama Gnama/unnamed.jpg" alt="slide">
                                 </div>
                                 <div class="card swiper-slide">
-                                    <div class="card-content">
-
-                                    </div>
+                                    <img src="../assets/images/games/Gnama Gnama/unnamed (1).jpg" alt="slide">
                                 </div>
                                 <div class="card swiper-slide">
-                                    <div class="card-content">
-
-                                    </div>
+                                    <img src="../assets/images/games/Gnama Gnama/unnamed (2).jpg" alt="slide">
+                                </div>
+                                <div class="card swiper-slide">
+                                    <img src="../assets/images/games/Gnama Gnama/unnamed (3).jpg" alt="slide">
+                                </div>
+                                <div class="card swiper-slide">
+                                    <img src="../assets/images/games/Gnama Gnama/unnamed (4).jpg" alt="slide">
+                                </div>
+                                <div class="card swiper-slide">
+                                    <img src="../assets/images/games/Gnama Gnama/unnamed (5).jpg" alt="slide">
                                 </div>
                                 <!-- slide 1 -->
 
@@ -343,14 +357,14 @@
 
 
                         <div class="d-flex align-items-center justify-content-around">
-                            <button class="btn-dl"><img src="../assets/images/logos/APPLE.png" alt="Apple" width="20">
-                                <span class="d-none mx-2">Jouer</span></button>
-                            <button class="btn-dl"><img src="../assets/images/logos/PLAYSTORE.png" alt="PlayStore"
+                            <a href="#" class="btn-dl indispo"><img src="../assets/images/logos/APPLE.png" alt="Apple" width="20">
+                                <span class="d-none mx-2">Jouer</span></a>
+                            <a href="https://play.google.com/store/search?q=gnama+gnama&c=apps" target="_blank" class="btn-dl"><img src="../assets/images/logos/PLAYSTORE.png" alt="PlayStore"
                                     width="20">
-                                <span class="d-none mx-2">Play Store</span></button>
-                            <button class="btn-dl"><img src="../assets/images/logos/GARA CARD.png" alt="PlayStore"
+                                <span class="d-none mx-2">Play Store</span></a>
+                            <a href="#" class="btn-dl indispo"><img src="../assets/images/logos/GARA CARD.png" alt="PlayStore"
                                     width="20">
-                                <span class="d-none mx-2">GARA Store</span></button>
+                                <span class="d-none mx-2">GARA Store</span></a>
                         </div>
                     </div>
                 </div>
@@ -365,6 +379,9 @@
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-body">
+                        <button type="button" class="MyBtnClose" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="fas fa-xmark"></i>
+                        </button>
 
                         <!-- Icon et description début -->
                         <div class="d-flex justify-content-center">
@@ -389,23 +406,18 @@
 
                                 <!-- slide 1 -->
                                 <div class="card swiper-slide">
-                                    <div class="card-content">
-
-                                    </div>
+                                    <img src="../assets/images/games/Référence Ivoirienne/screenshot 1.jpg" alt="slide">
                                 </div>
                                 <div class="card swiper-slide">
-                                    <div class="card-content">
-
-                                    </div>
+                                    <img src="../assets/images/games/Référence Ivoirienne/screenshot 2.jpg" alt="slide">
                                 </div>
                                 <div class="card swiper-slide">
-                                    <div class="card-content">
-
-                                    </div>
+                                    <img src="../assets/images/games/Référence Ivoirienne/screenshot 3.jpg" alt="slide">
                                 </div>
                                 <!-- slide 1 -->
 
                             </div>
+
                             <div class="swiper-button-next"></div>
                             <div class="swiper-button-prev"></div>
                         </div>
@@ -413,14 +425,14 @@
 
 
                         <div class="d-flex align-items-center justify-content-around">
-                            <button class="btn-dl"><img src="../assets/images/logos/APPLE.png" alt="Apple" width="20">
-                                <span class="d-none mx-2">Jouer</span></button>
-                            <button class="btn-dl"><img src="../assets/images/logos/PLAYSTORE.png" alt="PlayStore"
+                            <a href="#" class="btn-dl indispo"><img src="../assets/images/logos/APPLE.png" alt="Apple" width="20">
+                                <span class="d-none mx-2">Jouer</span></a>
+                            <a href="#" class="btn-dl indispo"><img src="../assets/images/logos/PLAYSTORE.png" alt="PlayStore"
                                     width="20">
-                                <span class="d-none mx-2">Play Store</span></button>
-                            <button class="btn-dl"><img src="../assets/images/logos/GARA CARD.png" alt="PlayStore"
+                                <span class="d-none mx-2">Play Store</span></a>
+                            <a href="https://web.gara.store/apps/game/143" target="_blank" class="btn-dl"><img src="../assets/images/logos/GARA CARD.png" alt="PlayStore"
                                     width="20">
-                                <span class="d-none mx-2">GARA Store</span></button>
+                                <span class="d-none mx-2">GARA Store</span></a>
                         </div>
                     </div>
                 </div>
@@ -435,6 +447,9 @@
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-body">
+                        <button type="button" class="MyBtnClose" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="fas fa-xmark"></i>
+                        </button>
 
                         <!-- Icon et description début -->
                         <div class="d-flex justify-content-center">
@@ -459,23 +474,18 @@
 
                                 <!-- slide 1 -->
                                 <div class="card swiper-slide">
-                                    <div class="card-content">
-
-                                    </div>
+                                    <img src="../assets/images/games/Zighehi/screen 1.jpg" alt="slide">
                                 </div>
                                 <div class="card swiper-slide">
-                                    <div class="card-content">
-
-                                    </div>
+                                    <img src="../assets/images/games/Zighehi/screen 2.jpg" alt="slide">
                                 </div>
                                 <div class="card swiper-slide">
-                                    <div class="card-content">
-
-                                    </div>
+                                    <img src="../assets/images/games/Zighehi/screen 3.jpg" alt="slide">
                                 </div>
                                 <!-- slide 1 -->
 
                             </div>
+
                             <div class="swiper-button-next"></div>
                             <div class="swiper-button-prev"></div>
                         </div>
@@ -483,14 +493,15 @@
 
 
                         <div class="d-flex align-items-center justify-content-around">
-                            <button class="btn-dl"><img src="../assets/images/logos/APPLE.png" alt="Apple" width="20">
-                                <span class="d-none mx-2">Jouer</span></button>
-                            <button class="btn-dl"><img src="../assets/images/logos/PLAYSTORE.png" alt="PlayStore"
+                            <a href="#" class="btn-dl indispo"><img src="../assets/images/logos/APPLE.png" alt="Apple"
                                     width="20">
-                                <span class="d-none mx-2">Play Store</span></button>
-                            <button class="btn-dl"><img src="../assets/images/logos/GARA CARD.png" alt="PlayStore"
+                                <span class="d-none mx-2">Jouer</span></a>
+                            <a href="#" class="btn-dl indispo"><img src="../assets/images/logos/PLAYSTORE.png" alt="PlayStore"
                                     width="20">
-                                <span class="d-none mx-2">GARA Store</span></button>
+                                <span class="d-none mx-2">Play Store</span></a>
+                            <a href="https://web.gara.store/apps/game/144" target="_blank" class="btn-dl"><img
+                                    src="../assets/images/logos/GARA CARD.png" alt="PlayStore" width="20">
+                                <span class="d-none mx-2">GARA Store</span></a>
                         </div>
                     </div>
                 </div>
@@ -510,8 +521,11 @@
     <script type="text/javascript" src="../assets/vendors/swiperjs/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="../assets/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="../assets/vendors/bootstrap/dist/js/popper.min.js"></script>
+    <script type="text/javascript" src="../assets/vendors/splidejs/js/splide.min.js"></script>
     <script type="text/javascript" src="../assets/vendors/bootstrap/dist/js/tooltip.js"></script>
     <script type="text/javascript" src="../assets/js/gamesModals.js"></script>
+    <script type="text/javascript" src="../assets/js/splideCarousels.js"></script>
+    <script type="text/javascript" src="../assets/js/indispoToast.js"></script>
 
     <script>
         // load

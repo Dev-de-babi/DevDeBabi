@@ -50,7 +50,7 @@ body {
   display: none;
   overflow-x: hidden;
 }
-.orangee {  
+.orangee {
   background-color: #facea8 !important;
 }
 .rouge {
@@ -158,6 +158,21 @@ a.extern-link {
   }
 }
 
+.splide {
+  .splide__pagination__page {
+    background: $blanc !important;
+    transform: scale(0.8);
+  }
+  .splide__pagination__page.is-active {
+    background: $orange !important;
+    transform: scale(1.3);
+  }
+
+  .splide__arrow--next,
+  .splide__arrow--prev {
+    display: none !important;
+  }
+}
 @keyframes spinerAnim {
   0% {
     border: 5px solid $orange;

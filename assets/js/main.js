@@ -1,8 +1,9 @@
 import { animElt } from "./elementsAnim.js";
 import { rippleAnim } from "./btn.js";
 
-// Toast de page bientot disponible
+// Toast de page ou service bientot disponible
 const onWorkBtns = document.querySelectorAll(".on-work");
+const newsletterbtn = document.querySelector("footer form button");
 const Toast = Swal.mixin({
   toast: true,
   position: "top-end",
@@ -14,6 +15,7 @@ const Toast = Swal.mixin({
     toast.addEventListener("mouseleave", Swal.resumeTimer);
   },
 });
+
 onWorkBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     Toast.fire({
@@ -31,6 +33,17 @@ onWorkBtns.forEach((btn) => {
       .querySelector(".swal2-timer-progress-bar")
       .classList.add("orangee");
   });
+});
+
+newsletterbtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  Toast.fire({
+    icon: "warning",
+    title: "Service momentanément indisponible, désolé... :(",
+  });
+  document.querySelector(".swal2-timer-progress-bar").classList.remove("vert");
+  document.querySelector(".swal2-timer-progress-bar").classList.remove("rouge");
+  document.querySelector(".swal2-timer-progress-bar").classList.add("orangee");
 });
 
 // Pop-up section contact
@@ -92,18 +105,6 @@ var ourTeamSwiper = new Swiper(".ourTeamSwiper", {
   },
 });
 
-// Caroussel au de la page jeux
-var gamesTopSwiper = new Swiper(".gamesTopSwiper", {
-  loop: true,
-  autoplay: {
-       delay: 500,
-       pauseOnMouseEnter :true,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    dynamicBullets: true,
-  },
-});
 
 // Animation d'une card de la section notre equipe
 const roundedBtn = document.querySelectorAll(".btn-rounded");
