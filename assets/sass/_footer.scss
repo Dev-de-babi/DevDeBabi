@@ -3,21 +3,45 @@
   backdrop-filter: blur(1px);
   background-color: $dark;
   font-family: "Montserrat";
-
+  .ul-games {
+    li {
+      position: relative;
+      display: flex;
+      align-items: center;
+      &.soon {
+        &::after {
+          content: "Bientôt";
+          display: inline-block;
+          height: calc($petit + 1.5px);
+          padding: 1px 10px;
+          margin: 0 10px;
+          border: 1px solid $orange;
+          color: $orange;
+          border-radius: 15px;
+          font-size: calc($petit - 3px);
+          line-height: 1.15;
+        }
+      }
+    }
+  }
   div.row {
     border-bottom: 2px solid $vert;
     border-top: 2px solid $vert;
   }
-a{
-  color: $gris !important;
-}
+  a {
+    color: $gris !important;
+    transition: color 0.3s ease-in-out;
+    &:hover {
+      color: $orange !important;
+    }
+  }
   h5 {
     color: $blanc;
     font-size: 20px;
   }
-p {
-  font-size: .85rem ;
-}
+  p {
+    font-size: 0.85rem;
+  }
   .footer-copy {
     color: $blanc;
   }

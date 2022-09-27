@@ -5,25 +5,32 @@ import { rippleAnim } from "./btn.js";
 const onWorkBtns = document.querySelectorAll(".on-work");
 const Toast = Swal.mixin({
   toast: true,
-  position: 'top-end',
+  position: "top-end",
   showConfirmButton: false,
   timer: 3500,
   timerProgressBar: true,
   didOpen: (toast) => {
-      toast.addEventListener('mouseenter', Swal.stopTimer)
-      toast.addEventListener('mouseleave', Swal.resumeTimer)
-  }
-})
-onWorkBtns.forEach(btn => {
+    toast.addEventListener("mouseenter", Swal.stopTimer);
+    toast.addEventListener("mouseleave", Swal.resumeTimer);
+  },
+});
+onWorkBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     Toast.fire({
-      icon: 'warning',
-      title: 'Connexion et inscription momentanément indisponible, désolé... :('
-  })
-  document.querySelector(".swal2-timer-progress-bar").classList.remove("vert")
-  document.querySelector(".swal2-timer-progress-bar").classList.remove("rouge")
-  document.querySelector(".swal2-timer-progress-bar").classList.add("orangee")
-  })
+      icon: "warning",
+      title:
+        "Connexion et inscription momentanément indisponible, désolé... :(",
+    });
+    document
+      .querySelector(".swal2-timer-progress-bar")
+      .classList.remove("vert");
+    document
+      .querySelector(".swal2-timer-progress-bar")
+      .classList.remove("rouge");
+    document
+      .querySelector(".swal2-timer-progress-bar")
+      .classList.add("orangee");
+  });
 });
 
 // Pop-up section contact
@@ -45,8 +52,8 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Caroussel notre equipe
-var swiper = new Swiper(".gameDetailSwiper", {
+// Caroussel de détail d'un jeu
+var gameDetailSwiper = new Swiper(".gameDetailSwiper", {
   effect: "coverflow",
   grabCursor: true,
   centeredSlides: true,
@@ -64,7 +71,9 @@ var swiper = new Swiper(".gameDetailSwiper", {
     prevEl: ".swiper-button-prev",
   },
 });
-var swiper = new Swiper(".mySwiper", {
+
+// Caroussel notre equipe
+var ourTeamSwiper = new Swiper(".ourTeamSwiper", {
   effect: "coverflow",
   grabCursor: true,
   centeredSlides: true,
@@ -82,12 +91,13 @@ var swiper = new Swiper(".mySwiper", {
     dynamicBullets: true,
   },
 });
+
 // Caroussel au de la page jeux
-var swiper = new Swiper(".gamesTopSwiper", {
+var gamesTopSwiper = new Swiper(".gamesTopSwiper", {
   loop: true,
   autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
+       delay: 500,
+       pauseOnMouseEnter :true,
   },
   pagination: {
     el: ".swiper-pagination",

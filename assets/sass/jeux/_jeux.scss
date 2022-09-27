@@ -18,62 +18,32 @@
         top: 50%;
         transform: translate(-50%, -50%) !important;
       }
-      .plus {
-        border-radius: 10px !important;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        background-color: rgba(255, 255, 255, 0.212);
-        backdrop-filter: blur(5px);
-        transform-origin: center;
-        transform: scale(0);
-        transition: transform 0.5s;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        i {
-          transform: scale(1);
-          transition: transform 0.3s ease;
-          color: $blanc;
-          font-size: $moyen;
-          &:hover {
-            cursor: pointer;
-            color: $orange;
-            transform: scale(0.85);
-          }
-        }
-        &::after {
-          content: "";
-          border-left: 4px solid $blanc;
-          border-top: 4px solid $blanc;
-          border-top-left-radius: 10px;
-          position: absolute;
-          left: 10%;
-          top: 10%;
-          width: 20%;
-          height: 20%;
-        }
-        &::before {
-          content: "";
-          border-right: 4px solid $blanc;
-          border-bottom: 4px solid $blanc;
-          border-bottom-right-radius: 10px;
-          position: absolute;
-          right: 10%;
-          bottom: 10%;
-          width: 20%;
-          height: 20%;
-        }
-      }
-      &:hover > .plus {
-        transform: scale(1);
-      }
 
       div.swiper-button-prev::after {
         font-size: $moyen !important;
         color: $blanc !important;
         background: $orange;
         border-radius: 50%;
+      }
+
+      .details {
+        font-family: "Montserrat";
+        font-weight: 500;
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: $blanc;
+        font-size: ($petit - 2px);
+        background-color: $vert-C;
+        padding: 5px 8px;
+        padding-right: 10px;
+        border-radius: 0 0 0 10px;
+        box-shadow: -3px 3px 9px 2px rgb(0 0 0 / 46%);
+        cursor: pointer;
+        transition: letter-spacing 300ms ease-in-out;
+        &:hover {
+          letter-spacing: .3px;
+        }
       }
     }
   }
@@ -120,6 +90,8 @@
         max-width: 260px;
         &.ellipsis::after {
           content: "...";
+          font-size: $grand;
+          line-height: 1;
           position: absolute;
           right: -12px;
           bottom: 4px;
@@ -154,7 +126,7 @@
           color: $blanc;
           width: 40px;
           height: 40px;
-          background-color: $vert-C;
+          background-color: rgba(255, 255, 255, 0.5);
           border-radius: 50%;
           &::after {
             font-size: $moyen !important;
@@ -179,9 +151,9 @@
         font-family: "Montserrat";
         font-weight: bold;
         transition: 0.25s box-shadow;
-        transition: transform 0.25s ease;
+        transition: letter-spacing 0.25s ease;
         &:hover {
-          transform: scale(1.1);
+          letter-spacing: 1px;
         }
         &:first-child {
           background-color: $orange;
@@ -203,6 +175,7 @@
     padding: 5px;
   }
 }
+
 @media (min-width: 570px) {
   .btn-dl {
     height: 45px !important;

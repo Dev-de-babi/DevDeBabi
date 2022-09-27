@@ -470,12 +470,33 @@ a.extern-link:hover {
   background-color: #0e1118;
   font-family: "Montserrat";
 }
+.footer .ul-games li {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.footer .ul-games li.soon::after {
+  content: "Bientôt";
+  display: inline-block;
+  height: 15.5px;
+  padding: 1px 10px;
+  margin: 0 10px;
+  border: 1px solid #e85f31;
+  color: #e85f31;
+  border-radius: 15px;
+  font-size: 11px;
+  line-height: 1.15;
+}
 .footer div.row {
   border-bottom: 2px solid #01423a;
   border-top: 2px solid #01423a;
 }
 .footer a {
   color: #c4c4c4 !important;
+  transition: color 0.3s ease-in-out;
+}
+.footer a:hover {
+  color: #e85f31 !important;
 }
 .footer h5 {
   color: #fff;
@@ -688,9 +709,9 @@ h1 {
   position: absolute;
 }
 .presentation img.img-items:nth-of-type(2) {
-  width: 185px;
+  width: 170px;
   left: 10%;
-  top: 17%;
+  top: 18%;
 }
 .presentation img.img-items:nth-of-type(3) {
   width: 75px;
@@ -1334,61 +1355,30 @@ h1 {
   top: 50%;
   transform: translate(-50%, -50%) !important;
 }
-.gamePage .game-list .card .plus {
-  border-radius: 10px !important;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-color: rgba(255, 255, 255, 0.212);
-  backdrop-filter: blur(5px);
-  transform-origin: center;
-  transform: scale(0);
-  transition: transform 0.5s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.gamePage .game-list .card .plus i {
-  transform: scale(1);
-  transition: transform 0.3s ease;
-  color: #fff;
-  font-size: 16.5px;
-}
-.gamePage .game-list .card .plus i:hover {
-  cursor: pointer;
-  color: #e85f31;
-  transform: scale(0.85);
-}
-.gamePage .game-list .card .plus::after {
-  content: "";
-  border-left: 4px solid #fff;
-  border-top: 4px solid #fff;
-  border-top-left-radius: 10px;
-  position: absolute;
-  left: 10%;
-  top: 10%;
-  width: 20%;
-  height: 20%;
-}
-.gamePage .game-list .card .plus::before {
-  content: "";
-  border-right: 4px solid #fff;
-  border-bottom: 4px solid #fff;
-  border-bottom-right-radius: 10px;
-  position: absolute;
-  right: 10%;
-  bottom: 10%;
-  width: 20%;
-  height: 20%;
-}
-.gamePage .game-list .card:hover > .plus {
-  transform: scale(1);
-}
 .gamePage .game-list .card div.swiper-button-prev::after {
   font-size: 16.5px !important;
   color: #fff !important;
   background: #e85f31;
   border-radius: 50%;
+}
+.gamePage .game-list .card .details {
+  font-family: "Montserrat";
+  font-weight: 500;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #fff;
+  font-size: 12px;
+  background-color: #009e60;
+  padding: 5px 8px;
+  padding-right: 10px;
+  border-radius: 0 0 0 10px;
+  box-shadow: -3px 3px 9px 2px rgba(0, 0, 0, 0.46);
+  cursor: pointer;
+  transition: letter-spacing 300ms ease-in-out;
+}
+.gamePage .game-list .card .details:hover {
+  letter-spacing: 0.3px;
 }
 .gamePage .swiper {
   height: 220px;
@@ -1435,6 +1425,8 @@ h1 {
 }
 .gamesModals .modal .modal-body .description.ellipsis::after {
   content: "...";
+  font-size: 30px;
+  line-height: 1;
   position: absolute;
   right: -12px;
   bottom: 4px;
@@ -1469,7 +1461,7 @@ h1 {
   color: #fff;
   width: 40px;
   height: 40px;
-  background-color: #009e60;
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 50%;
 }
 .gamesModals .modal .modal-body .swiper .swiper-button-next::after,
@@ -1494,10 +1486,10 @@ h1 {
   font-family: "Montserrat";
   font-weight: bold;
   transition: 0.25s box-shadow;
-  transition: transform 0.25s ease;
+  transition: letter-spacing 0.25s ease;
 }
 .gamesModals .modal .modal-body .btn-dl:hover {
-  transform: scale(1.1);
+  letter-spacing: 1px;
 }
 .gamesModals .modal .modal-body .btn-dl:first-child {
   background-color: #e85f31;
