@@ -42,7 +42,7 @@ $(window).bind("DOMContentLoaded", function () {
     if (window.location.hash === `#${game.tag}`) {
       setTimeout(() => {
         game.modal.show();
-      }, 1500);
+      }, 2500);
 
       // Pour réinitialiser le hashtag de la page
       history.replaceState(
